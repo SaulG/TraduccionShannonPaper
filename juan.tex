@@ -1,37 +1,213 @@
 Hola Mundo!
 
+Agrego todas las ecuaciones de las paginas 36 - 40, y una imagen tabla.eps:
+
 \begin{equation}
-\begin{array}{l}
-\dot{x}_{1} \\ 
-\dot{x}_{2} \\
-\vdots \\
-\dot{x}_{n-1} \\ 
-\dot{x}_{n} \\ 
-\end{array}
-=
-\begin{array}{llllll}
-0 & 1 & 0 & \cdots & 0 \\
-0 & 1 & 0 & \cdots & 0 \\
-\vdots & \vdots & \vdots & \ddots  & \vdots \\
-0 & 1 & 0 & \cdots & 0 \\
--a_{n} & -a_{n-1} & -a_{n-2} & \cdots & -a_{1} &
-\end{array}
-\begin{array}{l}
-x_{1} \\ 
-x_{2} \\
-\vdots \\
-x_{n-1} \\ 
-x_{n} \\ 
-\end{array}
-+
-\begin{array}{l}
-0 \\
-0 \\
-\vdots \\
-0 \\
-1 \\
-\end{array}
-u
-\\
-\\
+H\left ( x,y \right )\leq H\left ( x \right )+H\left ( y \right )
 \end{equation}
+
+\\
+
+\begin{equation}
+{p}'\left ( y \right )=\int a\left ( x,y \right )p\left ( x \right )dx
+\end{equation}
+
+\\
+
+\begin{equation}
+\int a\left ( x,y \right )dx=\int a\left ( x,y \right )dy=1
+\:\:\:\:\:\:\:,\:\:\:\:\:\:\:
+a\left ( x,y \right )\geq 0
+\end{equation}
+
+\\
+
+\begin{equation}
+H\left ( x,y \right )=H\left ( x \right )+H_{x}\left ( y \right )=H\left ( y \right )+H_{y}\left ( x \right )
+\end{equation}
+
+\\
+
+\begin{equation}
+H_x{}\left ( y \right )\leq H\left ( y \right )
+\end{equation}
+
+\\
+
+\begin{equation}
+H\left ( x \right )=-\int p\left ( x \right )\log p\left ( x \right )dx
+\end{equation}
+
+\\
+
+\begin{equation}
+\sigma^{2}=\int p\left ( x \right )x^{2}dx \:\:\:\:\: \textup{y} \:\:\:\:\: 1=\int p\left ( x \right )dx
+\end{equation}
+
+\\
+
+\begin{equation}
+\int \left [ -p\left ( x \right ) \log p\left ( x \right ) + \lambda p\left ( x \right ) x^{2} + \mu p\left ( x \right )\right ]dx
+\end{equation}
+
+\\
+
+\begin{equation}
+-1-\log p\left ( x \right )+\lambda x^{2}+\mu =0
+\end{equation}
+
+\\
+
+\begin{equation}
+p\left ( x \right )=\frac{1}{\sqrt{2\pi \sigma }}e^{-\left ( x^{2}/2\sigma ^{2} \right )}
+\end{equation}
+
+\\
+
+\begin{equation}
+A_{ij}=\int \cdots \int x_{i}x_{j}p\left ( x_{1},...,x_{n} \right )dx_{1}\cdots dx_{n}
+\end{equation}
+
+\\
+
+\begin{equation}
+H\left ( x \right )=\log \sqrt{2\pi e\sigma }
+\end{equation}
+
+\\
+
+\begin{equation}
+p\left ( x \right )=\frac{1}{\sqrt{2\pi \sigma }}e^{-\left ( x^{2}/2\sigma ^{2} \right )}
+\newline
+-\log p\left ( x \right )=\log \sqrt{2\pi \sigma }+\frac{x^{2}}{2\sigma ^{2}}
+\newline
+H\left ( x \right )=-\int p\left ( x \right )\log p\left ( x \right )dx
+\newline
+\hspace*{9.8mm} =\int p\left ( x \right )\log \sqrt{2\pi \sigma }dx+\int p\left ( x \right )\frac{x^{2}}{2\sigma ^{2}}dx
+\newline
+\hspace*{9.8mm} =\log \sqrt{2\pi \sigma }+\frac{\sigma }{2\sigma ^{2}}
+\newline
+\hspace*{9.8mm} =\log \sqrt{2\pi \sigma }+\log \sqrt{e}
+\newline
+\hspace*{9.8mm} =\log \sqrt{2\pi e \sigma }
+\end{equation}
+
+\\
+
+\begin{equation}
+p\left ( x_{1},...,x_{n} \right )=\frac{\left | a_{ij} \right |^{\frac{1}{2}}}{\left ( 2\pi  \right )^{n/2}}\exp \left ( -\frac{1}{2} \sum a_{ij}x_{i}x_{j} \right)
+\end{equation}
+
+\\
+
+\begin{equation}
+H=\log \left ( 2\pi e \right )^{n/2}\left | a_{ij} \right |^{-\frac{1}{2}}
+\end{equation}
+
+\\
+
+\begin{equation}
+a=\int_{0}^{\infty}p\left ( x \right )xdx
+\end{equation}
+
+\\
+
+\begin{equation}
+p\left ( x \right )=\frac{1}{a}e^{-\left ( x/a \right )}
+\end{equation}
+
+\\
+
+\begin{equation}
+H\left ( y \right )=\int \cdots \int p\left ( x_{1},...,x_{n} \right )J\left ( \frac{x}{y} \right )\log p\left ( x_{1},...,x_{n} \right )J\left ( \frac{x}{y} \right )dy_{1}\cdots dy_{n}
+\end{equation}
+
+\\
+
+\begin{equation}
+H\left ( y \right )=H\left ( x \right )-\int \cdots \int p\left ( x_{1},...,x_{n} \right )\log J \left ( \frac{x}{y} \right )dx_{1}\cdots dx_{n}
+\end{equation}
+
+\\
+
+\begin{equation}
+y_{j}=\sum_{i}^{\:}a_{ij}x_{i}
+\end{equation}
+
+\\
+
+\begin{equation}
+H\left ( y \right )=H\left ( x \right )+\log\left | a_{ij} \right |
+\end{equation}
+
+\\
+
+\begin{equation}
+p\left ( x_{1},...,x_{n}\right )
+\end{equation}
+
+\\
+
+\begin{equation}
+{H}'=-\lim_{n\rightarrow \infty }\frac{1}{n}\int \cdots \int p\left ( x_{1},...,x_{n}\right ) \log p\left ( x_{1},...,x_{n}\right )dx_{1}...dx_{n}
+\end{equation}
+
+\\
+
+\begin{equation}
+{H}'=\log \sqrt{2\pi eN}
+\newline
+H=W\log 2\pi eN
+\end{equation}
+
+\\
+
+\begin{equation}
+\left | \frac{\log p}{n} - {H}'\right |< \varepsilon 
+\end{equation}
+
+\\
+
+\begin{equation}
+\lim_{n\rightarrow \infty }\frac{\log V_{n}\left ( q \right )}{n}={H}'
+\end{equation}
+
+\\
+
+\begin{equation}
+p\left ( x_{1},...,x_{n}\right )=\frac{1}{\left ( 2\pi N \right )^{n/2}}\exp -\frac{1}{2N}\sum x_{i}^{2}
+\end{equation}
+
+\\
+
+\begin{equation}
+N_{1}=\frac{1}{2\pi e}\exp 2{H}'
+\end{equation}
+
+\\
+
+\begin{equation}
+H_{2}=H_{1}+\frac{1}{W}\int_{W}^{\:}\log \left | Y\left ( f \right ) \right |^{2}df
+\end{equation}
+
+\\
+
+\begin{equation}
+J=\prod_{i=1}^{n}\left | Y\left ( f_{i} \right )  \right |^{2}
+\end{equation}
+
+\\
+
+\begin{equation}
+\exp \frac{1}{W}\int_{W}^{\:}\log \left | Y\left ( f \right ) \right |^{2}df
+\end{equation}
+
+\\
+
+\begin{equation}
+
+\end{equation}
+
+\\
+
+
