@@ -1,27 +1,71 @@
-4. Representacion grafica de procesos Markovianos
+\section{Representacion grafica de procesos Markovianos}
 
-Los procesos estocasticos del tipo descrito arriba son matematicamente conocidos como Procesos Markovianos Discretos y han sido estudiados extensivamente en la literatura.^{6} El caso general puede ser descrito de la siguiente manera: Existe un numero finito de posibles "estados" de un sistema; S_{1}, S_{2}, ...,S_{n}. Adem\'{a}s existen un conjunto de probabilidades de transicion; p_{i}(j) la probabilidad que si el sistema esta en estado S_{i} entonces enseguida vaya al estado S_{j}. Para realizar este proceso Markoviano en una fuente de información solo necesitamos asumir que una letra es producida para cada transicion desde un estado a otro. Los estados corresponderán al ``residuo de influencia'' de letras precedentes. \\
-La situacion puede ser representada graficamente como se muestra en las figuras 3, 4 y 5. Los "estados" son los puntos de union
+Los procesos estocasticos del tipo descrito arriba son matematicamente
+conocidos como Procesos Markovianos Discretos y han sido estudiados
+extensivamente en la literatura \footnote{AQUI}. El caso general puede
+ser descrito de la siguiente manera: Existe un numero finito de
+posibles "estados" de un sistema; $S_{1}, S_{2}, \ldots,
+S_{n}$. Adem\'{a}s existen un conjunto de probabilidades de
+transicion; $p_{i}(j)$ la probabilidad que si el sistema esta en
+estado $S_{i}$ entonces enseguida vaya al estado $S_{j}$. Para
+realizar este proceso Markoviano en una fuente de informaci\'{o}n solo
+necesitamos asumir que una letra es producida para cada transicion
+desde un estado a otro. Los estados corresponder\'{a}n al ``residuo de
+influencia'' de letras precedentes.
+
+La situacion puede ser representada graficamente como se muestra en
+las figuras 3, 4 y 5. Los ``estados'' son los puntos de union
 
 % aqui va figura 3
 
-en la grafica y las probabilidades y letras son producidas para una transicion son dadas ademas de la linea correspondiente. La figura 3 es para el ejemplo B en la seccion 2, mientras que la figura 4 corresponde al ejemplo C. En la figura 3
+en la grafica y las probabilidades y letras son producidas para una
+transicion son dadas ademas de la linea correspondiente. La figura 3
+es para el ejemplo B en la seccion 2, mientras que la figura 4
+corresponde al ejemplo C. En la figura 3
 
 %figura 4
 
-solamente hay un estado ya que letras sucesivas son independientes. En la figura 4 hay tantos estados como letras. \newline
-Si un ejemplo de un triagrama fuera construido, habr\'{i}a por maximo n^{2} estados correspondiendo a los posibles pares de letras precediendo a uno que haya sido elegido. La figura 5 es un grafo para el caso de estructura de palabras en el ejemplo D. Aqui S corresponde a el simbolo ``espacio''. \newline
+solamente hay un estado ya que letras sucesivas son independientes. En
+la figura 4 hay tantos estados como letras. \newline Si un ejemplo de
+un triagrama fuera construido, habr\'{i}a por maximo $n^{2}$ estados
+correspondiendo a los posibles pares de letras precediendo a uno que
+haya sido elegido. La figura 5 es un grafo para el caso de estructura
+de palabras en el ejemplo D. Aqui $S$ corresponde a el simbolo
+``espacio''. \newline
 
-5. Fuentes erg\'{o}dicas y mixtas.
+\section{Fuentes erg\'{o}dicas y mixtas}
 
-Como se ha indicado anteriormente, una fuente discreta para nuestros propositos puede ser considerada representada por un proceso Markoviano. Entre los posibles procesos discretos Markovianos existe un grupo con propiedades especiales con importancia en la teoria de la comunicacion. Esta clase especial consiste en los procesos ``ergodicos'' y deberiamos de llamar a las fuentes correspondientes, fuentes ergodicas. Aunque una definicion rigurosa de los procesos ergodicos es algo complicada, la idea general es simple. En un proceso ergodico cada secuencia producida por el proceso permanece igual en sus propiedades estadisticas. Por lo tanto las frecuencias de letras, las frecuencias de bigramas, etc., obtenidos de una secuencia en particulas, se acercaran a un limite definido conforme la longitud de las secuencua aumenta, independientemente de la secuencia en particular. En realidad esto no es meramente cierto para cada secuencia pero el grupo para el cual esto es falso tiene una probabilidad de cero. Practicamente, la propiedad ergodica significa homogeneidad estadistica. \\
-Todos los ejemplos de lenguaje artificial dados anteriormente son ergodicos. Esta propiedad está relacionada a la estructura de los grafos correspondientes. Si el grafo tiene las siguientes dos propiedades el proceso correspondiente será ergodico:
+Como se ha indicado anteriormente, una fuente discreta para nuestros
+propositos puede ser considerada representada por un proceso
+Markoviano. Entre los posibles procesos discretos Markovianos existe
+un grupo con propiedades especiales con importancia en la teoria de la
+comunicacion. Esta clase especial consiste en los procesos
+``ergodicos'' y deberiamos de llamar a las fuentes correspondientes,
+fuentes ergodicas. Aunque una definicion rigurosa de los procesos
+ergodicos es algo complicada, la idea general es simple. En un proceso
+ergodico cada secuencia producida por el proceso permanece igual en
+sus propiedades estadisticas. Por lo tanto las frecuencias de letras,
+las frecuencias de bigramas, etc., obtenidos de una secuencia en
+particulas, se acercaran a un limite definido conforme la longitud de
+las secuencua aumenta, independientemente de la secuencia en
+particular. En realidad esto no es meramente cierto para cada
+secuencia pero el grupo para el cual esto es falso tiene una
+probabilidad de cero. Practicamente, la propiedad ergodica significa
+homogeneidad estadistica.
+
+Todos los ejemplos de lenguaje artificial dados anteriormente son
+ergodicos. Esta propiedad est\'{a} relacionada a la estructura de los
+grafos correspondientes. Si el grafo tiene las siguientes dos
+propiedades el proceso correspondiente ser\'{a} erg\'{o}dico:
 
 \begin{enumerate}
-   \item El grafo no consiste de dos partes aisladas A y B dado que es imposible ir desde los puntos de union en la parte A a los puntos de union en la parte B a traves de las lineas del grafo en la direccion de las flechas y tambien es imposible ir desde las uniones en la parte B a las uniones en la parte A. 
-   \item 
+   \item El grafo no consiste de dos partes aisladas $A$ y $B$ dado que es
+   imposible ir desde los puntos de union en la parte $A$ a los puntos
+   de union en la parte $B$ a traves de las lineas del grafo en la
+   direccion de las flechas y tambien es imposible ir desde las
+   uniones en la parte $B$ a las uniones en la parte $A$.  \item
 \end{enumerate}
 
 \begin{equation}
-b = a - 2
+b = a - 2 \text{ (ejemplo)}
 \end{equation}

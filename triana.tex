@@ -1,210 +1,184 @@
 {\textexclamdown}Hola, mundo!
 
-%BLABLABLA%
+\section{Entrop\'ia de la suma de dos conjuntos}
 
-\begin{document}
-	\begin{center}
-	23. ENTROP\'IA DE LA SUMA DE DOS CONJUNTOS.
-	\end{center}
+	Si tenemos dos conjuntos de funciones $f_{\alpha}(t)$ y
+	$g_{\beta}(t)$ podemos formar un nuevo conjunto por
+	"adici\'on". Supongamos que el primer conjunto tiene la
+	funci\'on de densidad de probabilidad $p(x_{1},...,x_{n})$ y
+	el segundo $q(x_{1},...,x_{n})$.  Despu\'es la funci\'on de
+	densidad para la adici\'on es dada por la convoluci\'on
 	
-	Si tenemos dos conjuntos de funciones $f_{\alpha}(t)$ y $g_{\beta}(t)$ podemos formar
-	un nuevo conjunto por "adici\'on". Supongamos que el primer conjunto tiene la funci\'on
-	de densidad de probabilidad $p(x_{1},...,x_{n})$ y el segundo $q(x_{1},...,x_{n})$.	
-	Despu\'es la funci\'on de densidad para la adici\'on es dada por la convoluci\'on
+	\begin{equation} r(x_{1},...,x_{n}) = \int \cdots \int
+		p(y_{1},...,y{n})q(x_{1}-y_{1},...,x_{n}-y_{n})dy_{1}...dy_{n} \end{equation}
 	
-	\begin{equation}
-		r(x_{1},...,x_{n}) = \int \cdots \int p(y_{1},...,y{n})q(x_{1}-y_{1},...,x_{n}-y_{n})dy_{1}...dy_{n}
-	\end{equation}
-	
-	F\'isicamente esto corresponde a sumar los ruidos o se\~nales representados por los 
-	conjuntos originales de las funciones
+	F\'isicamente esto corresponde a sumar los ruidos o se\~nales
+	representados por los conjuntos originales de las funciones
 	
 		
 	El siguiente resultado es derivado en el Ap\'endice 6
 	
-	\begin{em}Teorema 15: Deje que la potencia media de los 2 conjuntos
-	 sea $N_{1}$ y $N_{2}$ y deje que sus poderes de entrop\'ia sean $\bar{N}_1$} y $\bar{N}_2$	.
-	Entonces, el poder de entrop\'ia de la suma, $N_{3}$, est\'a delimitado por.	
-	\end{em}	
+    \begin{theorem} Deje que la potencia media de los 2 conjuntos sea
+    $N_{1}$ y $N_{2}$ y deje que sus poderes de entrop\'ia sean
+    $\bar{N}_1$ y $\bar{N}_2$ . Entonces, el poder de entrop\'ia de
+    la suma, $N_{3}$, est\'a delimitado
+    por \begin{equation} \bar{N}_1+\bar{N}_2 \le \bar{N}_3 \le
+    N_{1}+N_{2}.  \end{equation} \end{theorem}
 	
-	\begin{equation}
-		\bar{N}_1+\bar{N}_2 \le \bar{N}_3 \le N_{1}+N_{2}
-	\end{equation}
+	El ruido blanco Gaussiano tiene la peculiar propiedad que
+	puede absorber cualquier otro ruido o conjunto de se\~nales
+	que puede ser a\~nadido a la misma con una potencia de
+	entrop\'ia resultante aproxim\'adamente igual a la suma de a
+	potencia ruido blanco y la potencia de la se\~nal(medida
+	apartir del valor promedio de la se\~nal, que es normalmente
+	cero), siempre que la potencia de la señal es peque\~na, en
+	cierto sentido, en comparaci\'on con el ruido.
 	
-	El ruido blanco Gaussiano tiene la peculiar propiedad que puede absorber cualquier otro
-	ruido o conjunto de se\~nales que puede ser a\~nadido a la misma con una potencia
-	de entrop\'ia resultante aproxim\'adamente igual a la suma de a potencia ruido blanco 
-	y la potencia de la se\~nal(medida apartir del valor promedio de la se\~nal, que es
-	normalmente cero), siempre que la potencia de la señal es peque\~na, en cierto sentido,
-	en comparaci\'on con el ruido.
+	Considere el espacio de la funci\'on asociada con estos
+	conjuntos que tienen dimensiones n. El ruido blanco
+	corresponde a la distribuci\'on Gaussiana esf\'erica en este
+	espacio. El conjunto de la se\~nal corresponde a otra
+	distribuci\'on de probabilidad, no necesariamente Gaussiana o
+	esf\'erica. Deje que los segundos momentos de esta
+	distribuci\'on alrededor de su centro de gravedad sea
+	$a_{ij}$.  Es decir, si p($x_{1},...,x_{n}$) es la funci\'on
+	de distribuci\'on de densidad \begin{equation}
+	a_{ij}=\int \cdots \int
+	p(x_{i}-\alpha_{i})(x_{j}-\alpha_{j}dx_{1} \cdots
+	dx_{n}) \end{equation} donde $\alpha_{i}$ son las coordenadas
+	del centro de gravedad. Ahora $a_{ij}$ es una forma
+	cuadr\'atica positiva, y podemos rotar nuestro sistema de
+	coordenadas para alinearla con las direcciones principales de
+	esta forma. $a_{ij}$ es entonces reducido a la forma diagonal
+	$b_{ii}$. Se requiere que cada $b{ii}$ sea peque\~no comparado
+	con N, el cuadrado del radio de la distribuci\'on esf\'erica.
 	
-	Considere el espacio de la funci\'on asociada con estos conjuntos que tienen
-	dimensiones n. El ruido blanco corresponde a la distribuci\'on Gaussiana esf\'erica
-	en este espacio. El conjunto de la se\~nal corresponde a otra distribuci\'on
-	de probabilidad, no necesariamente Gaussiana o esf\'erica. Deje que los segundos
-	momentos de esta distribuci\'on  alrededor de su centro de gravedad sea $a_{ij}$. 
-	Es decir, si p($x_{1},...,x_{n}$) es la funci\'on de distribuci\'on de densidad
+	En este caso, la convoluci\'on del ruido y se\~nal producen
+	aproximadamente una distribuci\'on Gaussiana cuya forma
+	cuadr\'atica correspondiente es \begin{equation} N +
+	b_{ii}.  \end{equation}
 	
-	\begin{equation}
-		a_{ij}=\int \cdots \int p(x_{i}-\alpha_{i})(x_{j}-\alpha_{j}dx_{1} \cdots dx_{n})
-	\end{equation}
-
-	donde $\alpha_{i}$ son las coordenadas del centro de gravedad. Ahora $a_{ij}$ es una 
-	forma cuadr\'atica positiva, y podemos rotar nuestro sistema de coordenadas para
-	alinearla con las direcciones principales de esta forma. $a_{ij}$ es entonces
-	reducido a la forma diagonal $b_{ii}$. Se requiere que cada $b{ii}$ sea peque\~no
-	comparado con N, el cuadrado del radio de la distribuci\'on esf\'erica.
-	
-	En este caso, la convoluci\'on del ruido y se\~nal producen aproximadamente una 
-	distribuci\'on Gaussiana cuya forma cuadr\'atica correspondiente es
-	
-	\begin{equation}
-		N + b_{ii}.
-	\end{equation}
-	
-	El potencial de entrop\'ia de esta distribuci\'on es
-	
-	\begin{equation}
-		[\Pi(N + b_{ii})]^\frac{1}{n}
-	\end{equation}
-	
-	o aproximadamente
-	
-	\begin{equation}
-		= [(N)^n + \Sigma b_{ii}(N)^n-1]^\frac{1}{n}
-	\end{equation}
-	
-	\begin{equation}
-		= N + \frac{1}{n}\Sigma b_{ii}.
-	\end{equation}
-	
-	El \'ultimo t\'ermino es la potencia de la se\~nal, mientras que el primero es la
-	potencia del ruido.
+	El potencial de entrop\'ia de esta distribuci\'on
+	es \begin{equation} [\Pi(N +
+	b_{ii})]^\frac{1}{n} \end{equation} o
+	aproximadamente \begin{equation} = [(N)^n + \Sigma
+	b_{ii}(N)^n-1]^\frac{1}{n} \end{equation} \begin{equation} = N
+	+ \frac{1}{n}\Sigma b_{ii}.  \end{equation} El \'ultimo
+	t\'ermino es la potencia de la se\~nal, mientras que el
+	primero es la potencia del ruido.
 	
 	
-	\begin{center}
-	PARTE 4: EL CANAL CONTINUO
+	\chapter{El canal continuo}
 	
-	\bigskip	
-	24. LA CAPACIDAD DE UN CANAL CONTINUO	
-	\end{center}
+\section{La capacidad de un canal continuo}	
 	
-	En un canal continuo de las se\~nales de entrada o transmitidas ser\'an funciones
-	continuas de tiempo $f(t)$ pertenecientes a un determinado conjunto, y la señales de
-	salida o recibidas ser\'an versiones perturbadas de estas. Vamos a considerar solo
-	el caso en que ambas se\~nales transmitidas y recibidas se limitan a una determinada 
-	banda $W$. Pueden ser despu\'es identificadas por un tiempo $T$, por los n\'umeros
-	$2TW$, y su estructura estad\'istica de las funciones de distribuci\'on finitos
-	tridimensionales. As\'i las estad\'isticas de la se\~nal transmitida ser\'a
+	En un canal continuo de las se\~nales de entrada o
+	transmitidas ser\'an funciones continuas de tiempo $f(t)$
+	pertenecientes a un determinado conjunto, y la señales de
+	salida o recibidas ser\'an versiones perturbadas de
+	estas. Vamos a considerar solo el caso en que ambas se\~nales
+	transmitidas y recibidas se limitan a una determinada banda
+	$W$. Pueden ser despu\'es identificadas por un tiempo $T$, por
+	los n\'umeros $2TW$, y su estructura estad\'istica de las
+	funciones de distribuci\'on finitos tridimensionales. As\'i
+	las estad\'isticas de la se\~nal transmitida ser\'a
 	determinada por
-	
 	\begin{equation}
 		P(x_{1}, \cdots ,x_{n}) = P(x)
 	\end{equation}	 
-	
-	Y los del ruido por la distribuci\'on de probabilidad condicional
-	
+	y los del ruido por la distribuci\'on de probabilidad condicional
 	\begin{equation}
 		P_{x1, \cdots ,xn} (y_{1}, \cdots ,y_{n}) = P_{x}(y).
 	\end{equation}
 	
-	La tasa de transmisi\'on de informaci\'on por un canal continuo se define de una
-	manera an\'aloga a la de un canal separado, esto es
-	
-	\begin{equation}
-		R = H(x)-H_{y}(x)
-	\end{equation}
-	
-	Donde $H(x)$ es la entrop\'ia de la entrada y $H_{y}(x)$ el equ\'ivoco. La capacidad
-	del canal $C$ se define como el m\'aximo de R cuando var\'ian la entrada para todos 
-	los conjuntos posibles. Esto significa que en una aproximaci\'on dimensional finita
-	debemos variar $P(x) = P(x_{1},...,x_{n})$ y maximizar
-	
-	\begin{equation}
-		- \int P(x) \log P(x)dx + \int\int P(x,y)\log \frac{P(x,y)}{P(y)}dxdy.
-   	\end{equation}	 
-	
-	Esto puede ser escrito
-	
-	\begin{equation}
-		\int\int P(x,y) \log \frac{P(x,y)}{P(x)P(y)}dxdy
-	\end{equation}
-	
-	\bigskip
-	usando el hecho que $\int\int P(x,y)\log P(x)dxdy = \int P(x)\log P(x)dx$. La capacidad
-	del canal se expresa as\'i:
-	
+	La tasa de transmisi\'on de informaci\'on por un canal
+	continuo se define de una manera an\'aloga a la de un canal
+	separado, esto es \begin{equation} R =
+	H(x)-H_{y}(x), \end{equation} donde $H(x)$ es la entrop\'ia de
+	la entrada y $H_{y}(x)$ el equ\'ivoco. La capacidad del canal
+	$C$ se define como el m\'aximo de R cuando var\'ian la entrada
+	para todos los conjuntos posibles. Esto significa que en una
+	aproximaci\'on dimensional finita debemos variar $P(x) =
+	P(x_{1},...,x_{n})$ y maximizar \begin{equation} - \int
+	P(x) \log P(x)dx + \int\int
+	P(x,y)\log \frac{P(x,y)}{P(y)}dxdy.  \end{equation} Esto puede
+	ser escrito \begin{equation} \int\int
+	P(x,y) \log \frac{P(x,y)}{P(x)P(y)}dxdy \end{equation} usando
+	el hecho que $\int\int P(x,y)\log P(x)dxdy = \int P(x)\log
+	P(x)dx$. La capacidad del canal se expresa as\'i:
 	\begin{equation}
 		C = \limsup_{T\to \infty P(x)} \frac{1}{T}\int\int P(x,y)\log \frac{P(x,y)}{P(x)~
-		P(y)}dxdy
+		P(y)}dxdy.
 	\end{equation}
 	
-	Es obvio que en esta forma $R$ y $C$ son independientes del sistema de coordenadas
-	dado que el numerador y denominador en $\log\frac{P(x,y)}{P(x)P(y)}$ ser\'a 
-	multiplicado por los mismos factores cuando $x$ y $y$ son transformados en cualquier
-	forma uno a uno. Esta expresi\'on integral para $C$ es m\ás general que 
-	$H(x)-H_{y}(x)$. Correctamente interpretada (ver Anexo 7) que siempre existir\'a
-	mientras $H(x)-H_{y}(x)$ puede asumir una forma indeterminada $\infty - \infty$ en 
-	algunos casos. Esto ocurre, por ejemplo, si $x$ est\'a limitada a una superficie
-	de menos dimensiones que $n$ en su aproximaci\'on $n$ dimensional.
+	Es obvio que en esta forma $R$ y $C$ son independientes del
+	sistema de coordenadas dado que el numerador y denominador en
+	$\log\frac{P(x,y)}{P(x)P(y)}$ ser\'a multiplicado por los
+	mismos factores cuando $x$ y $y$ son transformados en
+	cualquier forma uno a uno. Esta expresi\'on integral para $C$
+	es m\'{a}s general que $H(x)-H_{y}(x)$. Correctamente
+	interpretada (ver Anexo 7) que siempre existir\'a mientras
+	$H(x)-H_{y}(x)$ puede asumir una forma indeterminada $\infty
+	- \infty$ en algunos casos. Esto ocurre, por ejemplo, si $x$
+	est\'a limitada a una superficie de menos dimensiones que $n$
+	en su aproximaci\'on $n$ dimensional.
 	
-	Si la base logar\'itmica utilizada en computaci\'on $H(x)$ y $H_{y}(x)$ es dos 
-	entonces $C$ es el n\'umero m\'aximo de d\'igitos binarios que pueden ser enviados
-	por segundo a trav\'es del canal con equivocaci\'on arbitrariamente peque\~na,
-	al igual que en el caso discreto. Esto se puede ver f\'isicamente al dividir el espacio
-	de se\~nales en un gran n\'umero de celdas peque\~nas y suficientemente peque\~no
-	para que la densidad de probabilidad $P_{x}(y)$ de la se\~nal x que est\á siendo
-	perturbado hasta el punto de que $y$ es sustancialmente constante en una celda
-	(ya sea de $x$ o $y$). Si las celdas son consideradas como puntos distintos, la 
-	situaci\'on es esencialmente la misma que un canal discreto y las pruebas usadas
-	se aplicar\'an allí. Pero est\á claro que f\'isicamente esta cuantificaci\'on del 
-	volumen en puntos individuales no puede de ninguna manera pr\'actica alterar 
-	significativamente la respuesta final, siempre que las regiones sean suficientemente
-	peque\~nas. As\'i la capacidad será el l\'imite de las capacidades de las 
-	subdivisiones discretas y esto es es s\'olo la capacidad continua definida anteriormente.
+	Si la base logar\'itmica utilizada en computaci\'on $H(x)$ y
+	$H_{y}(x)$ es dos entonces $C$ es el n\'umero m\'aximo de
+	d\'igitos binarios que pueden ser enviados por segundo a
+	trav\'es del canal con equivocaci\'on arbitrariamente
+	peque\~na, al igual que en el caso discreto. Esto se puede ver
+	f\'isicamente al dividir el espacio de se\~nales en un gran
+	n\'umero de celdas peque\~nas y suficientemente peque\~no para
+	que la densidad de probabilidad $P_{x}(y)$ de la se\~nal x que
+	est\'{a}q siendo perturbado hasta el punto de que $y$ es
+	sustancialmente constante en una celda (ya sea de $x$ o
+	$y$). Si las celdas son consideradas como puntos distintos, la
+	situaci\'on es esencialmente la misma que un canal discreto y
+	las pruebas usadas se aplicar\'an all\'{a}. Pero est\'{a}
+	claro que f\'isicamente esta cuantificaci\'on del volumen en
+	puntos individuales no puede de ninguna manera pr\'actica
+	alterar significativamente la respuesta final, siempre que las
+	regiones sean suficientemente peque\~nas. As\'i la capacidad
+	ser\'{a} el l\'imite de las capacidades de las subdivisiones
+	discretas y esto es es s\'olo la capacidad continua definida
+	anteriormente.
 	
-	En el lado matem\'atico se pede demostrar primero (ver el Ap\'endice 7) que si $u$
-	es el mensaje, $x$ es la se\~nal, $y$ es la se\~nal recibida (perturbada por el ruido)
-	y $v$ es el mensaje recuperado, entonces
-	
+	En el lado matem\'atico se pede demostrar primero (ver el
+	Ap\'endice 7) que si $u$ es el mensaje, $x$ es la se\~nal, $y$
+	es la se\~nal recibida (perturbada por el ruido) y $v$ es el
+	mensaje recuperado, entonces
 	\begin{equation}
-		H(x) - H_{y}(x) \le H(u) - H_{v}(u)
+		H(x) - H_{y}(x) \le H(u) - H_{v}(u).
 	\end{equation}	 
 	
-	Independientemente de lo que las operaciones realizan en $u$ para obtener $x$ o en $y$
-	para obtener $v$. No importa como modificamos los d\'igitos binarios para obtener la
-	se\~nal, o como decodificamos la se\~nal recibida para recuperar el mensaje, la tasa
-	discreta para los d\'igitos binarios no excede la capacidad del canal que tenemos
-	definida. Por otra parte, es posible bajo condiciones muy generales encontrar un 
-	sistema de codificaci\'on para transmitir d\'igitos binarios en la tasa $C$ con peque\~na
-	equivocaci\'on o frecuencia de errores como se desee. Este es el caso, por ejemplo, 
-	si, cuando tomamos un espacio finito de aproximaci\'on para las funciones de 
-	las se\~nales, P(x,y) es continuo tanto en $x$ como en $y$, excepto en un conjunto
-	de puntos de probabilidad cero.
+	Independientemente de lo que las operaciones realizan en $u$
+	para obtener $x$ o en $y$ para obtener $v$. No importa como
+	modificamos los d\'igitos binarios para obtener la se\~nal, o
+	como decodificamos la se\~nal recibida para recuperar el
+	mensaje, la tasa discreta para los d\'igitos binarios no
+	excede la capacidad del canal que tenemos definida. Por otra
+	parte, es posible bajo condiciones muy generales encontrar un
+	sistema de codificaci\'on para transmitir d\'igitos binarios
+	en la tasa $C$ con peque\~na equivocaci\'on o frecuencia de
+	errores como se desee. Este es el caso, por ejemplo, si,
+	cuando tomamos un espacio finito de aproximaci\'on para las
+	funciones de las se\~nales, $P(x,y)$ es continuo tanto en $x$
+	como en $y$, excepto en un conjunto de puntos de probabilidad
+	cero.
 	
-	Un caso especial se produce cuando el ruido se a\~nade a la se\~nal y es 
-	independiente de ello (en el sentido de la probabilidad). Entonces $P_{x}(y)$
-	es una funci\'on s\'olo de la diferencia $n = (y-x)$,
-	
+	Un caso especial se produce cuando el ruido se a\~nade a la
+	se\~nal y es independiente de ello (en el sentido de la
+	probabilidad). Entonces $P_{x}(y)$ es una funci\'on s\'olo de
+	la diferencia $n = (y-x)$,
 	\begin{equation}
-		P_{x}(y) = Q(y-x)
+		P_{x}(y) = Q(y-x).
 	\end{equation}
 	
 	%%%%%%%%%%%%% PAGINA 43 ES LA SIGUIENTE %%%%%%%%%%	
 	
 	Meh meh
 	
-	%Ecuacion sin numero
-	\begin{displaymath}
-		x^{2}+y^{2}=h^2
-	\end{displaymath}
-
-	%Ecuacion
-	\begin{equation}
-	\end{equation}
-		p\left ( x_{1},...,x_{n}\right )
-	\end{equation}
-
 	%Ecuacion
 	\begin{equation}
 		{H}'=-\lim_{n\rightarrow \infty }\frac{1}{n}\int \cdots \int p\left ( 							x_{1},...,x_{n}\right ) \log p\left ( x_{1},...,x_{n}\right )dx_{1}...dx_{n}
@@ -217,8 +191,6 @@
 		H=W\log 2\pi eN
 	\end{equation}	
 	
-\end{document}
 
-%BLABLABLA
 
 
