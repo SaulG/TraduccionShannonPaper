@@ -1,5 +1,362 @@
-Hola
+% pp. 32
+
+PARTE III: PRELIMINARES MATEM\'ATICOS
+\newline
+
+En esta entrega final del documento se aborda el caso donde las se\~nales o
+los mensajes, o ambos, son variables continuas, en contraste con la naturaleza
+discreta asumida hasta ahora. En gran medida, el caso continuo puede obtenerse
+a trav\'es de un proceso limitado del caso discreto dividiendo la continuidad
+de mensajes y se\~nales en un n\'umero elevado pero finito de peque\~nas
+regiones y calculando los diferentes par\'ametros que intervienen en una base
+discreta. A medida que el tama\~no de las regiones se disminuye, desde el
+enfoque general, estos par\'ametros limitan los valores adecuados para el caso
+continuo. Sin embargo, hay algunos efectos nuevos que aparecen y tambi\'en un
+cambio general del \'enfasis en la direcci\'on de la especializaci\'on de los
+resultados generales a casos particulares.
+
+No vamos a intentar, en el caso continuo, obtener nuestros resultados con la
+mayor generalidad, o con el rigor extremo de la matem\'atica pura, ya que esto
+implicar\'ia una gran cantidad de teor\'ia de la medida abstracta y
+oscurecer\'ia el hilo principal del an\'alisis. Sin embargo, un estudio
+preliminar indica que la teor\'ia puede ser formulada de una manera
+completamente axiom\'atica y rigurosa que incluye tanto los casos continuos y
+discretos, y muchos otros.
+\newline
+
+% ensembles -> familias
+18. CONJUNTOS Y FAMILIAS DE FUNCIONES
+\newline
+
+Tendremos que hacer frente en el caso continuo con conjuntos de funciones y
+familias de funciones. Un conjunto de funciones, como el nombre implica, es
+simplemente una clase o colecci\'on de funciones, generalmente de una variable,
+el tiempo. Puede ser especificado dando una representaci\'on expl\'icita de las
+diversas funciones en el conjunto, o impl\'icitamente, dando una propiedad cuya
+funci\'on en el conjunto poseen y otros no lo hacen. Algunos ejemplos son:
+
+\begin{enumerate}
+  \item El conjunto de funciones:
+  \begin{equation}
+    f_{\theta}(t) = \sen(t+\theta).
+  \end{equation}
+
+  Cada valor particular de $\theta$ determina una funci\'on particular en el
+  conjunto.
+
+  \item El conjunto de todas las funciones de tiempo no conteniendo frecuencias
+  sobre $W$ ciclos por segundo.
+
+  \item El conjunto de todas las funciones limitadas en banda a $W$ y amplitud
+  en $A$.
+
+  % the set of all English speech signals as functions of time
+  \item El conjunto de todas las se\~nales de habla inglesa como funciones de
+  tiempo.
+\end{enumerate}
+
+Una familia de funciones es un conjunto de funciones junto con una medida de
+probabilidad mediante el cual se puede determinar la probabilidad de una
+funci\'on en el conjunto que tiene ciertas propiedades.\footnote[1]{En
+terminolog\'ia matem\'atica, las funciones pertenecen a un espacio de medida
+cuya medida total es la unidad.} Por ejemplo con el conjunto,
+\begin{equation}
+  f_{\theta}(t) = \sen(t+\theta),
+\end{equation}
+
+podemos tener una distribuci\'on de probabilidad para $\theta$, $P(\theta)$.
+El conjunto se convierte en una familia. Algunos otros ejemplos de familias de
+funciones son:
+
+\begin{enumerate}
+  \item Un conjunto finito de funciones $f_k(t)(k=1, 2, ..., n)$ con la
+  probabilidad de $f_k$ siendo $p_k$.
+
+  \item Una familia de dimensi\'on finita de funciones
+  \begin{equation}
+    f(\alpha_1, \alpha_2, ..., \alpha_n; t)
+  \end{equation}
+
+  con una distribuci\'on de probabilidad sobre los par\'ametros $\alpha_i$:
+  \begin{equation}
+    p(\alpha_1, ..., \alpha_n).
+  \end{equation}
+
+  Por ejemplo podemos considerar la familia definida por
+  \begin{equation}
+    f(a_1, ..., a_n, \theta_1, ..., \theta_n; t) = \sum_{i=1}^{n} a_i \sen
+    i (\omega t + \theta_i)
+  \end{equation}
+
+  con las amplitudes $a_i$ distribuidas normalmente e independientemente, y
+  las fases $\theta_i$ distribuidas uniformemente (desde 0 a $2\pi$) e
+  independientemente.
+
+  % pp. 33
+
+  \item La familia
+  \begin{equation}
+    f(a_i, t) = \sum_{n=-\infty}^{+\infty} a_n \frac{\sen\pi(2Wt-n)}{\pi(2Wt-n)}
+  \end{equation}
+
+  con la $a_i$ normal e independiente todas con la misma desviaci\'on
+  est\'andar $\sqrt{N}$. Esta es una representaci\'on de ruido ''blanco'',
+  banda limitada a la banda de 0 a $W$ ciclos por segundo y con potencia media
+  de $N$.\footnote[2]{Esta representaci\'on puede ser utilizada como una
+  definici\'on de banda de ruido blanco limitada. Esto tiene ciertas ventajas
+  que implican un menor n\'umero de operaciones limitantes que usan definiciones
+  que se han utilizado en el pasado. El nombre de ''ruido blanco'', ya
+  firmemente arraigada en la literatura, es tal vez un poco desafortunado. En
+  \'optica, luz blanca significa cualquier espectro continuo en contraste con
+  un espectro de punto, o un espectro que es plano con una {\em longitud de
+  onda} (que no es el mismo que un espectro plano con frecuencia).}
+
+  \item Los puntos se distribuir\'an en el eje $t$ de acuerdo con una
+  distribuci\'on de Poisson. En cada punto seleccionado la funci\'on $f(t)$ es
+  colocada y las diferentes funciones agregadas, dando la familia
+  \begin{equation}
+    \sum_{k=-\infty}^{\infty} f(t+t_k)
+  \end{equation}
+
+  donde los $t_k$ son los puntos de la distribuci\'on Poisson. Esta familia
+  puede ser considerada como un tipo de impulso o disparo de ruido donde todos
+  los impulsos son id\'enticos.
+
+  % the set of English speech functions
+  \item El conjunto de todas las funciones de habla inglesa con la medida de
+  probabilidad dada por la frecuencia de ocurrencia en el uso ordinario.
+\end{enumerate}
+
+Una {\em familia} de funciones $f_{\alpha}(t)$ es {\em estacionaria} si la misma
+familia resulta cuando todas las funciones son desplazadas una cantidad fija de
+tiempo. La familia
+\begin{equation}
+  f_{\theta}(t) = \sen(t+\theta)
+\end{equation}
+
+es estacionario si $\theta$ es distribuido uniformemente desde 0 a $2\pi$. Si
+desplazamos cada funci\'on en $t_1$ obtenemos
+\begin{equation}
+  f_{\theta}(t+t_1) = \sen(t+t_1+\theta)
+\end{equation}
 
 \begin{equation}
-a = b + 2
+  f_{\theta}(t+t_1) = \sen(t+\varphi)
 \end{equation}
+
+con $\varphi$ distribuida uniformemente desde 0 a $2\pi$. Cada funci\'on ha
+cambiado, pero la familia como un todo es invariante por el desplazamiento.
+Los otros ejemplos dados anteriormente son tambi\'en estacionarios.
+
+Una familia es {\em erg\'odica} si es estacionaria, y no existe un subconjunto
+de las funciones en el conjunto con una probabilidad distinta de 0 y 1 que es
+estacionaria. La familia
+\begin{equation}
+  \sen(t+\theta)
+\end{equation}
+
+es erg\'odica. Ning\'un subconjunto de estas funciones de probabilidad
+$\neq0,1$ se transforma en s\'i mismo bajo todos los desplazamientos en el
+tiempo. Por otra parte la familia
+\begin{equation}
+  a \sen(t+\theta)
+\end{equation}
+
+con $a$ distribuida normalmente y $\theta$ uniformemente, es estacionaria pero
+no erg\'odica. El subconjunto de estas funciones con $a$ entre 0 y 1, por
+ejemplo, es estacionario.
+
+De los ejemplos dados, el 3 y 4 son erg\'odicos, y el 5 puede quiz\'as ser
+considerado as\'i. Si una familia es erg\'odica, podemos decir que
+aproximadamente cada funci\'on en el conjunto es t\'ipico de la familia.
+
+M\'as precisamente, se sabe que con un conjunto erg\'odico un promedio de
+cualquier estad\'istica sobre el conjunto es igual (con una probabilidad de 1)
+a un promedio sobre los desplazamientos de tiempo de una funci\'on particular
+del conjunto.\footnote[3]{Este es el famoso teorema erg\'odico o m\'as bien un
+aspecto de este teorema que fue demostrado en formulaciones algo diferentes por
+Birkoff, von Neumann, y Koopman, y posteriormente generalizada por Wiener, Hopf,
+Hurewicz y otros. La literatura sobre la teor\'ia erg\'odica es bastante extensa
+y se remite al lector a los trabajos de estos autores para formulaciones
+precisas y generales; por ejemplo, E. Hopf, ''Ergodentheorie,'' {\em Ergebnisse
+der Mathematik und ihrer Grenzgebiete}, v. 5; ''On Causality Statistics and
+Probability,'' {\em Journal of Mathematics and Physics}, v. XIII, No. 1, 1934;
+N. Wiener, ''The Ergodic Theorem,'' {\em Duke Mathematical Journal}, v. 5,
+1939.} En t\'erminos generales, en cada funci\'on se puede esperar que, a medida
+que avanza el tiempo, pase con la frecuencia adecuada todas las convoluciones de
+cualquiera de las funciones en el conjunto.
+
+% pp. 34
+
+Del mismo modo que se pueden realizar diversas operaciones sobre los n\'umeros o
+funciones para obtener nuevos n\'umeros o funciones, podemos realizar
+operaciones sobre familias para obtener nuevas familias. Supongamos por ejemplo
+que tenemos una familia de funciones $f_{\alpha}(t)$ y un operador $T$ que nos
+da por cada funci\'on $f_{\alpha}(t)$ una funci\'on resultante $g_{\alpha}(t)$:
+\begin{equation}
+  g_{\alpha}(t) = Tf_{\alpha}(t).
+\end{equation}
+
+La medida de probabilidad se define por el conjunto de $g_{\alpha}(t)$ por
+medio del conjunto $f_{\alpha}(t)$. La probabilidad de un cierto subconjunto de
+las funciones $g_{\alpha}(t)$ es igual a la del subconjunto de las funciones
+$f_{\alpha}(t)$ que producen los miembros del subconjunto dado de funciones $g$
+bajo la operaci\'on $T$. F\'isicamente esto corresponde al pasar el conjunto a
+trav\'es de alg\'un dispositivo, por ejemplo, un filtro, un rectificador o un
+modulador. Las funciones de salida del dispositivo forman la familia
+$g_{\alpha}(t)$.
+
+Un dispositivo u operador $T$ se llama invariante si desplazando la entrada
+simplemente se desplaza la salida, es decir, si
+\begin{equation}
+  g_{\alpha}(t) = Tf_{\alpha}(t)
+\end{equation}
+
+implica
+\begin{equation}
+  g_{\alpha}(t+t_1) = Tf_{\alpha}(t+t_1)
+\end{equation}
+
+para toda $f_{\alpha}(t)$ y toda $t_1$. Esto es f\'acilmente demostrado (ver
+Ap\'endice 5) que si $T$ es invariante y la familia de entrada es estacionaria,
+luego la familia de salida es estacionaria. Del mismo modo, si la entrada es
+erg\'odica, la salida tambi\'en ser\'a erg\'odica.
+
+Un filtro o un rectificador es invariante bajo todos los desplazamientos de
+tiempo. La operaci\'on de modulaci\'on no es desde la fase portadora que
+proporciona una estructura de tiempo determinado. Sin embargo, la modulaci\'on
+es invariante bajo todos los desplazamientos que son m\'ultiplos del per\'iodo
+del portador.
+
+Wiener ha se\~nalado la \'intima relaci\'on entre la invariancia de dispositivos
+f\'isicos en desplazamientos en tiempo y la teor\'ia de Fourier.\footnote[4]{La
+teor\'ia de la comunicaci\'on est\'a muy en deuda con Wiener por gran parte de
+su filosof\'ia y teor\'ia. Su art\'iculo cl\'asico NDRC, {\em The Interpolation,
+Extrapolation and Smoothing of Stationary Time Series} (Wiley, 1949), contiene
+la primera formulaci\'on clara de la teor\'ia de la comunicaci\'on como un
+problema estad\'istico, el estudio de las operaciones en series de tiempo. Este
+trabajo, aunque ocupa principalmente de la predicci\'on lineal y el problema de
+filtraci\'on, es una referencia colateral importante en relaci\'on con el
+presente documento. Tambi\'en podemos referirnos aqu\'i a {\em Wiener's
+Cybernetics} (Wiley, 1948), que trata de los problemas generales de
+comunicaci\'on y control.} De hecho, \'el ha demostrado que si un dispositivo es
+lineal, as\'i como el invariante an\'alisis de Fourier, es entonces la
+herramienta matem\'atica adecuada para tratar con el problema.
+
+Una familia de funciones es la representaci\'on matem\'atica adecuada de los
+mensajes producidos por una fuente continua (por ejemplo, el habla), de las
+se\~nales producidas por un transmisor, y el del ruido perturbador. La teor\'ia
+de la comunicaci\'on se interesa espec\'ificamente, como se ha enfatizado por
+Wiener, no con las operaciones en funciones particulares, pero con las
+operaciones sobre familias de funciones. Un sistema de comunicaci\'on no
+est\'a dise\~nado para una funci\'on de habla particular y menos a\'un para una
+onda sinusoidal, pero si para la familia de las funciones del habla.
+\newline
+
+% band limited ensembles of functions
+19. FUNCIONES DE FAMILIAS CON BANDA LIMITADA
+\newline
+
+Si la funci\'on de tiempo $f(t)$ es limitada a la banda de 0 a $W$ ciclos por
+segundo, este es completamente determinado dando sus ordenadas en una serie de
+puntos discretos espaciados $\frac{1}{2W}$ segundos aparte de la manera indicada
+por el siguiente resultado.\footnote[5]{Para una demostraci\'on de este teorema
+y discusi\'on adicional, v\'ease el art\'iculo del autor ''Communication in the
+Presence of Noise'' publicado en {\em Proceedings of the Institute of Radio
+Engineers}, v. 37, No. 1, Enero, 1949, pp. 10-21.}
+
+{\em Teorema 13:} No dejar que $f(t)$ contenga frecuencias por encima de $W$.
+Entonces
+\begin{equation}
+  f(t) = \sum_{-\infty}^{\infty} X_n \frac{\sen \pi(2Wt-n)}{\pi(2Wt-n)}
+\end{equation}
+
+donde
+\begin{equation}
+  X_n = f\left(\frac{n}{2W} \right).
+\end{equation}
+
+% pp. 35
+
+En esta expansi\'on $f(t)$ es representada como una suma de funciones
+ortogonales. El coeficiente $X_n$ de los diversos t\'erminos puede considerar
+como coordenadas en una dimensi\'on infinita ''espacio funcional''. En este
+espacio cada funci\'on corresponde precisamente un punto y cada punto a una
+funci\'on.
+
+Una funci\'on puede ser considerada para estar sustancialmente limitada a un
+tiempo $T$ si todas las ordenadas $X_n$ fuera de este intervalo de tiempo es
+cero. En este caso todo pero $2TW$ de las coordenadas ser\'ian cero. As\'i
+funciones limitadas a una banda $W$ y duraci\'on $T$ corresponden a puntos en
+un espacio de $2TW$ dimensiones.
+
+Un subconjunto de funciones de banda $W$ y duraci\'on $T$ corresponde a una
+regi\'on en este espacio. Por ejemplo, las funciones cuya energ\'ia total es
+menor que o igual a $E$ corresponden a puntos en una esfera dimensional $2WT$
+con radio $r=\sqrt{2WE}$.
+
+Una familia de funciones de duraci\'on limitada y la banda representada por una
+distribuci\'on de probabilidad $p(x_1, ..., x_n)$ en el correspondiente espacio
+$n$ dimensional. Si la familia no est\'a limitada en el tiempo se pueden
+considerar las coordenadas $2TW$ en un intervalo $T$ para representar
+sustancialmente la parte de la funci\'on en el intervalo $T$ y la distribuci\'on
+de probabilidad $p(x_1, ..., x_n)$ para dar la estructura estad\'istica de la
+familia para intervalos de esa duraci\'on.
+\newline
+
+20. ENTROP\'IA DE UNA DISTRIBUCI\'ON CONTINUA
+\newline
+
+La entrop\'ia de un conjunto discreto de probabilidades $p_1, ..., p_n$ ha sido
+definido como:
+\begin{equation}
+  H = -\sum p_i \log p_i.
+\end{equation}
+
+% ... with the density distribution function ...
+De manera an\'aloga se define la entrop\'ia de una distribuci\'on continua con
+la densidad de la funci\'on de distribución $p(x)$ por:
+\begin{equation}
+  H = -\int_{-\infty}^{\infty} p(x) \log p(x)dx.
+\end{equation}
+
+Con una distribuci\'on $n$ dimensional $p(x_1, ..., x_n)$ tenemos
+\begin{equation}
+  H = -\int \cdots \int p(x_1, ..., x_n) \log p(x_1, ..., x_n)dx_1 \cdots dx_n.
+\end{equation}
+
+Si tenemos dos argumentos $x$ y $y$ (que pueden ser ellos mismos
+multidimensionales) las entrop\'ias conjuntas y condicionales de $p(x, y)$
+est\'an dadas por
+\begin{equation}
+  H(x, y) = -\iint p(x, y) \log p(x, y)dxdy
+\end{equation}
+
+y
+\begin{equation}
+  H_x(y) = -\iint p(x, y) \log \frac{p(x, y)}{p(x)} dxdy
+\end{equation}
+
+\begin{equation}
+  H_y(x) = -\iint p(x, y) \log \frac{p(x, y)}{p(y)} dxdy
+\end{equation}
+
+donde
+\begin{equation}
+  p(x) = \int p(x, y)dy
+\end{equation}
+
+\begin{equation}
+  p(y) = \int p(x, y)dx.
+\end{equation}
+
+Las entrop\'ias de distribuciones continuas tienen la mayor\'ia (pero no todos)
+las propiedades del caso discreto. En particular, tenemos lo siguiente:
+
+\begin{enumerate}
+  \item Si $x$ es limitado a un cierto volumen $v$ en su espacio, entonces
+  $H(x)$ es un m\'aximo e igual a $\log v$ cuando $p(x)$ es constante
+  $(1/v)$ en el volumen.
+\end{enumerate}
+
+% lista numerada continua en las siguientes paginas
