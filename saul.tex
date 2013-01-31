@@ -1,4 +1,222 @@
-Hello world!
+Una Teoría matemática de la comunicación
+
+por C.E. SHANNON
+
+INTRODUCCION
+
+El reciente desarrollo de varios metodos de modulación como PCM y PPM
+el cual intercambio el ancho de banda por señal a ruido ha
+intensificado el interes general de la teoría de la comunicación. A
+base de esta teoría se encuentra en los papeles importantes
+Nyquist(subindice 1) y Hartley(subindice 2) sobre este tema. 
+
+En el presente artículo se extiende la teoría a incluir un número de
+nuevos factor, en particular el efecto del sonido en un canal, y los
+ahorros posibles debido a la estructura estadística del mensaje
+original y a la naturaleza del destino final de la información. El
+problema fundamental de la comunicación es el de reproducir en un
+momento exacto o aproximado un mensaje seleccionado en otro punto.
+
+Frecuentemente los mensajes tienen un significado; es decir que
+refieren o están correlacionados de acuerdo con algún sistema con
+ciertas entidades físicas o conceptuales. Estos aspectos semanticos de
+la comunicación son irrelevantes a el problema de ingeniería. 
+
+El significante aspecto es que el actual mensaje es uno de los
+seleccionados desde un conjunto de posibles mensajes. El sistema debe
+estar diseñado para operar por cada selección posible, no solamente
+por el
+único que ha sido escogido ya que es desconocido en el momento del
+diseño.
+
+Sí el número de mensajes en el conjunto es finito entonces el numero o
+cualquier función monótico de este número puede ser considerado como
+una medida de la información producida cuando un mensaje es escogido
+de un conjunto, todas las opciones son igualmente probables. 
+
+Como se ha señalado por Hartley la opción mas natural es la función
+logarítmica. Aunque esta definición debe ser generalizado
+consideradamente cuando se cuenta la influencia de las estadísticas
+del mensaje y cuando tenemos un rango continuo de mensajes, vamos a
+utilizar en todos los casos una medida esencialmente logarítmica.
+
+La medida logarítmica es más conveniente por varias razones:
+
+1. Es practicamente muy útil. Parámetros importantes utilizados en la
+ingeniería como el tiempo, ancho de banda, número de pasos, etc.,
+tiende a variar linealmente con el logarítmo de número de
+posibilidades. Por ejemplo, agregando un paso a un grupo dobla el
+número de posible estado de pasos. Eso agrega 1 a la base 2 del
+logarítmo de este número. Duplicando el tiempo aproximadamente hace
+que el número de cuadrados posibles, o duplicando el logarítmo, etc.
+
+2. Es más cerca a nuestro sentimiento intuitivo en cuanto a la medidad
+adecuada. Esto es cercanamente relacionado desde que medimos
+intuitivamente entidades por una comparación lineal con estándares
+comúnes.[?] Un sentimiento, por ejemplo, cuando perforas dos cartas
+deberían tener el doble de la capacidad de uno para la transmisión de
+información.[?]
+
+3. Es matemáticamente más adecuado. Muchas de las operaciones que
+limitan son simples en términos de el logarítmo pero requeriría
+reemplantamiento descuidado en términos del número de posibilidades.
+
+
+La selección de la base del logarítmo corresponde a la selección de la
+unidad para medir la información. Sí la base 2 es usado, las unidades
+resultantes podrían ser llamados digitos binarios, o más brevemente
+bits, una palabra sugerida por J.W. Tukey. Un dispositivo con dos
+posiciones estables, como lo es un número de paso o un circuito
+flip-flop, pueden almacenar un bit de información. N dispositivos
+pueden almacenar N bits, desde que el número total de posibles estados
+es 2ˆN y log_2*2ˆN = N. Sí la base 10 es usada las unidades podrían
+ser llamados dígitos decimales. Desde
+
+    log_2 M = log_10 M / log_10ˆ2
+          = 3.32 log_10 M,
+
+[Imagen] Fig. 1 [Imagen]
+
+un dígito decimal es alrededor de 3 1/3 bits. Una rueda dígital en una
+computadora de escritorio tiene 10 posiciones estables y por lo tanto,
+tiene una capacidad de almacenamiento de un dígito decimal. En trabajo
+analitico donde la integración y la diferenciación estan envueltos en
+base e es algunas veces conveniente. Las unidades resultantes de
+información serían llamados unidades naturales. El cambio de base a a
+base b simplemene requiere la multiplicación por log_b * a.
+
+Por un sistema de comunicación se quiere decir que es un sistema de un
+tipo indicado esquematicamente en la Fig. 1. Eso consiste de cinco
+partes esenciales:
+
+1. La fuente de información el cual produces el mensaje o secuencia de
+mensajes a ser comunicado a la terminal que recibe. El mensaje puede
+ser de varios tipos: (a) Una secuencia de letras como un sistem de
+telegrafo de teletipo; (b) Una sola función de tiempo f(t) como un
+radio o telefonía; (c) Una función de tiempo y otras variables como
+televisión en blanco y negro --- aquí el mensaje podría pasar a traves
+de una función f(x,y,t) de dos espacios de coordenadas y tiempo, la
+intensidad de la luz en el punto (x, y) y el tiempo t sobre un tubo en
+la placa; (d) Dos o más funciones de tiempo, digames f(t), g(t), h(t)
+--  este es el caso en ``Tres dimensional'' transmisión de sonido o si
+el
+sistema está diseñado para dar servicio a varios canales individuales
+en multiplex; (e) Varias funciones de varias variables -- en la
+televisión a color el mensaje consiste en tres funciones f(x,y,t),
+g(x,y,t),h(x,y,t) definido en tres dimensiones continuas -- también se
+podría pensar que esas tres funciones como componentes de un campo
+vectorial definido en una región -- de manera similar, distintas
+fuentes de televisiones en blanco y negro podrían producir
+``mensajes''
+que consisten en un número de funciones de tres variables; (f)
+Diversas combinaciones también se producen , por ejemplo, en la
+televisión con un canal de audio asociado.
+
+2. Un transmisor que opera en el mensaje de alguna manera para
+producir una señal adecuada para la transmisión sobre el canal. En la
+telefonía esta operación consiste simplemente en el cambio de presión
+de sonido en una corriente eléctrica proporcional. En la telegrafía
+tenemos una operación de codificación que produce una secuencia de
+puntos, guiones y espacios en el canal correspondiente al mensaje. En
+un sistema multiplex PCM las diferentes funciones de voz deben tomar
+muestras, compresiones, cuantificada y codificada, y finalmente
+intercalados adecuadamente para construir la señal. Sistemas de
+vodocoder, la televisión y la modulación de frecuencia son ejemplos de
+operaciones complejas aplicadas a los mensajes para obtener la señal.
+
+3. El canal es simplemente el medio usado para transmitir la señal
+desde un transmitor a un receptor. Eso podría ser un par de cables, un
+cable coazial, una radio frecuencia, un rayo de luz, etc.
+
+4. El receptor ordinalmente hace la operación inversa de lo que ya
+esta hecho por el transmitor, reconstruye el mensaje desde la señal.
+
+5. La destinación es la persona (o cosa) hacia quien el mensaje es
+enviado.
+
+ Se desearía considerar ciertos problemas generales envueltos en el
+ sistema de comunicación. Para hacer esto es necesario representar
+ varios elementos envueltos como lo son las entidades matematicas,
+ adecuadamente idealizada desde sus contrapartes físicas.
+
+//Checar
+A grandes rasgos se pueden clasificar los sistemas de comunicación en
+tres categorías principales: los discretes, continuos y mixtos. Por un
+sistema discreto se quiere decir que en tanto el mensaje como la señal
+son una secuencia de simbolos discretos. Un caso típico es la
+telegrafía donde el mensaje es una secuencia de letras y la señal de
+una secuencia de puntos, guiones y espacios. Un sistema continuo es
+aqul en el que están tanto el mensaje como señal tratadas como
+funciones continuas, por ejemplo, la radio o la televisión. Un sistema
+mixto es una en la que tanto las variables discretas y continuas
+aparecen, por ejemplo, la transmisión PCM de voz. Consideremos en
+primer lugar el caso discreto. Este caso tiene aplicaciones no sólo en
+teoría de la comunicación, sino también en la teoría de las máquinas
+de computación, el diseño de las centrales telefónicas y otros campos.
+Además el caso discreto crea una base para los casos continuos mixtos
+que serán tratadas en la segunda mitad del papel.//Checar
+
+PARTE I: Sistemas discretos silenciosos
+
+1. El canal discreto silencioso
+
+Teletipo y telegrafía son dos simples ejemplos de un canal discreto
+para la transmisión de información. Generalmente, con un canal
+discreto queremos decir que es un sistema, por lo cual una secuencia
+de selecciones desde un conjunto de simbolos elementarios S1,..., Sn
+puede ser transmitido desde un punto a otro. Cada uno de los simboos
+Si es  asumido a tener una cierta duración en tiempo ti segundos (no
+es necesariamente el mismo por cada Si, por ejemplo los puntos y
+guiones. Es no requerido que todas las posibles secuencias de Si sean
+capaces de hacer transmisión en el sistema; ciertas secuencias deben
+ser permitidas. Esos serían posibles señales por canal. Supongamos que
+en el telegrafo que los simbolos son: (1) Un punto, que consta de un
+cierre de línea para una unidad de tiempo y, a continuación de línea
+abierta para una unidad de tiempo; (2) Un guión, consta de tres
+unidades de tiempo de cierre y una unidad abierta; (3) Un espacio de
+palabra de seis unidades de línea abierta. Se podría colocar la
+restricción de secuencias permisibles que no hay espacios siguen uno a
+otro (por si dos espacios de letras son adyacentes, es idéntico con un
+espacio de palabra). La pregunta que ahora cuenta es cómo se puede
+medir la capacidad de un canal de transmitir información.
+
+En el caso del teletipo donde todos los simbolos son de la misma
+duración, y cualquier secuencia de 32 simbolos se permite y la
+respuesta es fácil. Cada simbolo representa cinco bits de información.
+Si transmite el sistema de N simbolos por segundo, es natural decir
+que el canal tiene una capacidad de bits por segundo 5 n. Esto no
+significa que el canal del teletipo siempre será la transmisión de
+información a este ritmo - esta es la tasa máxima posible y si o no la
+tasa real alcanza este máximo depende de la fuente de información que
+alimenta el canal, como se verá más adelante. En el caso más general,
+con diferentes longitudes de los simbolos y las limitaciones en las
+secuencias permitidas, hacemos la siguiente definición.
+
+Definición: La capacidada C de un canal discreto es dado por
+
+            C = Lim         logN(T)/T
+                T->infinito
+
+donde N(T) es el numero de señales permitidas de duración T.
+
+Es facilmente visto que en el caso de teletipo es reducido hacía el
+resultado previo. Puede ser demostrado que el limite en cuestion
+existe como un numero finito en la mayoría de los casos de interes.
+Supongamos que todas las secuencias de simbolos S1, ..., Sn son
+permitidos y esos simbolos tienen una duración t1,...,tn. Cuál es la
+capacidad del canal? Si N(t) representa el número de secuencias de
+duración t, nosotros tenemos:
+
+         N(t) = N(t-t1) + N(t-t2) + ... +N(t-tn).
+
+El número tota es equivalente a la suma de número de secuencias
+terminando en S1, S2,...,Sn y esos son N(t-t1), N(t-t2),...,N(t-tn),
+respectivamente. Acorde a un buen resultado en diferencias finitas,
+N(t) es entonces asintotica para un largo t a Xt_0 donde X0 es la
+solución real de la ecuación característica:
+
+         X-t1 + X-t2 + ... + X-tn = 1
+
 \begin{equation}
 8 \leq 10 \approx \, \text{True} \, \pi \Lambda
 \end{equation}
