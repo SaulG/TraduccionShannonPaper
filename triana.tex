@@ -177,8 +177,112 @@
 	
 	%%%%%%%%%%%%% PAGINA 43 ES LA SIGUIENTE %%%%%%%%%%	
 	
+	y nosotros podemos asignar una entrop\'ia definida al ruido (independientemente de 
+	las estad\'isticas de la se\~nal), es decir, la entrop\'ia de la distribuci\'on
+	$Q(n)$. Esta entrop\'ia se denotar\'a por $H(n)$.
+	
+	\begin{em}
+		Teorema 16: Si la se\~nal y el ruido son independientes y la se\~nal recibida
+		es la suma de se\~nal transmitida y el ruido entonces la tasa de transmisi\'on es
+	\end{em}
+	
+	\begin{equation}
+		R = H(y) - H(n),
+	\end{equation}
+	
+	es decir, la entrop\'ia de la se\~nal recibida menos la entrop\'ia del ruido. La
+	capacidad del canal es
+	
+	\begin{equation}
+		C = \limsup_{P(x)} H(y) - H(n)
+	\end{equation}
+	
+	Tenemos, desde $y = x+n$
+	
+	\begin{equation}
+		H(x,y) = H(x,n).
+	\end{equation}
+	
+	Expandiendo el lado izquierdo y utilizando el hecho de que $x$ y $n$ son independientes
+	
+	\begin{equation}
+		H(y) + H_{y}(x) = H(x) + H(n).
+	\end{equation}
+	
+	Por lo tanto
+	
+	\begin{equation}
+		R = H(x) - H_{y}(x) = H(y) - H(n).
+	\end{equation}
+	
+	Puesto que $H(n)$ es independiente de $P(x)$, maximizando R requiere maximizar $H(y)$,
+	la entrop\'ia de la se\~nal recibida. Si existen ciertas restricciones en el conjunto
+	de las se\~nales transmitidas, la entrop\'ia de la se\~nal recibida debe ser maximizada
+	sujeto a esas restricciones.
+	
+	\bigskip
+	25. CAPACIDAD DE LA SE\~NAL  CON UNA LIMITACI\'ON DE POTENCIA MEDIA
+	\bigskip	
+	
+	Una sencilla aplicaci\'on del teorema 16 es el caso cuando el ruido es un ruido
+	t\'ermico blanco y las se\~nales transmitidas est\'an limitadas a un cierto 
+	promedio de potencia $P$. Luego las se\~nales recibidas tienen una potencia media
+	$P + N$ donde $N$ es la potencia media del ruido. La entrop\'ia m\'axima para las
+	se\~nales recibidas se produce cuando tambi\'en forman un ruido blanco ya que 
+	es la entrop\'ia mayor posible para una potencia $P + N$ y puede obtenerse mediante
+	una elecci\'on adecuada de las se\~nales transmitidas, a saber, si forman un conjunto
+	de ruido blanco de potencia $P$. La entrop\'ia (por segundo) del conjunto recibido es luego
+	
+	\begin{equation}
+		H(y) = W\log 2\pi e(P+N),
+	\end{equation}
+	
+	Y la entrop\'ia de ruido es
+	
+	\begin{equation}
+		H(n) = W\log 2\pi eN.
+	\end{equation}
+	
+	La capacidad del canal es
+	
+	\begin{equation}
+		C = H(y) - H(n) = W\log \frac{P + N}{N}.
+	\end{equation}
+	
+	Resumiendo tenemos lo siguiente:
+	
+	Teorema 17: La capacidad de un canal de banda $W$ de potencia perturbada por el ruido
+	t\'ermico blanco $N$ cuando la potencia de transmisi\'on media se limita a $P$ viene
+	dada por
+	
+	\begin{equation}
+		C = W\log \frac{P + N}{N}.
+	\end{equation}
+	
+	Esto significa que por sistemas de codificaci\'on suficientemente implicados se puede
+	transmitir d\'igitos binarios a la tasa $W \log_{2}\frac{P + N}{N}$ bits por segundo,
+	con arbitrariamente peque\~na frecuencia de errores. No es posible transmitir a una
+	velocidad mayor por cualquier sistema de codificaci\'on sin una frecuencia
+	definida positiva de errores.
+	
+	Para aproximar esta limitaci\'on de la tasa de transmisi\'on, las se\~nales transmitidas
+	deben aproximarse, en propiedades estad\'isticas, un ruido blanco. Un sistema que se 
+	aproxima a la tasa ideal puede ser descrito como sigue: Sea $M = 2^s$
+	
+	%%%%%%%%%%%%%% SIGUE LA PAGINA 44
 	Meh meh
 	
+	%Ecuacion sin numero
+	\begin{displaymath}
+		x^{2}+y^{2}=h^2
+	\end{displaymath}
+
+	%Ecuacion
+	\begin{equation}
+	\end{equation}
+		p\left ( x_{1},...,x_{n}\right )
+	\end{equation}
+
 	%Ecuacion
 	\begin{equation}
 		{H}'=-\lim_{n\rightarrow \infty }\frac{1}{n}\int \cdots \int p\left ( 							x_{1},...,x_{n}\right ) \log p\left ( x_{1},...,x_{n}\right )dx_{1}...dx_{n}
@@ -189,7 +293,7 @@
 		{H}'=\log \sqrt{2\pi eN}
 		\newline
 		H=W\log 2\pi eN
-	\end{equation}	
+	\end{equation}		
 	
 
 
