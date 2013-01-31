@@ -3,12 +3,12 @@
 En el caso de una fuente continua de informaci\'on nos fue posible
 determinar una definida tasa de generaci\'on de informaci\'on, esta es
 la entrop\'ia del proceso estoc\'astico subyacente. Con una continua
-fuente, la situaci\'on es m\'as complicada.  En primer lugar, una
+fuente, la situaci\'on es m\'as complicada. En primer lugar, una
 cantidad continuamente variable puede ser asumida como un n\'umero
 infinito de valores y por lo tanto requiere un n\'umero infinito de
 d\'igitos binarios para su especificaci\'on exacta. Esto significa que
 para transmitir la salida de una fuente continua con una {\em
-  recuperaci\'on exacta} en el punto de recepci\'on, requiere
+ recuperaci\'on exacta} en el punto de recepci\'on, requiere
 generalmente un canal de capacidad infinita (en bits por
 segundo). Debido a que, ordinariamente, los canales tienen una cierta
 cantidad de ruido, y por lo tanto una capacidad finita, la
@@ -19,7 +19,7 @@ no estamos interesados en transmisi\'on exacta cuando tenemos una
 fuente continua, sino solamente en la transmisi\'on dentro de una
 cierta tolerancia. La cuesti\'on es si podemos asignar una tasa
 definida a una fuente continua cuando requerimos solamente una cierta
-fidelidad de recuperaci\'on, medida en una forma adecuada.  Claro, a
+fidelidad de recuperaci\'on, medida en una forma adecuada. Claro, a
 como los requerimientos de fidelidad sean incrementados la tasa se
 incrementar\'a de igual manera. Ser\'a mostrado que podemos, en casos
 muy generales, definir tal tasa, teniendo la propiedad de que es
@@ -53,13 +53,13 @@ equivalente. Esto significa que el criterio de fidelidad puede ser
 representado mediante una funci\'on n\'umericamente valuada.
 \begin{equation} v(P(x,y)) \end{equation}
 cuyos argumentos van m\'as all\'a de las posibles funciones de
-probabilidad $P(x,y)$.  Ahora mostraremos que bajo suposiciones muy
+probabilidad $P(x,y)$. Ahora mostraremos que bajo suposiciones muy
 generales y razonables, la funci\'on $v(P(x,y))$ puede ser escrita en
 una forma aparentemente mucho m\'as especializada, esta siendo un
 promedio de una funci\'on $\rho(x,y)$ sobre el conjunto de valores
 posibles de $x$ y $y$:
 \begin{equation} 
-v(P(x,y)) = \int \int P(x,y) \rho(x,y) \diff x   \diff y . 
+v(P(x,y)) = \int \int P(x,y) \rho(x,y) \diff x  \diff y . 
 \end{equation}
 Para obtener esto necesitamos solamente asumir (1) que la fuente y el
 sistema son erg\'odicos as\'i que una muestra muy larga ser\'a,
@@ -69,18 +69,18 @@ observaci\'on de una tipica entrada y salida $x_{1}$ y $y_{1}$, formar
 la evaluaci\'on tentativa en la base de esas muestra; y si estas
 muestras son incrementadas en duraci\'on la evaluaci\'on tentativa,
 con probabilidad 1, se acercar\'a a la evaluaci\'on exacta basada en
-un total conocimiento de $P(x, y)$.  Digamos que la evaluaci\'on
+un total conocimiento de $P(x, y)$. Digamos que la evaluaci\'on
 tentativa es $\rho(x, y)$. Entonces la funci\'on $\rho(x, y)$ se
 acerca (como $T \rightarrow \infty$) a una constante para la mayor\'ia
 (x,y) los cuales est\'an en la regi\'on altamente probable
 correspondiente al sistema:
 \begin{equation} \rho(x, y) \rightarrow v(P(x, y)) \end{equation}
 y tambi\'en podemos escribir
-\begin{equation} \rho(x, y) \rightarrow \int \int P(x,y)\rho(x, y)  \diff x   \diff y  \end{equation}
+\begin{equation} \rho(x, y) \rightarrow \int \int P(x,y)\rho(x, y) \diff x  \diff y \end{equation}
 debido a que
-\begin{equation} \int \int P(x, y)  \diff x   \diff y  = 1 \end{equation}
-Esto establece el resultado deseado.  La funci\'on $\rho(x, y)$ tiene
-la naturaleza general de una "distancia" entre $x$ y $y^{9}$.  Mide
+\begin{equation} \int \int P(x, y) \diff x  \diff y = 1 \end{equation}
+Esto establece el resultado deseado. La funci\'on $\rho(x, y)$ tiene
+la naturaleza general de una "distancia" entre $x$ y $y^{9}$. Mide
 que tan indeseable es (de acuerdo a nuestro criterio de fidelidad)
 recibir $y$ mientras $x$ es transmitido. El resultado general dado
 anteriormente puede ser expresado como sigue: Cualquier evaluaci\'on
@@ -89,8 +89,8 @@ distancia sobre el conjunto de mensajes y mensajes recuperados $x$ y
 $y$ ponderados de acuerdo a la probabilidad $P(x, y)$ de obtener el
 par en cuesti\'on, siempre que la duraci\'on $T$ de los mensajes sea
 suficientemente larga. \footnote{No es ``m\'etrica'' en el sentido
-  estricto, ya que en general no satisface uno u otro ya sea:
-  $\rho(x,y) = \rho(y,x)$ o: $\rho(x,y) + \rho(y,z) \geq \rho(x,x)$.}
+ estricto, ya que en general no satisface uno u otro ya sea:
+ $\rho(x,y) = \rho(y,x)$ o: $\rho(x,y) + \rho(y,z) \geq \rho(x,x)$.}
 
 \begin{enumerate}
 \item{Criterio R.M.S. 
@@ -99,7 +99,7 @@ En esta medida de fidelidad muy com\'unmente usada, la funci\'on de
 distancia $\rho(x,y)$ es (aparte de un factor constante) el cuadrado
 de la distancia Euclidiana ordinaria entre los puntos $x$ y $y$ en la
 funci\'on espacio asociada.
-\begin{equation} \rho(x, y) = \frac{1}{T} \int_0^T  [x(t) - y(t)]^{2}  \diff t  \end{equation}}
+\begin{equation} \rho(x, y) = \frac{1}{T} \int_0^T [x(t) - y(t)]^{2} \diff t \end{equation}}
 \item{Criterio R.M.S. con frecuencia ponderada. M\'as generalmente uno puede
 aplicar diferentes ponderaciones a los diferentes componentes de frecuencia
 antes de usar una medici\'on de fidelidad R.M.S. Esto es el equivalente a pasar
@@ -108,27 +108,35 @@ determinar la potencia promedio en la salida.
 As\'i, sea 
 \begin{equation} e(t) = x(t) - y(t) \end{equation}
 y
-\begin{equation} f(t) = \int_-\infty^\infty   \epsilon(\Theta)k(t - \Theta) d\Theta \end{equation}
+\begin{equation} f(t) = \int_-\infty^\infty  \epsilon(\Theta)k(t - \Theta) 
+\diff \Theta \end{equation}
 entonces
-\begin{equation} \rho (x, y) = \frac{1}{T} \int_0^T f(t)^{2}  \diff t  \end{equation}}
+\begin{equation} 
+\rho (x, y) = \frac{1}{T} \int_0^T f(t)^{2} \diff t 
+\end{equation}}
 \item{Criterio del error absoluto
-\begin{equation} \rho(x,y) = \frac{1}{T} \int_0^T | x(t) - y(t)|  \diff t . \end{equation}}
-\item{La estructura de la oreja y el cerebro determina impl\'icitamente una evaluaci\'on,
-o m\'as bien un n\'umero de evaluaciones, apropiado en el caso de transmisi\'on
-de m\'usica o habla. Hay, por ejemplo, un criterio de "inteligibilidad" en el cual
-$\rho(x,y)$ es equivalente a la frecuencia relativa de palabras incorrectamente
-interpretadas cuando el mensaje $x(t)$ es recibido como $y(t)$. Aunque no podemos
-dar una representaci\'on expl\'icita de $\rho(x,y)$, en esos casos podr\'ia, en principio,
-ser determinada por suficiente experimentaci\'on. Algunas de sus propiedades hacen
-seguimiento a buenos experimentos conocidos sobre el o\'ido, por ejemplo, la 
-oreja es relativamente insensible a la fase y la sensibilidad de amplitud y frecuencia
-es aproximadamente logar\'itmica.}
+\begin{equation} 
+\rho(x,y) = \frac{1}{T} \int_0^T | x(t) - y(t)| \diff t . 
+\end{equation}}
+\item{La estructura de la oreja y el cerebro determina
+ impl\'icitamente una evaluaci\'on, o m\'as bien un n\'umero de
+ evaluaciones, apropiado en el caso de transmisi\'on de m\'usica o
+ habla. Hay, por ejemplo, un criterio de ``inteligibilidad'' en el cual
+ $\rho(x,y)$ es equivalente a la frecuencia relativa de palabras
+ incorrectamente interpretadas cuando el mensaje $x(t)$ es recibido
+ como $y(t)$. Aunque no podemos dar una representaci\'on expl\'icita
+ de $\rho(x,y)$, en esos casos podr\'ia, en principio, ser
+ determinada por suficiente experimentaci\'on. Algunas de sus
+ propiedades hacen seguimiento a buenos experimentos conocidos sobre
+ el o\'ido, por ejemplo, la oreja es relativamente insensible a la
+ fase y la sensibilidad de amplitud y frecuencia es aproximadamente
+ logar\'itmica.}
 \item{El caso discreto puede ser considerado como una
-  especializaci\'on en la cual hemos asumido t\'acitamente una
-  evaluaci\'on basada en la frecuencia de los errores.  La funci\'on
-  $\rho(x,y)$ es entonces definida como el n\'umero de s\'imbolos en
-  la secuencia y que difieren de s\'imbolos correspondientes en $x$
-  dividido por el total de n\'umero de s\'imbolos en $x$.}
+ especializaci\'on en la cual hemos asumido t\'acitamente una
+ evaluaci\'on basada en la frecuencia de los errores. La funci\'on
+ $\rho(x,y)$ es entonces definida como el n\'umero de s\'imbolos en
+ la secuencia y que difieren de s\'imbolos correspondientes en $x$
+ dividido por el total de n\'umero de s\'imbolos en $x$.}
 \end{enumerate}
 
 \section{La tasa para una fuente relativa a una evaluaci\'on de fidelidad}
@@ -136,22 +144,25 @@ es aproximadamente logar\'itmica.}
 Estamos ahora en una posici\'on de definir la tasa de generaci\'on de
 informaci\'on para una fuente continua. Se nos da $P(x)$ para la
 fuente y una evaluaci\'on v determinada por una funci\'on de distancia
-$\rho(x,y)$ la cual se asumir\'a continua en ambos $x$ y $y$.  Con un
+$\rho(x,y)$ la cual se asumir\'a continua en ambos $x$ y $y$. Con un
 sistema particular $P(x,y)$ la calidad es medida por
-\begin{equation} v = \int \int \rho(x,y) P(x,y)  \diff x   \diff y \end{equation}
+\begin{equation} 
+v = \int \int \rho(x,y) P(x,y) \diff x  \diff y 
+\end{equation}
 M\'as a\'un, la tasa de flujo de d\'igitos binarios correspondientes a
 $P(x,y)$ es
-\begin{equation} R = \int \int P(x,y) \log \frac{P(x,y)}{P(x)P(y)} \diff x   \diff y  \end{equation}
+\begin{equation} 
+R = \int \int P(x,y) \log \frac{P(x,y)}{P(x)P(y)} \diff x  \diff y \end{equation}
 Definimos que la tasa $R_{1}$ de generaci\'on de informaci\'on para
 una calidad de reproducci\'on dada v1 sea el m\'inimo R cuando
 mantenemos v fija en $v_{1}$ y $P_{x}(y)$ variable. Esto es:
-\begin{equation} R_{1} = \min_{P_{x}(y)} \int \int P(x,y) \log \frac{P(x,y)}{P(x)P(y)}  \diff x   \diff y  \end{equation}
+\begin{equation} R_{1} = \min_{P_{x}(y)} \int \int P(x,y) \log \frac{P(x,y)}{P(x)P(y)} \diff x  \diff y \end{equation}
 sujeto a la restricci\'on:
-\begin{equation} v_{1} = \int \int P(x,y) \rho(x,y)  \diff x   \diff y . \end{equation}
+\begin{equation} v_{1} = \int \int P(x,y) \rho(x,y) \diff x  \diff y . \end{equation}
 Esto significa que consideramos, en efecto, todos los sistemas de
 comunicaci\'on que pueden ser usados y que transmiten con la fidelidad
 requerida. La tasa de transmisi\'on en bits por segundo es calculada
-para cada uno y escogemos el que tiene la menor tasa.  \'Esta ultima
+para cada uno y escogemos el que tiene la menor tasa. \'Esta ultima
 tasa es la tasa que asignamos a la fuente para la fidelidad en
 cuesti\'on.
 
@@ -169,7 +180,7 @@ definici\'on de $R_{1}$ y resultados previos. Si esto no fuera cierto
 podr\'iamos transmitir m\'as de C bits por segundos sobre un canal de
 capacidad C. La primera parte del teorema es comprobada por un
 m\'etodo an\'alogo al que fue usado en el Teorema \ref{FALTA PONER
-  ETIQUETA}. Podemos, en primer lugar, dividir el espacio $(x,y)$ en
+ ETIQUETA}. Podemos, en primer lugar, dividir el espacio $(x,y)$ en
 un gran n\'umero de peque\~{n}as celdas y representar la situaci\'on
 en un caso discreto. Esto no va a cambiar la funci\'on de evaluaci\'on
 por m\'as que una peque\~{n}a cantidad arbitraria (cuando las celdas
@@ -181,7 +192,7 @@ probabilidad, un conjunto al azar que contenga
 miembros donde $E \rightarrow 0$ como $T \rightarrow \infty$. Con una
 $T$ grande, cada punto escogido ser\'a conectado por una linea de alta
 probabilidad (como en la figura \ref{FALTA LA ETIQUETA}) a un conjunto
-de $x$'s.  Un c\'alculo similar al usado para comprobar el Teorema
+de $x$'s. Un c\'alculo similar al usado para comprobar el Teorema
 \ref{FALTA LA ETIQUETA} muestra que con una $T$ grande la mayor\'ia de
 las $x$'s son cubiertas por los $fans$ de los puntos y escogidos, para
 la mayor\'ia de las elecciones de $y$'s. El sistema de comunicaci\'on
@@ -200,7 +211,7 @@ La evaluaci\'on $v'_{1}$ para este sistema se puede hacer
 arbitrariamente cercana a $v_{1}$ tomando una T suficientemente
 grande. Esto es debido a el hecho de que para cada muestra larga de un
 mensaje x(t) y un mensaje de recuperaci\'on $y(t)$, la evaluaci\'on se
-acerca a $v_{1}$ (con probabilidad 1).  Es interesante notar que, en
+acerca a $v_{1}$ (con probabilidad 1). Es interesante notar que, en
 este sistema, el ruido en el mensaje recuperado es en realidad
 producido por un tipo de cuantificaci\'on general en el transmisor y
 no producido por el ruido en el canal. Es m\'as o menos an\'alogo al
@@ -209,33 +220,33 @@ ruido de cuantificaci\'on en PCM.
 \section{El c\'alculo de las tasas}
 
 La definici\'on de la tasa es similar en muchos aspectos a la
-definici\'on de capacidad de canal.  En la primera:
-\begin{equation} R = \min_{P_{x}(y)} \int \int  P(x,y) \log \frac{P(x,y)}{P(x)P(y)}  \diff x   \diff y  \end{equation}
-con $P(x)$ y $v_{1} = \int \int P(x,y) \rho(x,y)  \diff x   \diff y  $ fija. En la segunda:
-\begin{equation} C = \max_{P(x)} \int \int P(x,y) \log  \frac{P(x,y)}{P(x)P(y)}  \diff x   \diff y  \end{equation}
+definici\'on de capacidad de canal. En la primera:
+\begin{equation} R = \min_{P_{x}(y)} \int \int P(x,y) \log \frac{P(x,y)}{P(x)P(y)} \diff x  \diff y \end{equation}
+con $P(x)$ y $v_{1} = \int \int P(x,y) \rho(x,y) \diff x  \diff y $ fija. En la segunda:
+\begin{equation} C = \max_{P(x)} \int \int P(x,y) \log \frac{P(x,y)}{P(x)P(y)} \diff x  \diff y \end{equation}
 con $P_{x}(y)$ fija y posibilidad de uno o m\'as restricciones (por
 ejemplo, una limitaci\'on de potencia promedio) de la forma $K = \int
-\int P(x,y) \lambda(x,y)  \diff x   \diff y $.  Una soluci\'on parcial del problema
+\int P(x,y) \lambda(x,y) \diff x  \diff y $. Una soluci\'on parcial del problema
 de maximizaci\'on general para determinar la tasa de una fuente se
 puede dar.
 
 Usando el m\'etodo de Lagrange, consideramos:
-\begin{equation} \int \int [ P(x,y) \log \frac{P(x,y)}{P(x)P(y)} + \mu P(x,y)\rho(x,y) + v(x)P(x,y)]  \diff x   \diff y  \end{equation}
+\begin{equation} \int \int [ P(x,y) \log \frac{P(x,y)}{P(x)P(y)} + \mu P(x,y)\rho(x,y) + v(x)P(x,y)] \diff x  \diff y \end{equation}
 La equaci\'on variacional (cuando tomamos la primera variaci\'on de $P(x,y)$) lleva a:
 \begin{equation} Py(x) = B(x)\epsilon^{-\lambda \rho(x,y)} \end{equation}
 donde $\lambda$ es determinada para dar la fidelidad requerida y $B(x)$ es elegida para
 satisfacer:
-\begin{equation} \int B(x) \epsilon^{\lambda \rho(x,y)}  \diff x   = 1. \end{equation}
+\begin{equation} \int B(x) \epsilon^{\lambda \rho(x,y)} \diff x  = 1. \end{equation}
 			
 Esto muestra que, con la mejor codificaci\'on, la probabilidad
 condicional de una cierta causa de variaci\'on recibida $y$,
 $P_{y}(x)$ estar\'a en decline exponencialmente con la funci\'on de
-distancia $\rho(x,y)$ entre el $x$ y $y$ en cuesti\'on.  En el caso
+distancia $\rho(x,y)$ entre el $x$ y $y$ en cuesti\'on. En el caso
 epecial donde la funci\'on de distancia $\rho(x,y)$ depende solo en la
 diferencia (vector) entre $x$ y $y$,
 \begin{equation} \rho(x,y) = \rho(x - y) \end{equation}
 tenemos
-\begin{equation} \int B(x) \epsilon^{-\lambda p(x-y)}  \diff x  = 1 \end{equation}
+\begin{equation} \int B(x) \epsilon^{-\lambda p(x-y)} \diff x = 1 \end{equation}
 			
 Por lo tanto $B(x)$ es contante, digamos alpha, y
 \begin{equation} P_{y}(x) = \alpha \epsilon^{ -\lambda \rho(x - y)}. \end{equation}
@@ -243,7 +254,7 @@ Por lo tanto $B(x)$ es contante, digamos alpha, y
 Desafortunadamente etas soluciones formales son dif\'iciles de evaluar
 en casos particulares y parece ser de poco valor. De hecho, el calculo
 actual de las tasas ha sido llevado a cabo en solo alguno casos muy
-simples.  Si la funci\'on de ditancia p(x,y) es el cuadrado medio de
+simples. Si la funci\'on de ditancia p(x,y) es el cuadrado medio de
 la discrepancia entre $x$ y $y$, y el mensaje conjunto es ruido
 blanco, la tasa puede ser determinada. En ese cao tenemos
 \begin{equation} R = \min[ H(x) - H_{y}(x)] = H(x) - \max H_{y}(x) 
@@ -344,34 +355,34 @@ distribuciones en $n$ dimensiones $p(x_{i})$ y $q(x_{i})$ con
 energ\'ias de entrop\'ia $\overline{N_{1}}$ y $\overline{N_{2}}$. Que
 forma deber\'ia $p$ y $q$ tener para poder minimizar la energ\'ia de
 entrop\'ia $\overline{N_{3}}$ de su convoluci\'on $r(x_{i})$:
-\begin{equation} r(x_{i}) = \int p(y_{i}) q(x_{i} - y_{i})  \diff y _{i}.
+\begin{equation} r(x_{i}) = \int p(y_{i}) q(x_{i} - y_{i}) \diff y _{i}.
 \end{equation}
 			
 La entrop\'ia $H_{3}$ de $r$ es dada por:
-\begin{equation} H_{3} = - \int r(x_{i}) \log r(x_{i})  \diff x _{i}. \end{equation}
+\begin{equation} H_{3} = - \int r(x_{i}) \log r(x_{i}) \diff x _{i}. \end{equation}
 			
 Deseamos minimizar esto sujeto a las restricciones:
-\begin{equation} H_{1} = - \int p(x_{i}) \log p(x_{i})  \diff x _{i} \end{equation}
-\begin{equation} H_{2} = - \int q(x_{i}) \log q(x_{i})  \diff x _{i}. \end{equation}
+\begin{equation} H_{1} = - \int p(x_{i}) \log p(x_{i}) \diff x _{i} \end{equation}
+\begin{equation} H_{2} = - \int q(x_{i}) \log q(x_{i}) \diff x _{i}. \end{equation}
 				
 Consideramos entonces
 \begin{equation} U = - \int [r(x) \log r(x) + 
-\lambda p(x) \log p(x) + \mu q(x) \log q(x)] \diff x  \end{equation}
-\begin{equation} \delta U =  - \int  [[1 + \log r(x)] 
+\lambda p(x) \log p(x) + \mu q(x) \log q(x)] \diff x \end{equation}
+\begin{equation} \delta U = - \int [[1 + \log r(x)] 
 \delta r(x) + \lambda [1 + \log p(x) \delta p(x) + 
-\mu [1 + \log q(x)]\delta q(x)] \diff x  \end{equation}
+\mu [1 + \log q(x)]\delta q(x)] \diff x \end{equation}
 
 Si $p(x)$ es variado en un argumento particular $x_{i} = s_{i}$, la variaci\'on en $r(x)$ es
 \begin{equation} \delta r(x) = q(x_{i} - s_{i}) \end{equation}
 y
 \begin{equation} 
-\delta U = - \int q (x_{i} - si_{i}) \log r(x_{i})  \diff x _{i} - \lambda \log p(s_{i}) = 0 
+\delta U = - \int q (x_{i} - si_{i}) \log r(x_{i}) \diff x _{i} - \lambda \log p(s_{i}) = 0 
 \end{equation}
 y similarmente cuando $q$ es variado. Entonces las condiciones para un m\'inimo son:
-\begin{equation} \int q(x_{i} - s_{i}) \log r(x_{i})  \diff x _{i} 
+\begin{equation} \int q(x_{i} - s_{i}) \log r(x_{i}) \diff x _{i} 
 = -\lambda \log p(s_{i}) \end{equation}
 				
-\begin{equation} \int p(x_{i} - s_{i}) \log r(x_{i})  \diff x _{i} = -\mu \log q(s_{i}) \end{equation}
+\begin{equation} \int p(x_{i} - s_{i}) \log r(x_{i}) \diff x _{i} = -\mu \log q(s_{i}) \end{equation}
 				
 Si multiplicamos el primero por $p(s_{i})$ y el segundo por $q(s_{i})$ e integramos con 
 respecto a $s_{i}$, obtenemos:
@@ -379,10 +390,10 @@ respecto a $s_{i}$, obtenemos:
 \begin{equation} H_{3} = -\lambda H_{1} \end{equation}
 \begin{equation} H_{3} = -\mu H_{2} \end{equation}
 o resolviendo $\lambda$ y $\mu$, y reemplazando en las ecuaciones
-\begin{equation} H_{1} \int q(x_{i} - s_{i}) \log r(x_{i})  \diff x _{i} 
+\begin{equation} H_{1} \int q(x_{i} - s_{i}) \log r(x_{i}) \diff x _{i} 
 = - H_{3} \log p(s_{i}) 
 \end{equation}
-\begin{equation} H_{2} \int p(x_{i} - s_{i}) \log r(x_{i})  \diff x _{i} 
+\begin{equation} H_{2} \int p(x_{i} - s_{i}) \log r(x_{i}) \diff x _{i} 
 = - H_{3} \log q(s_{i}) \end{equation}
 
 Ahora supongamos que $p(x_{i})$ y $q(x_{i})$ son normales
@@ -402,7 +413,7 @@ m\'inimo $H_{3}$ bajo las restricciones. Primero tenemos
 \Sigma(C_{ij} x_{i} x_{j}) \end{equation}
 			
 \begin{equation} 
-\int q(x_{i} - s_{i}) \log r(x_{i})  \diff x _{i} = \frac{n}{2} \log
+\int q(x_{i} - s_{i}) \log r(x_{i}) \diff x _{i} = \frac{n}{2} \log
 \frac{1}{2\pi} |C_{ij}| - \frac{1}{2} \Sigma(C_{ij}S_{i}S_{j}) -
 \frac{1}{2} \Sigma(C_{ij} B_{ij}) \end{equation}
 		
@@ -432,11 +443,11 @@ la tasa de transmisi\'on $R$ por
 donde
 \begin{itemize}
 \item $P(x_{i})$ es la probabilidad de medici\'on de la tira sobre
-  $X_{i}$
+ $X_{i}$
 \item $P(Y_{i})$ es la probabilidad de medici\'on de la tira sobre
-  $Y_{i}$
+ $Y_{i}$
 \item $P(X_{i},Y_{i})$ es la probabilidad de medici\'on dela
-  interseccion de las tiras.
+ interseccion de las tiras.
 \end{itemize}
 		
 Una subdivisi\'on adicional no puede disminuir $R_{1}$ nunca. Dejemos
@@ -455,18 +466,18 @@ P(X_{1}, Y_{1}) &=& d + e &&&
 					
 Entonces en la suma hemos reemplazado (para la intersecci\'on $X_{1}, Y_{1}$)
 \begin{equation} (d + e) \log 
-\frac{(d + e)}{a(b + c)}   por  d \log \frac{d}{ab} 
+\frac{(d + e)}{a(b + c)}  por d \log \frac{d}{ab} 
 + e \log \frac{e}{ac}. \end{equation}
 Es f\'acilmente mostrado que con la limitaci\'on que tenemos en $b, c,
 d, e$,
 \begin{equation} 
-[\frac{d + e}{b + c}]^{d+e}  \leq \frac{d{d} e{e}}{b^{d} c^{e}} \end{equation}
+[\frac{d + e}{b + c}]^{d+e} \leq \frac{d{d} e{e}}{b^{d} c^{e}} \end{equation}
 y consecuentemente la suma es incrementada. Por lo tanto las varias formas posibles
 de subdivisi\'on formanun conjunto dirigido, con $R$ incrementandose monot\'onicamente
 con el refinamiento de la subdivisi\'on. Podemos definir $R$ sin ambigüedad como el
 menor l\'imite superior para $R_{1}$ y escribirlo
 \begin{equation} R = \frac{1}{T} \int \int P(x,y) \log 
-\frac{P(x,y)}{P(x) P(y)}  \diff x   \diff y  \end{equation}
+\frac{P(x,y)}{P(x) P(y)} \diff x  \diff y \end{equation}
 			
 La integral, entendida en el sentido anterior, incluye ambos los casos
 continus y discretos, y por supuesto, muchos otros que no pueden ser
@@ -477,7 +488,7 @@ es cualquier funci\'on de $y$ (no necesariamente con una inversa)
 entonces la tasa desde $x$ a $y$ es mayor o igual a aquella entre $x$
 a $v$ debido a que, en el c\'alculo de las aproximaciones, las
 subdivisiones de $y$ son escencialmente subdivisiones m\'as finas que
-aquellas para $v$.  M\'as generalmente si $y$ y $v$ est\'an
+aquellas para $v$. M\'as generalmente si $y$ y $v$ est\'an
 relacionadas, no funcionalmente pero estad\'isticamente, por ejemplo
 si tenemos un espacio de medida de probabilidad $(y, v)$, entonces
 $R(x,v) \leq R(x,y)$. Esto significa que cualquier operaci\'on
@@ -489,7 +500,7 @@ abstracta de la teor\'ia, es "la tasa de dimensi\'on", que es el
 n\'umero promedio de dimensiones por segundo requeridas para
 especificar a un miembro de un conjunto. En el caso de una banda
 limitada con $2W$ n\'umeros por segundo son suficientes. Una
-definici\'on general puede ser enmarcada como sigue.  Sea
+definici\'on general puede ser enmarcada como sigue. Sea
 $f_{\alpha}(t)$ un conjunto de funciones y sea $\rho_{\Theta} \left
 [f_{\alpha}(t),f_{\beta}(t) \right ]$ una m\'etrica midiendo la forma
 de "distancia" desde $f_{\alpha}$ hasta $f_{\beta}$ sobre el tiempo
@@ -507,8 +518,7 @@ dimensi\'on $\lambda$ para el conjunto, por el triple l\'imite
 \lim_{\delta \to \infty} 
 \lim_{\varepsilon \to \infty} 
 \lim_{\Theta \to \infty} 
-\frac{\log N(\varepsilon, \delta, \Theta)}{\Theta \log
-  \varepsilon} 
+\frac{\log N(\varepsilon, \delta, \Theta)}{\Theta \log \varepsilon} 
 \end{equation} 
 Esta es una generalizaci\'on de las definiciones de tipo de medida de
 la dimensi\'on en la topolog\'ia, y est\'a de acuerdo con la tasa de
