@@ -4,13 +4,13 @@
 
 	Si tenemos dos conjuntos de funciones $f_{\alpha}(t)$ y
 	$g_{\beta}(t)$ podemos formar un nuevo conjunto por
-	"adici\'on". Supongamos que el primer conjunto tiene la
+	``adici\'on''. Supongamos que el primer conjunto tiene la
 	funci\'on de densidad de probabilidad $p(x_{1},...,x_{n})$ y
 	el segundo $q(x_{1},...,x_{n})$.  Despu\'es la funci\'on de
 	densidad para la adici\'on es dada por la convoluci\'on
 	
 	\begin{equation} r(x_{1},...,x_{n}) = \int \cdots \int
-		p(y_{1},...,y{n})q(x_{1}-y_{1},...,x_{n}-y_{n})dy_{1}...dy_{n} \end{equation}
+		p(y_{1},...,y{n})q(x_{1}-y_{1},...,x_{n}-y_{n}) \diff y_{1}... \diff y_{n} \end{equation}
 	
 	F\'isicamente esto corresponde a sumar los ruidos o se\~nales
 	representados por los conjuntos originales de las funciones
@@ -29,10 +29,10 @@
 	puede absorber cualquier otro ruido o conjunto de se\~nales
 	que puede ser a\~nadido a la misma con una potencia de
 	entrop\'ia resultante aproxim\'adamente igual a la suma de a
-	potencia ruido blanco y la potencia de la se\~nal(medida
+	potencia ruido blanco y la potencia de la se\~nal (medida
 	apartir del valor promedio de la se\~nal, que es normalmente
-	cero), siempre que la potencia de la señal es peque\~na, en
-	cierto sentido, en comparaci\'on con el ruido.
+	cero), siempre que la potencia de la se\~{n}al es peque\~na,
+	en cierto sentido, en comparaci\'on con el ruido.
 	
 	Considere el espacio de la funci\'on asociada con estos
 	conjuntos que tienen dimensiones n. El ruido blanco
@@ -101,14 +101,14 @@
 	aproximaci\'on dimensional finita debemos variar $P(x) =
 	P(x_{1},...,x_{n})$ y maximizar \begin{equation} - \int
 	P(x) \log P(x)dx + \int\int
-	P(x,y)\log \frac{P(x,y)}{P(y)}dxdy.  \end{equation} Esto puede
+	P(x,y)\log \frac{P(x,y)}{P(y)}dx \diff y.  \end{equation} Esto puede
 	ser escrito \begin{equation} \int\int
-	P(x,y) \log \frac{P(x,y)}{P(x)P(y)}dxdy \end{equation} usando
-	el hecho que $\int\int P(x,y)\log P(x)dxdy = \int P(x)\log
+	P(x,y) \log \frac{P(x,y)}{P(x)P(y)}dx \diff y \end{equation} usando
+	el hecho que $\int\int P(x,y)\log P(x)dx \diff y = \int P(x)\log
 	P(x)dx$. La capacidad del canal se expresa as\'i:
 	\begin{equation}
 		C = \limsup_{T\to \infty P(x)} \frac{1}{T}\int\int P(x,y)\log \frac{P(x,y)}{P(x)~
-		P(y)}dxdy.
+		P(y)}dx \diff y.
 	\end{equation}
 	
 	Es obvio que en esta forma $R$ y $C$ son independientes del
@@ -284,7 +284,7 @@
 
 	%Ecuacion
 	\begin{equation}
-		{H}'=-\lim_{n\rightarrow \infty }\frac{1}{n}\int \cdots \int p\left ( 							x_{1},...,x_{n}\right ) \log p\left ( x_{1},...,x_{n}\right )dx_{1}...dx_{n}
+		{H}'=-\lim_{n\rightarrow \infty }\frac{1}{n}\int \cdots \int p\left ( 							x_{1},...,x_{n}\right ) \log p\left ( x_{1},...,x_{n}\right ) \diff x_{1}... \diff x_{n}
 	\end{equation}
 
 	%Ecuacion

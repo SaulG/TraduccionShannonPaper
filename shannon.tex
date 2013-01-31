@@ -1,6 +1,7 @@
 \documentclass{report}
 \usepackage[spanish]{babel}
 \usepackage{url}
+\usepackage[titletoc,toc,title]{appendix}
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage[letterpaper, top=30mm, bottom=30mm, left=30mm, right=30mm]{geometry}
@@ -13,6 +14,27 @@
 
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{1em}
+
+\makeatletter
+\providecommand*{\diff}%
+        {\@ifnextchar^{\DIfF}{\DIfF^{}}}
+\def\DIfF^#1{%
+        \mathop{\mathrm{\mathstrut d}}%
+                \nolimits^{#1}\gobblespace
+}
+\def\gobblespace{%
+        \futurelet\diffarg\opspace}
+\def\opspace{%
+        \let\DiffSpace\!%
+        \ifx\diffarg(%
+                \let\DiffSpace\relax
+        \else
+                \ifx\diffarg\[%
+                        \let\DiffSpace\relax
+                \else
+                        \ifx\diffarg\{%
+                                \let\DiffSpace\relax
+                        \fi\fi\fi\DiffSpace} 
 
 \author{Claude E. Shannon}
 \title{Una teor\'{\i}a matem\'{a}tica de la comunicaci\'{o}n}
@@ -28,7 +50,7 @@
   realizado a base del PDF disponible en
   \url{http://cm.bell-labs.com/cm/ms/what/shannonday/shannon1948.pdf}
   como un esfuerzo colectivo de estudiantes de octavo semestre del ITS
-  de la FIME de la UANL por puntos extra en la unidad de aprendizaje
+  de la FIME de la UANL por puntos extra en la unidad de apxrendizaje
   {\em Teor\'{\i}a de la informaci\'{o}n y m\'{e}todos de
     codificaci\'{o}n}, impartida por Dra.\ Elisa Schaeffer en la
   primavera del 2013.

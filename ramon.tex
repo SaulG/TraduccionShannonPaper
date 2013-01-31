@@ -299,34 +299,34 @@ p_n$ ha sido definido como:
 \end{equation}
 % ... With the density distribution function ...
 De manera an\'aloga se define la entrop\'ia de una distribuci\'on continua con
-la densidad de la funci\'on de distribución $p(x)$ por:
+la densidad de la funci\'on de distribuci\'{o}n $p(x)$ por:
 \begin{equation}
-  H = -\int_{-\infty}^{\infty} p(x) \log p(x)dx.
+  H = -\int_{-\infty}^{\infty} p(x) \log p(x) \diff x .
 \end{equation}
 Con una distribuci\'on $n$ dimensional $p(x_1, \ldots, x_n)$ tenemos
 \begin{equation}
   H = -\int \cdots \int p(x_1, \ldots, x_n) \log p(x_1, \ldots,
-  x_n)dx_1 \cdots dx_n.
+  x_n) \diff x _1 \cdots  \diff x _n.
 \end{equation}
 Si tenemos dos argumentos $x$ y $y$ (que pueden ser ellos mismos
 multidimensionales) las entrop\'ias conjuntas y condicionales de $p(x, y)$
 est\'an dadas por
 \begin{equation}
-  H(x, y) = -\iint p(x, y) \log p(x, y)dxdy
+  H(x, y) = -\iint p(x, y) \log p(x, y) \diff x  \diff y 
 \end{equation}
 y
 \begin{equation}
-  H_x(y) = -\iint p(x, y) \log \frac{p(x, y)}{p(x)} dxdy
+  H_x(y) = -\iint p(x, y) \log \frac{p(x, y)}{p(x)}  \diff x  \diff y 
 \end{equation}
 \begin{equation}
-  H_y(x) = -\iint p(x, y) \log \frac{p(x, y)}{p(y)} dxdy
+  H_y(x) = -\iint p(x, y) \log \frac{p(x, y)}{p(y)}  \diff x  \diff y 
 \end{equation}
 donde
 \begin{equation}
-  p(x) = \int p(x, y)dy
+  p(x) = \int p(x, y) \diff y 
 \end{equation}
 \begin{equation}
-  p(y) = \int p(x, y)dx.
+  p(y) = \int p(x, y) \diff x .
 \end{equation}
 Las entrop\'ias de distribuciones continuas tienen la mayor\'ia (pero
 no todos) las propiedades del caso discreto. En particular, tenemos lo
