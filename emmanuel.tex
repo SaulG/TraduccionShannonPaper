@@ -108,8 +108,8 @@ determinar la potencia promedio en la salida.
 As\'i, sea 
 \begin{equation} e(t) = x(t) - y(t) \end{equation}
 y
-\begin{equation} f(t) = \int_-\infty^\infty  \epsilon(\Theta)k(t - \Theta) 
-\diff \Theta \end{equation}
+\begin{equation} f(t) = \int_{-\infty}^{\infty}  \epsilon(\tau)k(t - \tau) 
+\diff \tau \end{equation}
 entonces
 \begin{equation} 
 \rho (x, y) = \frac{1}{T} \int_0^T f(t)^{2} \diff t 
@@ -501,11 +501,11 @@ n\'umero promedio de dimensiones por segundo requeridas para
 especificar a un miembro de un conjunto. En el caso de una banda
 limitada con $2W$ n\'umeros por segundo son suficientes. Una
 definici\'on general puede ser enmarcada como sigue. Sea
-$f_{\alpha}(t)$ un conjunto de funciones y sea $\rho_{\Theta} \left
+$f_{\alpha}(t)$ un conjunto de funciones y sea $\rho_{\tau} \left
 [f_{\alpha}(t),f_{\beta}(t) \right ]$ una m\'etrica midiendo la forma
 de "distancia" desde $f_{\alpha}$ hasta $f_{\beta}$ sobre el tiempo
 $T$(por ejemplo la discrepancia R.M.S. sobre \'este intervalo). Sea
-$N(\varepsilon, \delta, \Theta)$ el menor n\'umero de elementos $f$
+$N(\varepsilon, \delta, \tau)$ el menor n\'umero de elementos $f$
 que pueden ser elegidos, as\'i que todos los elementos del conjunto
 adem\'as de un conjunto de medici\'on $\delta$, est\'an dentro de
 distancia $\varepsilon$ de por lo menos uno de los escogidos.
@@ -517,8 +517,8 @@ dimensi\'on $\lambda$ para el conjunto, por el triple l\'imite
 \lambda = 
 \lim_{\delta \to \infty} 
 \lim_{\varepsilon \to \infty} 
-\lim_{\Theta \to \infty} 
-\frac{\log N(\varepsilon, \delta, \Theta)}{\Theta \log \varepsilon} 
+\lim_{\tau \to \infty} 
+\frac{\log N(\varepsilon, \delta, \tau)}{\tau \log \varepsilon} 
 \end{equation} 
 Esta es una generalizaci\'on de las definiciones de tipo de medida de
 la dimensi\'on en la topolog\'ia, y est\'a de acuerdo con la tasa de
