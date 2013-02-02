@@ -2,9 +2,11 @@
 
 Los procesos estocasticos del tipo descrito arriba son matematicamente
 conocidos como Procesos Markovianos Discretos y han sido estudiados
-extensivamente en la literatura \footnote{AQUI}. El caso general puede
-ser descrito de la siguiente manera: Existe un numero finito de
-posibles "estados" de un sistema; $S_{1}, S_{2}, \ldots,
+extensivamente en la literatura \footnote{Para una explicaci\'{o}n detallada
+ver M. Fr\'{e}chet, M\'{e}thode des fonctions arbitraires. Th\'{e}orie des \'{e}v\'{e}nements
+en chaine dans le cas d'un nombre fini d'\'{e}tats possibles. Paris, Gauthier-Villars, 1938.}.
+El caso general puede ser descrito de la siguiente manera: Existe un numero finito de
+posibles ``estados'' de un sistema; $S_{1}, S_{2}, \ldots,
 S_{n}$. Adem\'{a}s existen un conjunto de probabilidades de
 transicion; $p_{i}(j)$ la probabilidad que si el sistema esta en
 estado $S_{i}$ entonces enseguida vaya al estado $S_{j}$. Para
@@ -15,12 +17,16 @@ influencia'' de letras precedentes.
 
 La situacion puede ser representada graficamente como se muestra en
 las figuras 3, 4 y 5. Los ``estados'' son los puntos de union
+
 % aqui va figura 3
+
 en la grafica y las probabilidades y letras son producidas para una
 transicion son dadas ademas de la linea correspondiente. La figura 3
 es para el ejemplo B en la seccion 2, mientras que la figura 4
 corresponde al ejemplo C. En la figura 3
+
 %figura 4
+
 solamente hay un estado ya que letras sucesivas son independientes. En
 la figura 4 hay tantos estados como letras. 
 
@@ -56,12 +62,41 @@ grafos correspondientes. Si el grafo tiene las siguientes dos
 propiedades el proceso correspondiente ser\'{a} erg\'{o}dico:
 
 \begin{enumerate}
-   \item El grafo no consiste de dos partes aisladas $A$ y $B$ dado que es
+  \item El grafo no consiste de dos partes aisladas $A$ y $B$ dado que es
    imposible ir desde los puntos de union en la parte $A$ a los puntos
    de union en la parte $B$ a traves de las lineas del grafo en la
    direccion de las flechas y tambien es imposible ir desde las
-   uniones en la parte $B$ a las uniones en la parte $A$.  \item
+   uniones en la parte $B$ a las uniones en la parte $A$.
+ \item Una serie de lineas cerradas en un grafo con todas sus flechas en las lineas
+   apuntando en la misma direccion son llamados ``circuitos''.
+   La ``longitud'' de un circuito es el numero de lineas en el.
+   Por lo tanto figura 5, la serie BEBES es un circuito de longitud 5.
+   La segunda propiedad requerida es que el maximo comun divisor
+   de la longitud de todos los circuitos en el grafo sea igual a uno.
 \end{enumerate}
+
+%figura 5
+
+Si la primera condicion es satisfecha pero la segunda no por tener
+un maximo comun divisor igual a $d > 1$, las secuencias tiene algun tipo
+de estructura periodica. Las diferentes secuencias caen dentro $d$ clases diferentes
+que son estadisticamente las mismas partiendo desde un cambio
+del origen (por ejemplo, que letra en la secuencia es llamada letra 1). Por un cambio
+de desde $0$ hasta $d - 1$ cualquier secuencia puede ser
+estadisticamente equivalente a cualquier otra. Un ejempl simple
+con $d = 2$ es el siguiente: Existen tres posibles letras $a, b , c$.
+La letra $a$ es seguida con $b$ \'{o} $c$ con
+probabilidades \frac{1}{3} y \frac{2}{3} respectivamente.
+Tanto $b$ como $c$ son siempre seguidas por una letra $a$. Por lo tanto una
+secuencia tipica ser\'{i}a
+
+\begin{equation}
+a b a c a c a c a b a c a b a b a c a c
+\end{equation}
+
+Este tipo de situacion no es de mucha importancia para nuestro trabajo.
+Si la primera condici\'{o}n no se cumple, el grafo puede ser separado en
+un conjunto de subgrafos que satisfagan cada uno la primera condici\'{o}n.
 
 \begin{equation}
 b = a - 2 \text{ (ejemplo)}
