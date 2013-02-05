@@ -1,0 +1,148 @@
+\begin{theorem}
+  La capacidad del canal $C$ para una banda $W$ perturbada por el
+  ruido t\'ermico blanco de potencia $N$ est\'a limitada por
+  \begin{equation}
+    C \ge W \log \dfrac{2}{\pi e^3} \dfrac{S}{N},
+  \end{equation}
+  donde $S$ es el pico permitido por el transmisor de potencia. Para
+  $\dfrac{S}{N}$ suficientemente grande
+  \begin{equation}
+    C \le W \log \dfrac{\dfrac{2}{\pi e} S + N}{N} (1 + \epsilon)
+  \end{equation}
+  donde $\epsilon$ es arbitrariamente peque\~no. Como
+  $\dfrac{S}{N} \to 0$ (y siempre que la banda $W$ inicia en 0)
+  \begin{equation}
+    \frac{C}{W \log \left(1 + \dfrac{S}{N} \right)} \to 1.
+  \end{equation}
+\end{theorem}
+
+Queremos maximizar la entrop\'ia de la se\~nal recibida. Si
+$\dfrac{S}{N}$ es grande, esto ocurrir\'a muy pronto cuando
+maximizamos la entrop\'ia de la familia transmitida.
+
+La parte superior asint\'otica se obtiene mediante la relajaci\'on de
+las condiciones en la familia. Supongamos que el poder se limita a
+$S$ no en cada instante de tiempo, pero s\'olo en los puntos de
+muestreo. La entrop\'ia m\'axima de la familia transmitida en estas
+condiciones debilitadas, es ciertamente mayor que o igual a la que en
+las condiciones originales. Este problema alterado se puede resolver
+f\'acilmente. La entrop\'ia m\'axima se produce si las diferentes
+muestras son independientes y tienen una funci\'on de distribuci\'on
+que es constante a partir de $-\sqrt{S}$ a $+\sqrt{S}$. La entrop\'ia
+se puede calcular como
+\begin{equation}
+  W \log 4S.
+\end{equation}
+La se\~nal recibida tendr\'a entonces una entrop\'ia menor que
+\begin{equation}
+  W \log (4S + 2 \pi eN)(1 + \epsilon)
+\end{equation}
+con $\epsilon \to 0$ y $\dfrac{S}{N} \to \infty$, la capacidad del
+canal se obtiene restando la entrop\'ia del ruido blanco,
+$W \log 2 \pi eN$:
+\begin{equation}
+  W \log (4S + 2 \pi eN)(1 + \epsilon) - W \log (2 \pi eN) =
+  W \log \dfrac{\dfrac{2}{\pi e} S + N}{N} (1 + \epsilon).
+\end{equation}
+Este es el l\'imite superior deseado unido a la capacidad del canal.
+
+Para obtener un l\'imite inferior consideramos la misma familia de
+funciones. Permitir que estas funciones pasen a trav\'es de un filtro
+ideal con una caracter\'istica de transferencia triangular. La
+ganancia es igual a la unidad en la frecuencia 0 y disminuyendo
+linealmente hasta obtener 0 en la frecuencia $W$. En primer lugar,
+demuestra que las funciones de salida de los filtros tienen una
+limitaci\'on de potencia pico $S$ en todo momento (no s\'olo los
+puntos de muestreo). En primer lugar observamos que un pulso
+$\dfrac{\sen 2 \pi Wt}{2 \pi Wt}$ dentro del filtro produce
+\begin{equation}
+  \dfrac{1}{2} \dfrac{\sen^2 \pi Wt}{(\pi Wt)^2}
+\end{equation}
+en la salida. Esta funci\'on nunca es negativa. La funci\'on de
+entrada (en el caso general) se puede considerar como la suma de una
+serie de funciones desplazadas
+\begin{equation}
+  a \dfrac{\sen 2 \pi Wt}{2 \pi Wt}
+\end{equation}
+donde $a$, la amplitud de la muestra, no es mayor que $\sqrt{S}$. Por
+lo tanto, la salida es la suma de funciones desplazados de la forma
+no negativa, anteriormente con los mismos coeficientes. Estas
+funciones son no negativas, el mayor valor positivo para cualquier
+$t$ se obtiene cuando todos los coeficientes $a$ tienen sus valores
+positivos m\'aximos, es decir, $\sqrt{S}$. En este caso la funci\'on
+de entrada es una constante de amplitud $\sqrt{S}$ y ya que el filtro
+tiene una unidad de ganancia para D.C., la salida es la misma. Por lo
+tanto el conjunto de salida tiene una potencia pico $S$.
+
+La entrop\'ia de la familia de salida puede ser calculada a partir
+de la familia de entrada usando el teorema a tratar con dicha
+situaci\'on. La entrop\'ia de salida es igual a la entrop\'ia de
+entrada m\'as la ganancia media geom\'etrica del filtro:
+\begin{equation}
+  \int_{0}^{W} \log G^2 \diff f = \int_{0}^{W} \log \left(
+  \dfrac{W - f}{W} \right)^2 \diff f = -2W.
+\end{equation}
+Por lo tanto la entrop\'ia de salida es
+\begin{equation}
+  W \log 4S - 2W = W \log \dfrac{4S}{e^2}
+\end{equation}
+y la capacidad del canal es mayor que
+\begin{equation}
+  W \log \dfrac{2}{\pi e^3} \dfrac{S}{N}.
+\end{equation}
+Ahora queremos demostrar que, para peque\~nos $\dfrac{S}{N}$
+(potencia pico de la se\~nal a trav\'es de la potencia media de
+ruido blanco), el canal de capacidad es aproximadamente
+\begin{equation}
+  C = W \log \left(1 + \dfrac{S}{N} \right)
+\end{equation}
+M\'as precisamente
+$\dfrac{C}{W \log \left(1 + \dfrac{S}{N} \right)} \to 1$ como
+$\dfrac{S}{N} \to 0$. Puesto que la se\~nal de potencia media $P$ es
+menor o igual a el pico $S$, se deduce que para todos $\dfrac{S}{N}$
+\begin{equation}
+  C \le W \log \left(1 + \dfrac{P}{N} \right)
+  \le W \log \left(1 + \dfrac{S}{N} \right).
+\end{equation}
+Por lo tanto, si podemos encontrar una familia de funciones tal que
+correspondan a la tasa cerca de
+$W \log \left(1 + \dfrac{S}{N} \right)$ y se limitan a la banda $W$
+y pico $S$ el resultado ser\'a demostrado. Consid\'erese la familia
+de funciones del siguiente tipo. Una serie de muestras $t$ tienen el
+mismo valor, ya sea $+\sqrt{S}$ o $-\sqrt{S}$, entonces las
+siguientes muestras $t$ tienen el mismo valor, etc. El valor de una
+serie se elige al azar, probabilidad $\dfrac{1}{2}$ para $+\sqrt{S}$
+y $\dfrac{1}{2}$ para $-\sqrt{S}$. Si esta familia se pasa a trav\'es
+de un filtro con caracter\'istica de ganancia triangular (unidad de
+ganancia en D.C.), la salida est\'a limitada al pico $\pm S$.
+Adem\'as la potencia media es casi $S$ y se puede hacer para
+acercarse a esto tomando $t$ suficientemente grande. La entrop\'ia
+de la suma de este y el ruido t\'ermico se encuentra aplicando el
+teorema de la suma de un ruido y una peque\~na se\~nal. Este teorema
+se aplicar\'a si
+\begin{equation}
+  \sqrt{t} \dfrac{S}{N}
+\end{equation}
+es suficientemente peque\~no. Esto puede garantizarse tomando
+$\dfrac{S}{N}$ suficientemente peque\~no (despu\'es de que se elige
+$t$). La energ\'ia de la entrop\'ia ser\'a $S + N$ para acercarse a
+una aproximaci\'on como se desee, y por lo tanto la tasa de
+transmisi\'on tan cerca como queremos
+\begin{equation}
+  W \log \left(\dfrac{S + N}{N} \right).
+\end{equation}
+
+\chapter{La tasa para una fuente continua}
+
+\section{Funciones para una evaluaci\'on de fidelidad}
+
+En el caso de una fuente discreta de informaci\'on que fueron capaces
+de determinar una tasa definida de generaci\'on de informaci\'on, es
+decir, la entrop\'ia del proceso estoc\'astico subyacente. Con una
+fuente continua, la situaci\'on es considerablemente m\'as
+complicada. En primer lugar, una cantidad de variaci\'on continua
+puede asumir un n\'umero infinito de valores y requiere, por lo
+tanto, un n\'umero infinito de d\'igitos binarios para la
+especificaci\'on exacta. Esto significa que para transmitir la salida
+de una fuente continua con {\em recuperaci\'on exacta} en el punto
+de recepci\'on requiere,
