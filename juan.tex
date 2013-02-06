@@ -15,7 +15,7 @@ con
 \int a\left ( x,y \right ) \diff x =\int a\left ( x,y \right ) \diff y =1, 
 \,  a\left ( x,y \right )\geq 0
 \end{equation}
-Entonces la entropia de la distribuci\'{o}n promediada ${p}'\left ( y
+Entonces la entrop\'ia de la distribuci\'{o}n promediada ${p}'\left ( y
 \right )$ es igual a o mayor que la distribuci\'{o}n original $p\left
 ( y \right )$. 
 
@@ -29,7 +29,7 @@ y
 H_x{}\left ( y \right )\leq H\left ( y \right )
 \end{equation}
 
-5. Dejamos $p\left ( y \right )$ ser una distribuci\'{o}n unidimensional. La forma de $p\left ( y \right )$ dando una m\'{a}xima entropia sujeto a la condici\'{o}n de que la desviaci\'{o}n est\'{a}ndar de x es fija en $\sigma $ es Gaussiana. Para demostrar esto debemos maximizar:
+5. Dejamos $p\left ( y \right )$ ser una distribuci\'{o}n unidimensional. La forma de $p\left ( y \right )$ dando una m\'{a}xima entrop\'ia sujeto a la condici\'{o}n de que la desviaci\'{o}n est\'{a}ndar de x es fija en $\sigma $ es Gaussiana. Para demostrar esto debemos maximizar:
 \begin{equation}
 H\left ( x \right )=-\int p\left ( x \right )\log p\left ( x \right ) \diff x 
 \end{equation}
@@ -58,15 +58,15 @@ $A_{ij}$:
 A_{ij}=\int \cdots \int x_{i}x_{j}p\left ( x_{1}, \ldots ,x_{n} \right ) \diff x _{1}\cdots  \diff x_{n}
 \end{equation}
 
-Entonces la m\'{a}xima entropia ocurre (por un c\'{a}lculo similar)
+Entonces la m\'{a}xima entrop\'ia ocurre (por un c\'{a}lculo similar)
 cuando $p\left ( x_{1}, \ldots ,x_{n} \right )$ es la distribuci\'{o}n
 Gaussiana $n$ dimensional con los momentos de segundo orden $A_{ij}$
+\\
+6. La entrop\'ia de una distribuci\'on Gaussiana undimensional cuya desviaci\'on estandar es $\sigma$ est\'a dada por
 \begin{equation}
 H\left ( x \right )=\log \sqrt{2\pi e\sigma }
 \end{equation}
-
-a\\
-
+\'Esta es calculada de la siguiente forma
 \begin{equation}
 p\left ( x \right )=\frac{1}{\sqrt{2\pi \sigma }}e^{-\left ( x^{2}/2\sigma ^{2} \right )}
 \end{equation}
@@ -88,68 +88,83 @@ H\left ( x \right )=-\int p\left ( x \right )\log p\left ( x \right ) \diff x
 \begin{equation}
 =\log \sqrt{2\pi e \sigma }
 \end{equation}
-
-a\\
+\\
+Asi mismo, la distribuci\'on Gaussiana n-dimensional con una forma cuadr\'atica asociada $A_{ij}$ est\'a dada por:
 
 \begin{equation}
 p\left ( x_{1}, \ldots ,x_{n} \right )=\frac{\left | a_{ij} \right |^{\frac{1}{2}}}{\left ( 2\pi  \right )^{n/2}}\exp \left ( -\frac{1}{2} \sum a_{ij}x_{i}x_{j} \right)
 \end{equation}
 
-a\\
+y la entrop\'ia puede se calculada como:
 
 \begin{equation}
 H=\log \left ( 2\pi e \right )^{n/2}\left | a_{ij} \right |^{-\frac{1}{2}}
 \end{equation}
 
-a\\
+donde $\left |a_{ij}  \right | $ es la determinante cuyos elementos son $a_{ij}$.\newline \newline
+7. Si $x$ es limitada a una media linea ($p\left ( x \right )=0$ para $x\leq0$ y el primer momento de x es fijado en $a$:
 
 \begin{equation}
 a=\int_{0}^{\infty}p\left ( x \right )x \diff x 
 \end{equation}
 
-a\\
+entonces la m\'axima entrop\'ia ocurrira cuando
 
 \begin{equation}
 p\left ( x \right )=\frac{1}{a}e^{-\left ( x/a \right )}
 \end{equation}
 
-a\\
+y es igual a $\log ea$
+\\
+
+8. Hay una importante diferencia entre la entrop\'ia continua y discreta. En el caso discreto la entrop\'ia mide de un modo absoluto la aleatoriedad de la posible variable. En el caso continuo la medici\'on es relativa al sistema de coordenadas. Si cambiamos las coordenadas la entrop\'ia cambiar\'a de forma general. En efecto, si cambiamos las coordenadas $y_{1} \dots y_{n}$ la nueva estropia estar\'a dada por:
 
 \begin{equation}
 H\left ( y \right )=\int \cdots \int p\left ( x_{1}, \ldots ,x_{n} \right )J\left ( \frac{x}{y} \right )\log p\left ( x_{1}, \ldots ,x_{n} \right )J\left ( \frac{x}{y} \right ) \diff y _{1}\cdots  \diff y _{n}
 \end{equation}
 
-a\\
+donde $J\left ( \frac{x}{y} \right )$ es el Jacobiano de la transformaci\'on de las coordenadas. En la ampliaci\'on de los logaritmos y cambiando las variables a $x_{1}\dots x_{n}$, obtendremos:
 
 \begin{equation}
 H\left ( y \right )=H\left ( x \right )-\int \cdots \int p\left ( x_{1}, \ldots ,x_{n} \right )\log J \left ( \frac{x}{y} \right ) \diff x _{1}\cdots  \diff x _{n}
 \end{equation}
 
-a\\
+Por consiguiente, la nueva entrop\'ia es la vieja entromia menos el logaritmo esperado del Jacobiano. En el caso continuo la entrop\'ia puede considerarse una medida de aleatoriedad relativa a un est\'andar asumido, es decir, el sistema de coordenadas elegido con cada peque\~no elemento de volumen $dx_{1}\dots dx_{n}$ dado el mismo peso. Cuando cambiamos el sistema de coordenadas, la entrop\'ia en el nuevo sisema mide la aleatoriedad cuando elementos de volumen iguales $dy_{1}\dots dy_{n}$ en el nuevo sistema se les da el mismo peso.
+\\
+A pesar de esta dependencia en el sistema de coordenadas, el concepto de entropoa es tan importante en el caso continuo como en el caso discreto. Esto se debe al hecho de que los conceptos derivados de la tasa de informaci\'on y la capacidad del canal dependen de la diferencia de ambas entrop\'ias y esta diferencia no depende del marco de coordenadas, cada uno de los dos terminos ser\'an cambiados por la misma cantidad.
+La entrop\'ia de una distribuci\'on continua puede ser negativa. La escala de medici\'on establece un zero arbitrario correspondientea una distribuci\'on uniforme en una unidad de volumen. Una distribuci\'on que es m\'as limitada que \'esto tiene menos entrop\'ia y ser\'a negativa. Las tasas y capacidades ser\'an, sin embargo, siempre no negativas.
+\\
+\\
+9. Un caso particular de cambio de coordendas es la transformaci\'on lineal
 
 \begin{equation}
 y_{j}=\sum_{i}^{\:}a_{ij}x_{i}
 \end{equation}
 
-a\\
+En este caso el Jacobiano es simplemente la determinante $\left | a_{ij} \right |^{-1}$, y
 
 \begin{equation}
 H\left ( y \right )=H\left ( x \right )+\log\left | a_{ij} \right |
 \end{equation}
 
-a\\
+En el caso de la rotaci\'on de coordenadas (o cualquier medici\'on preservando la transformaci\'on) $J=1$ y $H\left ( y \right ) = H\left ( x \right )$.\newline \newline
+
+21. ENTROP\'IA EN UN CONJUNTO DE FUNCIONES\newline
+
+Considere un conjunto de funciones erg\'odico limitado a una cierta banda de ancho  $W$ ciclos por segundo. Dejar
 
 \begin{equation}
 p\left ( x_{1}, \ldots ,x_{n}\right )
 \end{equation}
 
-a\\
+ser la funcion de distribuci\'on de densidad para amplitudes $x_{1}\dots x_{n}$ en $n$ puntos sucesivos de muestra. Definimos la entrop\'ia del conjunto por grado de libertad como:
 
 \begin{equation}
 {H}'=-\lim_{n\rightarrow \infty }\frac{1}{n}\int \cdots \int p\left ( x_{1}, \ldots ,x_{n}\right ) \log p\left ( x_{1}, \ldots ,x_{n}\right ) \diff x _{1} \ldots  \diff x _{n}
 \end{equation}
 
-a\\
+Tambi\'en definiremos la entrop\'ia $H$ por segundo dividiendo, no por $n$, sino por el tiempo $T$ en segundos para $n$ nuestras. Desde que $n=2TW$, $H=2W{H}'$.\newline
+Con un blanco ruido t\'ermico $p$ es Gaussiano y tenemos:
 
 \begin{equation}
 {H}'=\log \sqrt{2\pi eN}
@@ -158,49 +173,67 @@ a\\
 H=W\log 2\pi eN
 \end{equation}
 
-a\\
+Para una determinada potencia media $N$, el ruido blanco tiene la m\'axima entrop\'ia posible. Esto se deduce de las propiedades de maximizar la distribuci\'on Gaussiana se\~nalada arriba.\newline
+La entrop\'ia de un proceso estoc\'astico continuo tiene muchas propiedades an\'alogas a ello para procesos discretos. En el caso discreto, la entrop\'ia esta relacionada al logartimo de la probabilidad de largas secuencias, y al n\'umero de secuencias razonablemente probables de larga longitud. En el caso continuo se relaciona de una manera simlar al logaritmo de la densidad de probabilidad de una larga serie de muestras, y el volumen de una probabilidad razonablemente alta en el espacio de la funci\'on.\newline
+M\'as precisamente, si asumimos que $p\left ( x_{1},\dots ,x_{n} \right )$ continua en todas las $x_{i}$ y para toda $n$, entonces para una suficientemente larga $n$
 
 \begin{equation}
 \left | \frac{\log p}{n} - {H}'\right |< \varepsilon 
 \end{equation}
 
-a\\
+para todas las opciones de $\left ( x_{1},\dots ,x_{n} \right )$ aparte de un conjunto cuya probabilidad total es menor, arbitrariamente peque\~na. Lo siguiente forma la propiedad erg\'odica si dividimos el espacio en un gran n\'umero de peque\~nas celdas. La relaci\'on de $H$ a un volumen puede enunciarse como sigue: Bajo las mismas suposiciones consider\'e el espacio n-dimensional correspondiente a $p\left ( x_{1},\dots ,x_{n} \right )$. Dejar $Vn\left ( 	q \right )$ ser el menor volumen en este espacio que incluye en su interior una probabilidad total de $q$. Entonces:
 
 \begin{equation}
 \lim_{n\rightarrow \infty }\frac{\log V_{n}\left ( q \right )}{n}={H}'
 \end{equation}
 
-a\\
+dado $q$ no es igual a $0$ o $1$.\newline
+Estos resultados muestran que para una gran $n$ existe un volumen bien definido (al menos en el sentido logar\i'itmico) de alta probabilidad, y que dentro de este volumen la densidad de probabilidad es relativamente uniforme (de nuevo en el sentido logar\'itmico).\newline
+En el caso del ruido blanco, la funci\'on de distribuci\'on est\'a dada por:
 
 \begin{equation}
 p\left ( x_{1}, \ldots ,x_{n}\right )=\frac{1}{\left ( 2\pi N \right )^{n/2}}\exp -\frac{1}{2N}\sum x_{i}^{2}
 \end{equation}
 
-a\\
+Dado que este s\'olo depende de x, entonces, las superficies de igual densidad de probabilidad son esferas y la distribuci\'on entera tiene simetr\'ia esf\'erica. La regi\'on de alta probabilidad es una esfera de radio $\sqrt{nN}$. Como $n\rightarrow \infty $ la probabilidad de caer fuera de una esfera de radio $\sqrt{n\left ( N+\varepsilon  \right )}$ se aproxima a cero y $\frac{1}{n}$ veces el logaritmo del volumen de la esfera e aproxima a $\log \sqrt{2\pi eN}$ .
+En el caso continuo es conveniente no trabajar con la entrop\'ia H de un conjunto pero con una cantidad derivada la cual llamaremos potencia de entrop\'ia. Esto es definido como el poder en el ruido blanco limitado a la misma banda que el original y teniendo la misma entrop\'ia. En otras palabras, si ${H}'$ es la entrop\'ia de un conjunto, su potencia de entrop\'ia es:
 
 \begin{equation}
 N_{1}=\frac{1}{2\pi e}\exp 2{H}'
 \end{equation}
 
-a\\
+En la im\'agen geom\'etrica esta cantidad de medir el volumen de mayor probabilidad por el radio al cuadrado de una esfera teniendo el mismo volumen. Desde que el ruido blanco tiene la m\'axima entrop\'ia para una potencia dada, la potencia de entrop\'ia de cualquier ruido es menor o igual a su actual potencia.\newline \newline
+
+22. P\'ERDIDA DE ENTROP\'IA EN FILTROS LINEALES
+
+\textit{Theorema14: Si un conjunto tiene una entro\'ia $H_{1}$ por grado de libertad en la banda $W$, y es transmitido a trav\'es de un filtro con caracter\'isticas $Y\left ( f \right )$, el conjunto de salida tendr\'a la entrop\'ia} 
 
 \begin{equation}
 H_{2}=H_{1}+\frac{1}{W}\int_{W}^{\:}\log \left | Y\left ( f \right ) \right |^{2}df
 \end{equation}
 
-a\\
+La operaci\'on de un filtro es esencialmente una transformaci\'on lineal de coordenadas. Si pensamos en los diferentes componentes frecuentes como el sistema original de coordenadas, los nuevos componentes frecuentes son meramente los viejos multiplicados por factores. La matriz de transformac\'on de coordenadas es entonces esencialmente diagonalizada en t\'erminos de estas coordenadas. El Jacobiano de las transformaciones es (para los componentes $n$ seno y $n$ coseno):
 
 \begin{equation}
 J=\prod_{i=1}^{n}\left | Y\left ( f_{i} \right )  \right |^{2}
 \end{equation}
 
-a\\
+donde la $f_{i}$ esta igualmente espaciada a trav\'es de la banda $W$. Esto ocurre en el l\'imite:
 
 \begin{equation}
 \exp \frac{1}{W}\int_{W}^{\:}\log \left | Y\left ( f \right ) \right |^{2}df
 \end{equation}
 
-a\\
+Desde que J es constante, su valor promedio es la misma cantidad y aplicando el teorema en el cambio de entrop\'ia con un cambio en las coordenadas, resultar\'a lo siguiente. Podremos redactarlo en t\'erminos de la potencia de entrop\'ia. As\'i si la potencia de entrop\'ia del primer conjunto es $N_{1}$ entonces la del segundo ser\'a
 
+\begin{equation}
+N_{1}\exp \frac{1}{W}\int_{W}^{\:}\log \left | Y\left ( f \right ) \right |^{2}df
+\end{equation}
 
+La potencia de entrop\'ia final es la entrop\'ia inicial multiplicada por la ganancia media geom\'etrica del filtro. Si la ganancia es medida en $db$, entonces la potencia de entrop\'ia de salids ser\'a incrementada por la ganancia media aritm\'etica $db$ sobre $W$.\newline
+En la tabla 1, la perdida de potencia de entrop\'ia ha sido calculada (tambi\'en expresada en $db$) para un n\'umero ideal de ganancias caracter\'isticas. Las respuestas impulsivas de estos filtros estan dadas tambi\'en por $W = 2 \pi$, con fase en 0.\newline
+La p\'erdida de entrop\'ia para otros muchos casos puede ser obtenida desde estos resultados. Por ejemplo, la el factor de potencia de entrop\;ia $\frac{1}{e^{2}}$ para el primer caso tambi\'en aplica para cualquier ganancia caracter\'istica obtenida desde $1-\omega$ por una medida preservando la transformaci\'on del eje $\omega$. En una particular ganancia que incrementa linealmente $G \left (\omega  \right) = \omega$, o un "diente de sierra" caracter\'istico entre 0 y 1 tienen la misma p\'erdida de entrop\'ia. La ganancia rec\'iproca tiene el factor rec\'iproco. Entonces, $\frac{1}{\omega}$ tiene el factor $e^{2}$. Aumentando la ganancia a cualquier potencia incrementa el factor a esta potencia.\newline \newline \newline
+23. ENTROP\'IA DE UNA SUMA DE DOS CONJUNTOS\newline 
+
+Si tenemos dos conjuntos de funciones $f_{\alpha} \left( t \right)$ y $g_{\beta} \left( t \right)$ podemos formar un nuevo conjunto mediante "adici\'on". Supongamos que el primer conjunto  tiene la funci\'on de densidad de probabilidad $p \left( x_{1}, \dots , x_{n} \right)$ y el segundo $q \left( x_{1}, \dots , x_{n} \right)$. Entonces la
 
