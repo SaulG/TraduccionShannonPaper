@@ -1,16 +1,25 @@
-En el caso sin ruido un retraso generalmente requiere para la codificacion\'on ideal ahora \bigskip esta tiene una funci\'on adicional que permite una muestra larga de ruido para afectar la señal antes de un juicio, se hace \bigskipen en el punto de resepci\'on  para el mensaje original.Incrementando el tamaño del ejemplo siempre agudiza las posibles afirmaciones estadisticas.
+En el caso sin ruido un retraso generalmente requiere para la codificacion\'on ideal ahora 
+esta tiene una funci\'on adicional que permite una muestra larga de ruido para afectar la señal antes de un juicio, se hace 
+en el punto de resepci\'on  para el mensaje original.Incrementando el tamaño del ejemplo siempre agudiza las posibles afirmaciones estadisticas.
 
-El contenido del teorema 11 y su prueba se pueden formular de una manera diferente que muestra \bigskipen una conexi\'on sin ruido de una manera mas clara.Considere las posibles duraciones de las señales T y supongamos \bigskipen un subconjutno de ellos se seleccionan para ser usados. Los que esten en el subconjunto se utilizen todos con igual probabilidad, y suponiendo \bigskipen que el resector es construido para seleccionar, como la señal original. la causa mas probable de subconjutno cuando \bigskipen una señal perturbada es recivida.Nosotros definimos \begin{em}N(T,q)\end{em} siendo el numero maximo de señales que podemos elegir para el subconjunto tal que la probabilidad de una interpretaci\on incorrecta sea menor o igual a q.
+El contenido del teorema 11 y su prueba se pueden formular de una manera diferente que muestra 
+una conexi\'on sin ruido de una manera mas clara.Considere las posibles duraciones de las señales T y supongamos 
+un subconjutno de ellos se seleccionan para ser usados. Los que esten en el subconjunto se utilizen todos con igual probabilidad, y suponiendo 
+que el resector es construido para seleccionar, como la señal original. la causa mas probable de subconjutno cuando 
+una señal perturbada es recivida.Nosotros definimos \begin{em}N(T,q)\end{em} siendo el numero maximo de señales que podemos elegir para el subconjunto tal que la probabilidad de una interpretaci\on incorrecta sea menor o igual a q.
 
 \begin{em}Teorema 12:\end{em} \displaystyle\lim_{t \to{}\infty}\frac{\log{N}(T,q)}{T} = C \begin{em}, Donde C es la capacidad de canal,a condici\'on que q no sea igual a 0 o 1\end{em}
 
-En otras palabras, no importa lo que nos propusimos de limites de confiabilidad, podemos distinguir de forma fiable en el tiempo T \bigskipen suficientes mensajes para corresponder a CT bits, cuando T es suficientemente grande. En el teorema 12 podemos comparar \bigskipen la capacidad de un canal sin ruido en la secci\'on uno.
+En otras palabras, no importa lo que nos propusimos de limites de confiabilidad, podemos distinguir de forma fiable en el tiempo T 
+suficientes mensajes para corresponder a CT bits, cuando T es suficientemente grande. En el teorema 12 podemos comparar 
+la capacidad de un canal sin ruido en la secci\'on uno.
 
 \begin{center}
 EJEMPLO DE UN CANAL DISCRETO Y SU CAPACIDAD
 \end{center} 
 
-Un ejemplo simple de un canal discreto se indica en la figura 11.Hay tres posibles simbolos. EL primero \bigskipen nunca se vera afectado por el ruido.El segundo y la tercera tiene cada una probabilidad p de que viene a trav\'es impertubable q de ser cambiado en el otro elemto par.Nosotros tenemos (dejar =  \alpha = -[plogp + q\log{q}] y p y q son probabilidades de estar usando los simbolos primero y segundo).
+Un ejemplo simple de un canal discreto se indica en la figura 11.Hay tres posibles simbolos. EL primero 
+nunca se vera afectado por el ruido.El segundo y la tercera tiene cada una probabilidad p de que viene a trav\'es impertubable q de ser cambiado en el otro elemto par.Nosotros tenemos (dejar =  \alpha = -[plogp + q\log{q}] y p y q son probabilidades de estar usando los simbolos primero y segundo).
 
 \begin{centerMe gusta ·  · Compartir · Hace 9 minutos · }
 H(x) = -P\log{P} - 2Q\log{Q}
@@ -48,8 +57,10 @@ La capacidad del canal es de:
 C = \log{\frac{\beta + 2}{\beta}}
 \end{center}
 
-Notese como esto comprueba los valores obvios en los casos: p = 1 y p = \frac{1}{2}. En primero, \beta = 1 y C = \log{3}, el cual es correcto debido a que el canal es entonces sin ruido con tres posibles s\'imbolos. Si p = \frac{1}{2}, \beta = 2 y C = \log{2}.Aqu\'i el segundo y el tercer s\'imbolos, no se pueden distinguir en absoluto y act\'uan conjuntamente como un solo s\'imbolo. El primer simbolo se utiliza con una probabilidad P = \frac{1}{2}   y el segundo junto al tercero con probabilidad \frac{1}{2}.Esto puede ser distribuido entre ellos de cualquier modo deseado y todav\'ia alcanzar la m\'axima capacidad.
-Para los valores intermedios de la capacidad del canal p estara entre \log{2} y \log{3}.Esta distinci\'on \bigskipen entre el segundo y tercer s\'imbolo transmite alguna informaci\'on, pero no tanto como en el caso sin ruido.
+Notese como esto comprueba los valores obvios en los casos: p = 1 y p = \frac{1}{2}. En primero, \beta = 1 y C = \log{3}, el cual es correcto debido a que el canal es entonces sin ruido con tres posibles s\'imbolos. Si p = \frac{1}{2}, \beta = 2 y C = \log{2}.Aqu\'i el segundo y el tercer s\'imbolos, no se pueden distinguir en absoluto y act\'uan conjuntamente como un solo s\'imbolo. El primer simbolo se utiliza con una probabilidad P = \frac{1}{2}  y el segundo junto al tercero con probabilidad \frac{1}{2}.Esto puede ser distribuido entre ellos de cualquier modo deseado y todav\'ia alcanzar la m\'axima capacidad.
+Para los valores intermedios de la capacidad del canal p estara entre \log{2} y \log{3}.Esta distinci\'on 
+entre el segundo y tercer s\'imbolo transmite alguna informaci\'on, pero no tanto como en el caso sin ruido.
+
 El primer s\'imbolo se utiliza tanto mas frecuentemente que los otros dos, debido a su ausencia de ruido.
 
 \begin{center}
@@ -141,3 +152,6 @@ C = MAX[ H(y) - H_x(y) ]
  
 Un c\'odigo eficiente, permite la correci\'on de todos los errores y transmitir a la tasa C, es el siguiente(encontrado por un metodo de R.Hamming):
  
+
+
+
