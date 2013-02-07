@@ -1,0 +1,143 @@
+En el caso sin ruido un retraso generalmente requiere para la codificacion\'on ideal ahora \bigskip esta tiene una funci\'on adicional que permite una muestra larga de ruido para afectar la señal antes de un juicio, se hace \bigskipen en el punto de resepci\'on  para el mensaje original.Incrementando el tamaño del ejemplo siempre agudiza las posibles afirmaciones estadisticas.
+
+El contenido del teorema 11 y su prueba se pueden formular de una manera diferente que muestra \bigskipen una conexi\'on sin ruido de una manera mas clara.Considere las posibles duraciones de las señales T y supongamos \bigskipen un subconjutno de ellos se seleccionan para ser usados. Los que esten en el subconjunto se utilizen todos con igual probabilidad, y suponiendo \bigskipen que el resector es construido para seleccionar, como la señal original. la causa mas probable de subconjutno cuando \bigskipen una señal perturbada es recivida.Nosotros definimos \begin{em}N(T,q)\end{em} siendo el numero maximo de señales que podemos elegir para el subconjunto tal que la probabilidad de una interpretaci\on incorrecta sea menor o igual a q.
+
+\begin{em}Teorema 12:\end{em} \displaystyle\lim_{t \to{}\infty}\frac{\log{N}(T,q)}{T} = C \begin{em}, Donde C es la capacidad de canal,a condici\'on que q no sea igual a 0 o 1\end{em}
+
+En otras palabras, no importa lo que nos propusimos de limites de confiabilidad, podemos distinguir de forma fiable en el tiempo T \bigskipen suficientes mensajes para corresponder a CT bits, cuando T es suficientemente grande. En el teorema 12 podemos comparar \bigskipen la capacidad de un canal sin ruido en la secci\'on uno.
+
+\begin{center}
+EJEMPLO DE UN CANAL DISCRETO Y SU CAPACIDAD
+\end{center} 
+
+Un ejemplo simple de un canal discreto se indica en la figura 11.Hay tres posibles simbolos. EL primero \bigskipen nunca se vera afectado por el ruido.El segundo y la tercera tiene cada una probabilidad p de que viene a trav\'es impertubable q de ser cambiado en el otro elemto par.Nosotros tenemos (dejar =  \alpha = -[plogp + q\log{q}] y p y q son probabilidades de estar usando los simbolos primero y segundo).
+
+\begin{centerMe gusta ·  · Compartir · Hace 9 minutos · }
+H(x) = -P\log{P} - 2Q\log{Q}
+H_y(x) = 2Q\alpha
+\end{center}
+
+
+Nosotros deseamos elegir P y Q, de tal manera que se maximice H(x) - H_y(x) sujeto a la restricci\'on P + 2Q = 1. 
+
+Por lo tanto concideremos:
+
+\begin{center}
+U = -P\log{P} - 2Q\log{Q} -2Q\alfa + \lambda(P+2Q)
+
+\frac{{\partial U}}{{\partial P}} = -1 - \log{P} + \lambda = 0
+
+\frac{{\partial U}}{{\partial P}} = -2 - 2\log{Q} -2\alpha + 2\lambda = 0
+\end{center}
+
+
+Eliminando \lamda
+
+\begin{center}
+\log{P} = \log{Q} + \alpha
+P = Q e^\alpha = Q\beta 
+\end{center}
+
+\begin{center}
+P = \frac{\beta}{\beta + 2}   Q = \frac{1}{\beta + 2}
+\end{center}
+
+La capacidad del canal es de:
+
+\begin{center}
+C = \log{\frac{\beta + 2}{\beta}}
+\end{center}
+
+Notese como esto comprueba los valores obvios en los casos: p = 1 y p = \frac{1}{2}. En primero, \beta = 1 y C = \log{3}, el cual es correcto debido a que el canal es entonces sin ruido con tres posibles s\'imbolos. Si p = \frac{1}{2}, \beta = 2 y C = \log{2}.Aqu\'i el segundo y el tercer s\'imbolos, no se pueden distinguir en absoluto y act\'uan conjuntamente como un solo s\'imbolo. El primer simbolo se utiliza con una probabilidad P = \frac{1}{2}   y el segundo junto al tercero con probabilidad \frac{1}{2}.Esto puede ser distribuido entre ellos de cualquier modo deseado y todav\'ia alcanzar la m\'axima capacidad.
+Para los valores intermedios de la capacidad del canal p estara entre \log{2} y \log{3}.Esta distinci\'on \bigskipen entre el segundo y tercer s\'imbolo transmite alguna informaci\'on, pero no tanto como en el caso sin ruido.
+El primer s\'imbolo se utiliza tanto mas frecuentemente que los otros dos, debido a su ausencia de ruido.
+
+\begin{center}
+16. LA CAPACIDAD DE CANALES EN CIERTOS CASOS ESPECIALES
+\end{center}
+
+Si el ruido afecta símbolos sucesivos de canal de forma independiente pueden ser descritos por un conjunto de transici\'on de probabilidades p_{i,j}.Esta es la probabilidad, si el simbolo i es enviado, que j sera recibido.La tasa de canal maximo viene dado por el m\'aximo de
+
+\begin{center}
+- \sum_{i,j}P_i p_{i,j} \log{\sum{P_i p_{i,j}}} + \sum_{i,j}P_i p_{i,j}\log{p_{i,j}}
+\end{center}
+ 
+Multiplicar por P_s y sumando en s muestra que \mu = C. Vamos a la inversa de p_{sj} (si existe) en h_{st}  de modo que \sum_{s} h_{st} p_{sj} = \delta_{tj}.Entonces: 
+
+\begin{center}
+\sum_{s,j}h_{st} p_{s,j} \log{p_{s.j}} - \log{\sum_{i}P_i p_{i,t}} = C \sum_{s} h_{s,t}
+\end{center}
+Por lo tanto:
+
+\begin{center}
+\sum_{i} P_i p_{i,t} = exp[- C \sum_{s} h_{s,t}+ \sum_{s,j} h_{s,t} p_{s,j} \log{p_{s,j}}]
+\end{center}
+
+o:  
+\begin{center}
+P_i = \sum_{t} h_{i,t} exp[ - C \sum_{s} h_{s,t}+ \sum_{s,j} h_{s,t} p_{s,j} \log{p_{s,j}} ]
+\end{center}
+
+
+Este es el sistema de ecuaciones para determinar el valor maximo de P, con C se determina de manera que \sum P_i = 1. Cuando esto esta hecho, C sera la capacidad del canal y P_i las probabilidades para los simbolos de canal para lograr esta capacidado.
+Si cada s\'imbolo de entrada tiene el mismo conjunto de probabilidades en las l\'ineas que emergen de ella y lo mismo sucede a cada s\'imbolo de salida, la capacidad puede ser calculada f\'acilmente. Los ejemplos se muestran en la figura 12. En tal caso H_x (y) es independiente de la destribuci\'on de probabilidades de los s\'imbolos de entrada, y esta dad por -\sum p_i \log{p_i}. Cuando p_i son los valores de probabilidad de transici\'on de cualquier s\'imbolo de entrada.La capacidad del canal es:
+
+\begin{center}
+MAX [H(y) - H_x(y)] = MAX H(y) + \sum p_i \log{p_i}.
+\end{center}
+  
+El valor m\'aximo de H(y) esta claramente  \log{m} donde m es el numero de simbolos de salida, ya que es posible para hacer todos igualmente probables haciendo los simbolos de entradas igualmente probables. La capacidad del canal es por lo tanto:
+
+\begin{center}
+C = \log{m} + \sum p_i \log{p_i}
+\end{center}
+
+En la figura 12a ser\'ia 
+
+\begin{center}
+C = = \log{4} - \log{2} 0 \log{2}.
+\end{center}
+
+Esto se podria lograr mediante el uso solo the la 1a y 3d simbolo. En la Figura b:
+
+\begin{center}
+C = \log{4} - \frac{2}{3}\log{3} - \frac{1}{3}\log{6}
+= \log{4} - \log{3} - \frac{1}{3}\log{2}
+= \log{\frac{1}{3}} 2^{\frac{5}{3}}
+\end{center}
+
+En la figura 12c nosotros tenemos:
+
+\begin{center}
+C = \log{3} - \frac{1}{2}\log{2} - \frac{1}{3}\log{3} - \frac{1}{6} \log{6}
+
+= \log{\frac{3}{ 2^{\frac{1}{2} 3^{\frac{1}{3} 6^{\frac{1}{6} }}
+\end{center}
+
+Supongamos que los s\'imbolos se dividen en varios grupos tal que el ruido causa a un s\'imbolo en un grupo a ser confundido con un s\'imbolo de otro grupo.Deja la capacidad de un grupo n-\'esimo ser C_n
+(en bits por segundo)donde solo utilizamos los s\'imbolos de este grupo. Entonces es facil desmotrar  de todo el conjunto, la probabilidad P_n para todos los s\'imbolos del grupo n-esimo deber\'ia ser:
+
+\begin{center}
+P_n = \frac{2^{C_n}}{\sum 2^{C_n}}
+\end{center}
+
+En un grupo la probabilidad se distribuye tal como seria si estos eran los unicos simbolos que se utilizan. La capacidad del canal es:
+
+\begin{center}
+C = \log{\sum 2^{C_n}}
+\end{center}
+
+\begin{center}
+17. UN EJEMPLO DE CODIFICACI\'ON EFICIENTE
+\end{center}
+
+El siguiente ejemplo, aunque es un poco realista, es un caso en que la coincidencia exacta para un canal con ruido, es posible. Hay dos s\'imbolos de canal 0 y 1, y el ruido les afecta en bloques de siete s\'imbolos. Un bloque de siete o se transmite sin error, o exactamente un s\'imbolo de los siete es incorrecta.Estas ocho posibilidades son igualmente probables. Nosotros tenemos:
+
+\begin{center}
+C = MAX[ H(y) - H_x(y) ]
+= \frac{1}{7}[7 + \frac{8}{8}\log{\frac{1}{8}}]
+= \frac{4}{7}bits/simbolos
+\end{center}
+ 
+Un c\'odigo eficiente, permite la correci\'on de todos los errores y transmitir a la tasa C, es el siguiente(encontrado por un metodo de R.Hamming):
+ 
