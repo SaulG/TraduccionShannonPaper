@@ -1,54 +1,71 @@
-En el caso sin ruido un retraso generalmente requiere para la codificacion\'on ideal ahora 
-esta tiene una funci\'on adicional que permite una muestra larga de ruido para afectar la señal antes de un juicio, se hace 
-en el punto de resepci\'on  para el mensaje original.Incrementando el tamaño del ejemplo siempre agudiza las posibles 
-afirmaciones estadisticas.
+En el caso sin ruido un retraso generalmente requiere para la
+codificacion\'on ideal ahora esta tiene una funci\'on adicional que
+permite una muestra larga de ruido para afectar la se\~{n}al antes de
+un juicio, se hace en el punto de resepci\'on para el mensaje
+original.Incrementando el tama\~{n}o del ejemplo siempre agudiza las
+posibles afirmaciones estad\'{\i}sticas.
 
-El contenido del teorema 11 y su prueba se pueden formular de una manera diferente que muestra 
-una conexi\'on sin ruido de una manera mas clara.Considere las posibles duraciones de las señales T y supongamos 
-un subconjutno de ellos se seleccionan para ser usados. Los que esten en el subconjunto se utilizen todos con igual probabilidad, y suponiendo 
-que el resector es construido para seleccionar, como la señal original. la causa mas probable de subconjutno cuando 
-una señal perturbada es recivida.Nosotros definimos \begin{em}N(T,q)\end{em} siendo el numero maximo de señales que podemos elegir para el 
-subconjunto tal que la probabilidad de una interpretaci\on incorrecta sea menor o igual a q.
+El contenido del teorema 11 PONER REF y su prueba se pueden formular
+de una manera diferente que muestra una conexi\'on sin ruido de una
+manera mas clara.Considere las posibles duraciones de las se\~{n}ales
+T y supongamos un subconjutno de ellos se seleccionan para ser
+usados. Los que esten en el subconjunto se utilizen todos con igual
+probabilidad, y suponiendo que el resector es construido para
+seleccionar, como la se\~{n}al original. la causa mas probable de
+subconjutno cuando una se\~{n}al perturbada es recivida.Nosotros
+definimos $N(T,q)$ siendo el numero maximo de se\~{n}ales que podemos
+elegir para el subconjunto tal que la probabilidad de una
+interpretaci\'{o}n incorrecta sea menor o igual a $q$.
 
-\begin{em}Teorema 12:\end{em} \displaystyle\lim_{t \to{}\infty}\frac{\log{N}(T,q)}{T} = C \begin{em}, Donde C es la capacidad de canal,a condici\'on que q no sea igual a 0 o 1\end{em}
+\begin{theorem}
+\begin{equation}
+\displaystyle\lim_{t \to{}\infty}\frac{\log{N}(T,q)}{T} = C,
+\end{equation}
+donde $C$ es la capacidad de canal,a condici\'on que q no sea igual a
+0 o 1
+\label{t12}
+\end{theorem}
 
-En otras palabras, no importa lo que nos propusimos de limites de confiabilidad, podemos distinguir de forma fiable en el tiempo T 
-suficientes mensajes para corresponder a CT bits, cuando T es suficientemente grande. En el teorema 12 podemos comparar 
-la capacidad de un canal sin ruido en la secci\'on uno.
+En otras palabras, no importa lo que nos propusimos de limites de
+confiabilidad, podemos distinguir de forma fiable en el tiempo $T$
+suficientes mensajes para corresponder a $CT$ bits, cuando $T$ es
+suficientemente grande. En el teorema \ref{t12} podemos comparar la
+capacidad de un canal sin ruido en la secci\'on uno PONER REF.
 
-\begin{center}
-15. EJEMPLO DE UN CANAL DISCRETO Y SU CAPACIDAD
-\end{center} 
+\section{Ejemplo de un canal discreto y su capacidad}
 
-Un ejemplo simple de un canal discreto se indica en la figura 11.Hay tres posibles simbolos. EL primero 
-nunca se vera afectado por el ruido.El segundo y la tercera tiene cada una probabilidad p de que viene a trav\'es impertubable q 
-de ser cambiado en el otro elemto par.Nosotros tenemos (dejar =  \alpha = -[plogp + q\log{q}] y p y q son probabilidades de estar usando los simbolos primero y segundo).
+Un ejemplo simple de un canal discreto se indica en la figura 11 PONER
+REF.Hay tres posibles simbolos. El primero nunca se vera afectado por
+el ruido.El segundo y la tercera tiene cada una probabilidad p de que
+viene a trav\'es impertubable q de ser cambiado en el otro elemento
+par.Nosotros tenemos (dejar $\alpha = -[plogp + q\log{q}]$ y $p$ y $q$
+son probabilidades de estar usando los simbolos primero y segundo).
+\begin{equation}
+\begin{array}{rcl}
+H(x) &=& -P\log{P} - 2Q\log{Q} \\
+H_y(x) &=& 2Q\alpha
+\end{array}
+\end{equation}
 
-\begin{center}
-H(x) = -P\log{P} - 2Q\log{Q}
-H_y(x) = 2Q\alpha
-\end{center}
-
-
-Nosotros deseamos elegir P y Q, de tal manera que se maximice H(x) - H_y(x) sujeto a la restricci\'on P + 2Q = 1. 
+Nosotros deseamos elegir $P$ y $Q$, de tal manera que se maximice
+$H(x) - H_y(x)$ sujeto a la restricci\'on $P + 2Q = 1$.
 
 Por lo tanto concideremos:
+\begin{equation}
+\begin{array}{rcl}
+U &=& -P\log{P} - 2Q\log{Q} -2Q\alpha + \lambda(P+2Q) \\
+\frac{{\partial U}}{{\partial P}} &=& -1 - \log{P} + \lambda = 0 \\
+\frac{{\partial U}}{{\partial P}} &=& -2 - 2\log{Q} -2\alpha + 2\lambda = 0
+\end{array}
+\end{equation}
 
-\begin{center}
-U = -P\log{P} - 2Q\log{Q} -2Q\alfa + \lambda(P+2Q)
-
-\frac{{\partial U}}{{\partial P}} = -1 - \log{P} + \lambda = 0
-
-\frac{{\partial U}}{{\partial P}} = -2 - 2\log{Q} -2\alpha + 2\lambda = 0
-\end{center}
-
-
-Eliminando \lamda
-
-\begin{center}
-\log{P} = \log{Q} + \alpha
-P = Q e^\alpha = Q\beta 
-\end{center}
+Eliminando $\lambda$
+\begin{equation}
+\begin{array}{rcl}
+\log{P} &=& \log{Q} + \alpha \\
+P &=& Q e^\alpha = Q\beta 
+\end{array}
+\end{equation}
 
 \begin{center}
 P = \frac{\beta}{\beta + 2}   Q = \frac{1}{\beta + 2}

@@ -1,4 +1,3 @@
-\usepackage{amssymb}
 \section{Representacion grafica de procesos Markovianos}
 
 Los procesos estocasticos del tipo descrito arriba son matematicamente
@@ -95,42 +94,47 @@ secuencia tipica ser\'{i}a
 a b a c a c a c a b a c a b a b a c a c
 \end{equation}
 
-Este tipo de situacion no es de mucha importancia para nuestro trabajo.
-Si la primera condici\'{o}n no se cumple, el grafo puede ser separado en
-un conjunto de subgrafos que satisfagan cada uno la primera condici\'{o}n.
-Nosotros asumiremos que la segunda condicion es tambien satisfecha
-para cada subgrafo.  Tenemos en este caso lo que se le llama una fuente ``mezclada''
-hecha de un numero de componentes puros. Estos componentes corresponden
-a los diversos subgrafos. Si $L_{1}, L_{2}, L_{3}, \cdots$ son los componentes
-fuente entonces podemos escribir
-
+Este tipo de situacion no es de mucha importancia para nuestro
+trabajo.  Si la primera condici\'{o}n no se cumple, el grafo puede ser
+separado en un conjunto de subgrafos que satisfagan cada uno la
+primera condici\'{o}n.  Nosotros asumiremos que la segunda condicion
+es tambien satisfecha para cada subgrafo.  Tenemos en este caso lo que
+se le llama una fuente ``mezclada'' hecha de un numero de componentes
+puros. Estos componentes corresponden a los diversos subgrafos. Si
+$L_{1}, L_{2}, L_{3}, \cdots$ son los componentes fuente entonces
+podemos escribir
 \begin{equation}
-L = p_{1}L_{1} + p_{2}L_{2} + p_{3}L_{3} + \ldots
+L = p_{1}L_{1} + p_{2}L_{2} + p_{3}L_{3} + \ldots,
 \end{equation}
-
-donde p_{i} es la probabilidad del componente fuente L_{i}.
+donde $p_{i}$ es la probabilidad del componente fuente $L_{i}$.
 Fisicamente la situacion representada es esta: Hay diferentes fuentes
-$L_{1}, L_{2}, L_{3}, \cdots$ que son cada uno de una estructura estadistica
-homogenea (por ejemplo, son erg\'{o}dicos). No sabemos \textit{a priori} cual será utilizada,
-pero una vez que la secuencia empieza en un componente puro dado $L_{i}$, este continua
-indefinidamente de acuerdo a la estructura estadistica de ese componente.
-Como un ejemplo, uno puede tomar dos de estos procesos definidos arriba y asumir
-$p_{1} = .2$ y $p_{2} = .8$. Una secuencia de la fuente mezclada
+$L_{1}, L_{2}, L_{3}, \cdots$ que son cada uno de una estructura
+estadistica homogenea (por ejemplo, son erg\'{o}dicos). No sabemos
+\textit{a priori} cual será utilizada, pero una vez que la secuencia
+empieza en un componente puro dado $L_{i}$, este continua
+indefinidamente de acuerdo a la estructura estadistica de ese
+componente.  Como un ejemplo, uno puede tomar dos de estos procesos
+definidos arriba y asumir $p_{1} = .2$ y $p_{2} = .8$. Una secuencia
+de la fuente mezclada
 
 \begin{equation}
 L = .2L_{1} + .8L_{2}
 \end{equation}
 
-ser\'{i}a obtenida escogiendo primero $L_{1}$ o $L_{2}$ con probabilidades .2 y .8 y despues
-de esta elecci\'{o}n generando una secuenca de lo que sea haya sido elegido.
-Excepto cuando se exprese lo contrario nosotros debemos asumir que una fuente es erg\'{o}dica. Esta
-asunci\'{o}n permite a uno identificar los promedios a lo largo de la secuencia con promedios encima
-del conjunto de posibles secuencias (la probabilidad de una discrepancia sea cero). Por ejemplo
-la frecuencia relativa de la letra A en una secuencia infinita particular ser\'{i}a, con la probabilidad
-uno, igual a su frecuencia relativa en el conjunto de secuencias.
-Si $P_{i}$ es la probabilidad de un estado $i$ y $p_{i}(j)$ la probabilidad de transicion de
-un estado $j$, entonces para que el proceso sea estacionario es claro que $P_{i}$ debe
-satisfacer condiciones de equilibrio:
+ser\'{i}a obtenida escogiendo primero $L_{1}$ o $L_{2}$ con
+probabilidades .2 y .8 y despues de esta elecci\'{o}n generando una
+secuenca de lo que sea haya sido elegido.  Excepto cuando se exprese
+lo contrario nosotros debemos asumir que una fuente es
+erg\'{o}dica. Esta asunci\'{o}n permite a uno identificar los
+promedios a lo largo de la secuencia con promedios encima del conjunto
+de posibles secuencias (la probabilidad de una discrepancia sea
+cero). Por ejemplo la frecuencia relativa de la letra A en una
+secuencia infinita particular ser\'{i}a, con la probabilidad uno,
+igual a su frecuencia relativa en el conjunto de secuencias.  Si
+$P_{i}$ es la probabilidad de un estado $i$ y $p_{i}(j)$ la
+probabilidad de transicion de un estado $j$, entonces para que el
+proceso sea estacionario es claro que $P_{i}$ debe satisfacer
+condiciones de equilibrio:
 
 \begin{equation}
 P_{j} = \sum P_{i}p_{i}(j).
@@ -142,16 +146,18 @@ equilibrio de valores conforme $N \rightarrow \infty$.
 
 \section{Selecci\'{o}n, incertidumbre y entropia.}
 
-Hemos presenteado una fuente de informaci\'{o}n discreta como un proceso Markoviano. ?'Podremos
-definir una cantidad que mida, en algun sentido, que tanta informaci\'{o}n es ``producida''
-por estos procesos, o mejor aun, a que tasa de informaci\'{o}n es producida?
-Suponiendo que tenemos un conjunto de posibles eventos cuya probabilidad de
-ocurrir es $p_{1}, p_{2}, \ldots, p_{n}$. Estas probabilidades son conocidas pero eso
-es todo lo que conocemos en cuanto a lo que concierne a que evento ocurrir\'{a}. ?'Podremos
-encontrar una medidad de cuanta ``opcion'' est\'{a} involucrada en la seleccion de un evento
-o de que tan incierto pudiera ser la salida?
-En caso de que exista dicha medida, $H(p_{1}, p_{2}, \ldots, p_{n})$, es razonable el requerir
-de esta las siguientes propiedades:
+Hemos presenteado una fuente de informaci\'{o}n discreta como un
+proceso Markoviano. Podremos definir una cantidad que mida, en algun
+sentido, que tanta informaci\'{o}n es ``producida'' por estos
+procesos, o mejor aun, a que tasa de informaci\'{o}n es producida?
+Suponiendo que tenemos un conjunto de posibles eventos cuya
+probabilidad de ocurrir es $p_{1}, p_{2}, \ldots, p_{n}$. Estas
+probabilidades son conocidas pero eso es todo lo que conocemos en
+cuanto a lo que concierne a que evento ocurrir\'{a}. ?'Podremos
+encontrar una medidad de cuanta ``opcion'' est\'{a} involucrada en la
+seleccion de un evento o de que tan incierto pudiera ser la salida?
+En caso de que exista dicha medida, $H(p_{1}, p_{2}, \ldots, p_{n})$,
+es razonable el requerir de esta las siguientes propiedades:
 
 \begin{enumerate}
 \item $H$ debe ser continuo en $p_{i}$.
@@ -235,7 +241,7 @@ p^{'}_{i} = \sum{j}{} a_{ij}p_{j}
 \end{equation}
 donde $\sum_{i} a_{ij} = \sum_{j} a_{ij} = 1$, y todo $a_{ij} \leq 0$, entonces H incrementa (excepto in el caso especial donde esta transformacion de cantidades a no mas de $p_{j}$ permutaciones con $H$ permaneciendo igual).
 \item Suponiendo que hay dos oportunidades de eventos $x$ y $y$ como en 3, no necesariamente independiente. Para cada valor particular $i$ que $x$ puede tener hay una probabilidad condicional $p_{i}(j)$ que $y$ tenga el valor $j$. Esto est\'{a} dado por
-\begin{equatio}
+\begin{equation}
 p_{i}(j) = \frac{p(i,j)}{\sum_{j}p(i,j)}
 \end{equation}
 Definimos la \textit{entrop\'{i}a condicional} de $y$, $H_{x}(y)$ como el promedio de entropia de $y$ para cada valor de $x$, ponderado de acuerdo a la probabilidad de obtener ese $x$ en particular. Esto es
@@ -291,149 +297,160 @@ donde $f_{i}$ es la frecuencia promedio (sucesos por segundo) del estado $i$. Cl
 H' = mH
 \end{equation}
 
-donde $m$ es el numero promedio de simbolos producidos por segundo. $H$ o
-$H'$ mide la cantidad de informaci\'{o}n generada por la fuente por simbolo o por
-segundo. Si la base logaritmica es 2, representar\'{a}n bits por simbolo o por segundo.
-Si simbolos sucesivos son independientes entonces $H$ es
-simplemente $-\sum p_{i} \log p_{i}$ donde $p_{i}$ es la probabilidad de
-simbolo $i$. Suponiendo que en este caso se considere un mensaje largo de $N$
-simbolos. Con mucha probabilidad este contendr\'{i}a alrededor de $p_{i}N$ ocurrencias
-del primer simbolo, $p_{2}N$ ocurrencias del segundo, etc. Por lo tanto
-la probabilidad en particular de este mensaje ser\'{i}a aproximadamente
-
-\being{equation}
+donde $m$ es el numero promedio de simbolos producidos por
+segundo. $H$ o $H'$ mide la cantidad de informaci\'{o}n generada por
+la fuente por simbolo o por segundo. Si la base logaritmica es 2,
+representar\'{a}n bits por simbolo o por segundo.  Si simbolos
+sucesivos son independientes entonces $H$ es simplemente $-\sum p_{i}
+\log p_{i}$ donde $p_{i}$ es la probabilidad de simbolo
+$i$. Suponiendo que en este caso se considere un mensaje largo de $N$
+simbolos. Con mucha probabilidad este contendr\'{i}a alrededor de
+$p_{i}N$ ocurrencias del primer simbolo, $p_{2}N$ ocurrencias del
+segundo, etc. Por lo tanto la probabilidad en particular de este
+mensaje ser\'{i}a aproximadamente
+\begin{equation}
 p = p_{1}^{ p_{1}^{N}} p_{2}^{ p_{2}^{N}} \ldots p_{n}^{ p_{n}^{N}}
 \end{equation}
-
 o
+\begin{equation}
+\log p \doteq N \sum{i}{} p_{i} \log p_{i}
+\end{equation}
+\begin{equation}
+\log p \doteq -NH
+\end{equation}
+\begin{equation}
+\log p \doteq \frac{\log 1/p}{N}
+\end{equation}
 
-\begin{equation}
-log p \doteq N \sum{i}{} p_{i} \log p_{i}
-\end{equation}
-\begin{equation}
-log p \doteq -NH
-\end{equation}
-\begin{equation}
-log p \doteq \frac{\log 1/p}{N}
-\end{equation}
+Entonces $H$ es aproximadamente el logaritmo del reciproco de la
+probabilidad de una longitud de secuencia tipica dividido por el
+numero de simbolos en la secuencia. El mismo resultado permanece para
+cualquier fuente. Dicho de otra forma mas precisa tenemos (ver
+ap\'{e}ndice \ref{a3}): 
 
-$Entonces H$ es aproximadamente el logaritmo del reciproco de la probabilidad
-de una longitud de secuencia tipica dividido por el numero de simbolos en la
-secuencia. El mismo resultado permanece para cualquier fuente. Dicho de otra forma
-mas precisa tenemos (ver apendice 3):
-\textit{Teorema 3}: Dado cualquier $\epsilon > 0$ y $\delta > 0$, podemos encontrar
-un $N_{0}$ de tal manera que las secuencias de cualquier longitud $N \geq N_{0}$ caen
-dentro de dos clasificaciones:
+\begin{theorem}
+Dado cualquier $\epsilon > 0$ y $\delta > 0$, podemos encontrar un
+$N_{0}$ de tal manera que las secuencias de cualquier longitud $N \geq
+N_{0}$ caen dentro de dos clasificaciones:
 \begin{enumerate}
 \item Un conjunto cuya probabilidad total es menor que $\epsilon$.
 \item El residuo, todos aquellos miembros cuyas probabilidades satisfacen la inequalidad
-\end{enumerate}
-
 \begin{equation}
 |\frac{\log p^{-1}}{N} - H| < \delta
 \end{equation}
+\end{enumerate}
+\end{theorem}
 
-En otras palabras estamos casi seguros de tener $\frac{log p^{-1}}{N}$ muy cerca a $H$ cuando $N$ es grande.
-Un resultado estrechamente relacionado trata con el numero de
-secuencias de varias probabilidades. Considerando de nuvo el
-numero de secuencias de longitud $N$ y dejando que sean acomodados
-en order decremental de probabilidad. Definimos $n(q)$ para ser el
-numero que debemos de tomar de este conjunto empezando con el mas probable
-a fin de acumular una probabilidad total q para aquellos tomados.
+En otras palabras estamos casi seguros de tener $\frac{log p^{-1}}{N}$
+muy cerca a $H$ cuando $N$ es grande.  Un resultado estrechamente
+relacionado trata con el numero de secuencias de varias
+probabilidades. Considerando de nuvo el numero de secuencias de
+longitud $N$ y dejando que sean acomodados en order decremental de
+probabilidad. Definimos $n(q)$ para ser el numero que debemos de tomar
+de este conjunto empezando con el mas probable a fin de acumular una
+probabilidad total q para aquellos tomados.
 
-\textit{Teorema 4}:
-
+\begin{theorem}
 \begin{equation}
 \lim_{N \rightarrow \infty} \frac{\log n(q)}{N} = H
-\end{begin}
-
-cuando $q$ no es igual a 0 o 1.
-Se puede interpretar $\log n(q)$ como el numero de bits requeridos para
-especificar la secuencia cuando consideramos solo la secuencia mas probable
-con una probabilidad $q$. Entonces $\frac{\log n(q)}{N}$ es el numero de bits
-por simbolo para la especificaci\'{o}n. Este teorema dice que para un $N$ grande
-este ser\'{a} independiente de $q$ e igual a $H$. La taza de crecimiento del
-logaritmo del numero de secuencias rasonablemente probables est\'{a} dado por
-$H$, independientemente de nuestra interpretacion de
-``razonalmente probable''. Debido a estos resultados, que son probados en el
-apendice 3, es posible para la mayoria de nuestros propositos el tratar a las
-secuencias largas como si solo fueran $2^{HN}$ de si mismas, cada una con una
-probabilidad $2^{-HN}$.
-Los siguientes dos teoremas muestran que $H$ y $H'$ pueden ser determinados
-al limitar las operaciones directamente de las estadisticas de las secuencias
-de mensajes, sin referencia a los estados y probabilidades de transicion entre los estados.
-
-\textit{Teorema 5}: Siendo $p(B_{i})$ la probabilidad de una secuencia $B_{i}$
-de simbolos de una fuente. Sea
-
-\begin{equation}
-G_{N} = - \frac{1}{N} \sum{i}{} p(B_{i}) \log p(B_{i})
 \end{equation}
+cuando $q$ no es igual a 0 o 1.
+\end{theorem}
 
+Se puede interpretar $\log n(q)$ como el numero de bits requeridos
+para especificar la secuencia cuando consideramos solo la secuencia
+mas probable con una probabilidad $q$. Entonces $\frac{\log n(q)}{N}$
+es el numero de bits por simbolo para la especificaci\'{o}n. Este
+teorema dice que para un $N$ grande este ser\'{a} independiente de $q$
+e igual a $H$. La taza de crecimiento del logaritmo del numero de
+secuencias rasonablemente probables est\'{a} dado por $H$,
+independientemente de nuestra interpretacion de ``razonalmente
+probable''. Debido a estos resultados, que son probados en el apendice
+3, es posible para la mayoria de nuestros propositos el tratar a las
+secuencias largas como si solo fueran $2^{HN}$ de si mismas, cada una
+con una probabilidad $2^{-HN}$.  Los siguientes dos teoremas muestran
+que $H$ y $H'$ pueden ser determinados al limitar las operaciones
+directamente de las estadisticas de las secuencias de mensajes, sin
+referencia a los estados y probabilidades de transicion entre los
+estados.
+
+\begin{theorem}
+Siendo $p(B_{i})$ la probabilidad de una secuencia $B_{i}$ de simbolos
+de una fuente. Sea
+\begin{equation}
+G_{N} = - \frac{1}{N} \sum{i}{} p(B_{i}) \log p(B_{i}),
+\end{equation}
 donde la suma est\'{a} por encima de todas las secuencias $B_{i}$ que
 contienen $N$ simbolos. Entonces $G_{N}$ es una funcion de decremento
 monotono de $N$ y
-
 \begin{equation}
-\lim_{N \rightarrow \infty} G_{N} = H
+\lim_{N \rightarrow \infty} G_{N} = H.
 \end{equation}
+\end{theorem}
 
-\textit{Teorema 6}: Sea $p(B_{i},S_{j})$ la probabilidad de secuencia $B_{i}$
-seguida por el simbolo $S_{j}$ y  $p_{B_{j}}(S_{j}) = p(B_{i},S_{j}/p(B_{i}))$ sea
+\begin{theorem}
+Sea $p(B_{i},S_{j})$ la probabilidad de secuencia $B_{i}$ seguida por
+el simbolo $S_{j}$ y $p_{B_{j}}(S_{j}) = p(B_{i},S_{j}/p(B_{i}))$ sea
 la probabilidad condicional de $S_{j}$ despues de $B_{i}$. Sea
-
 \begin{equation}
-F_{N} = - \sum{i,j}{} p(B_{i},S_{j}) \log p_{B_{i}}(S_{j})
+F_{N} = - \sum{i,j}{} p(B_{i},S_{j}) \log p_{B_{i}}(S_{j}),
 \end{equation}
-
 donde la suma est\'{a} por encima todos los bloques $B_{i}$ de $N-1$ simbolos y sobre
 todos los simbolos $S_{j}$. Entonces $F_{N}$ es una funcion mon\'{o}tona decreciente de $N$,
-
 \begin{equation}
-F_{N} = NG_{N} - (N - 1)G_{N-1},
+\begin{array}{rcl}
+F_{N} &=& NG_{N} - (N - 1)G_{N-1}, \\
+G_{N} &=& \frac{1}{N} \sum{n=1}{N} F_{n}, \\
+F_{N} &\leq& G_{N},
+\end{array}
 \end{equation}
+y $\lim_{N \rightarrow \infty} F_{N} = H$.  
+\end{theorem}
 
-\begin{equation}
-G_{N} = \frac{1}{N} \sum{n=1}{N} F_{n},
-\end{equation}
-
-\begin{equation}
-F_{N} \leq G_{N},
-\end{equation}
-
-y $\lim_{N \rightarrow \infty} F_{N} = H$.
-Estos resultados se derivan del apendice 3. Muestran que unas series de aproximaciones
-a H pueden ser obtenidas considerando solo la estructura estadistica de las secuencias
-sobre $1, 2, \cdots, N$ simbolos. $F_{N}$ es la mejor aproximaci\'{o}n. De hecho $F_{N}$ es
-la entropia de la aproximacion de $N^{th}$ orden a la fuente del tipo discutido arriba. Si
-no existen influencias estadisticas se extienden sobre mas $N$ simbolos, eso si la
-probabilidad condicional de el siguiente simbolo sabiendo el $(N-1)$ anterior no es cambiado
-por conocimiento de cualquiera anterior a el, entonces $F_{N} = H$. $F_{N}$ por supuesto es
-la entropia condicional del siguiente simbolo cuando los $(N-1)$ anteriores son conocidos,
-mientras $G_{N}$ es la entropia por simbolo de bloques de $N$ simbolos.
-El radio de entrop\'{i}a de una fuente a el valor m\'{a}ximo valor que puede tener mientras aun
-est\'{a} restringido a los mismos simbolos ser\'{a} llamado su \textit{entropia} relativa. Este es la
-compresion m\'{a}xima posible cuando codificamos dentro del mismo alfabeto. Uno menos la
-entrop\'{i}a relativa es la \textit{redundancia}. La redundancia de el idioma ingl\'{e}s ordinario,
-no teniendo en cuenta a las estructuras estadisticas sobre distancias mayores a ocho letras, es
-aproximadamente 50\%. Esto significa que cuando se escribe en ingles la mitad de lo que se
-escribe es determinado por la estructura del lenguaje y la mitad se escoge libremente. La
-cifra de 50\% se encontr\'{o} por diversos metodos independientes que todos arrojaron resultados
-similares. Uno es por calculo de la entrop\'{i}a de las aproximaciones al ingl\'{e}s. Un segundo
-metodo trata sobre borrar una cierta fraccion de letras de un ejemplo de texto en ingl\'{e}s y
-despues permitir a alguien el tratar de restaurarlo. Si puede ser restaurado cuando 50\% son
-borrados por redundancia. Un tercer metodo depende de ciertos resultados conocidos en criptografia.
-Dos extremos de la redundancia en prosa inglesa son representados por ingl\'{e}s b\'{a}sico y por el libro
-de James Joyc ``Finnegans Wake''. El vocabulario del ingl\'{e}s basico est\'{a} limitado a 850 palabras y
-la redundancia es muy alta. Esto se refleja en la expansion que ocurre cuando un texto es traducido
-a ingl\'{e}s basico. Por otro lado Joyce agranda el vocabulario y alega lograr una compresi\'{o}n del
-contenido sem\'{a}ntico.
-La redundancia de un lenguaje est\'{a} relacionada a la existencia de crucigramas. Si la redundancia es
-cero, cualquier secuencia de letras es un texto razonable en el lenguaje y cualquier arreglo
-bidimensional de letras forma un crucigrama. Si la redundancia es muy alta, el lenguaje impone
-demasiadas restricciones para que los crucigramas grandes existan. Un an\'{a}lisis mas detallado muestra
-que si se asume que las restricciones impuestas por el lenguaje son de una naturaleza ca\'{o}tica y
-aleatoria, crucigramas grandes son posibles de realizar cuando la redundancia es 50\%. Si la
-redundancia es 33\%, crucigramas tridimensionales deber\'{i}an ser realizables.
+Estos resultados se derivan del ap\'{e}ndice \ref{a3}. Muestran que
+unas series de aproximaciones a H pueden ser obtenidas considerando
+solo la estructura estadistica de las secuencias sobre $1, 2, \cdots,
+N$ simbolos. $F_{N}$ es la mejor aproximaci\'{o}n. De hecho $F_{N}$ es
+la entropia de la aproximacion de $N^{th}$ orden a la fuente del tipo
+discutido arriba. Si no existen influencias estadisticas se extienden
+sobre mas $N$ simbolos, eso si la probabilidad condicional de el
+siguiente simbolo sabiendo el $(N-1)$ anterior no es cambiado por
+conocimiento de cualquiera anterior a el, entonces $F_{N} =
+H$. $F_{N}$ por supuesto es la entropia condicional del siguiente
+simbolo cuando los $(N-1)$ anteriores son conocidos, mientras $G_{N}$
+es la entropia por simbolo de bloques de $N$ simbolos.  El radio de
+entrop\'{i}a de una fuente a el valor m\'{a}ximo valor que puede tener
+mientras aun est\'{a} restringido a los mismos simbolos ser\'{a}
+llamado su \textit{entropia} relativa. Este es la compresion
+m\'{a}xima posible cuando codificamos dentro del mismo alfabeto. Uno
+menos la entrop\'{i}a relativa es la \textit{redundancia}. La
+redundancia de el idioma ingl\'{e}s ordinario, no teniendo en cuenta a
+las estructuras estadisticas sobre distancias mayores a ocho letras,
+es aproximadamente 50\%. Esto significa que cuando se escribe en
+ingles la mitad de lo que se escribe es determinado por la estructura
+del lenguaje y la mitad se escoge libremente. La cifra de 50\% se
+encontr\'{o} por diversos metodos independientes que todos arrojaron
+resultados similares. Uno es por calculo de la entrop\'{i}a de las
+aproximaciones al ingl\'{e}s. Un segundo metodo trata sobre borrar una
+cierta fraccion de letras de un ejemplo de texto en ingl\'{e}s y
+despues permitir a alguien el tratar de restaurarlo. Si puede ser
+restaurado cuando 50\% son borrados por redundancia. Un tercer metodo
+depende de ciertos resultados conocidos en criptografia.  Dos extremos
+de la redundancia en prosa inglesa son representados por ingl\'{e}s
+b\'{a}sico y por el libro de James Joyc ``Finnegans Wake''. El
+vocabulario del ingl\'{e}s basico est\'{a} limitado a 850 palabras y
+la redundancia es muy alta. Esto se refleja en la expansion que ocurre
+cuando un texto es traducido a ingl\'{e}s basico. Por otro lado Joyce
+agranda el vocabulario y alega lograr una compresi\'{o}n del contenido
+sem\'{a}ntico.  La redundancia de un lenguaje est\'{a} relacionada a
+la existencia de crucigramas. Si la redundancia es cero, cualquier
+secuencia de letras es un texto razonable en el lenguaje y cualquier
+arreglo bidimensional de letras forma un crucigrama. Si la redundancia
+es muy alta, el lenguaje impone demasiadas restricciones para que los
+crucigramas grandes existan. Un an\'{a}lisis mas detallado muestra que
+si se asume que las restricciones impuestas por el lenguaje son de una
+naturaleza ca\'{o}tica y aleatoria, crucigramas grandes son posibles
+de realizar cuando la redundancia es 50\%. Si la redundancia es 33\%,
+crucigramas tridimensionales deber\'{i}an ser realizables.
 
 % aqui termina pagina 14
