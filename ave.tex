@@ -1,8 +1,3 @@
-
-\documentclass{article}
-
-\begin{document}
-
 En el caso sin ruido un retraso generalmente requiere para la
 codificacion\'on ideal ahora esta tiene una funci\'on adicional que
 permite una muestra larga de ruido para afectar la se\~{n}al antes de
@@ -22,12 +17,13 @@ definimos $N(T,q)$ siendo el numero m\'aximo de se\~{n}ales que podemos
 elegir para el subconjunto tal que la probabilidad de una
 interpretaci\'{o}n incorrecta sea menor o igual a $q$.
 
-\begin{equation}
-\lim_{t \to{}\infty}\frac{\log{N}(T,q)}{T} = C,
-\end{equation}
-
+\begin{theorem}
+  \begin{equation}
+    \lim_{t \to{}\infty}\frac{\log{N}(T,q)}{T} = C,
+  \end{equation}
 donde $C$ es la capacidad de canal,a condici\'on que q no sea igual a
 0 o 1
+\end{theorem}
 
 
 En otras palabras, no importa lo que nos propusimos de limites de
@@ -178,7 +174,7 @@ La capacidad del canal es:
 
 
 
-\secction{ UN EJEMPLO DE CODIFICACI\'ON EFICIENTE}
+\section{ UN EJEMPLO DE CODIFICACI\'ON EFICIENTE}
 
 El siguiente ejemplo, aunque es un poco realista, es un caso en que la coincidencia exacta para un canal con ruido, 
 es posible. Hay dos s\'imbolos de canal 0 y 1, y el ruido les afecta en bloques de siete s\'imbolos. 
@@ -193,5 +189,3 @@ C = MAX[ H(y) - H_x(y) ]
  
 Un c\'odigo eficiente, permite la correci\'on de todos los errores y transmitir a la tasa C, es el 
 siguiente(encontrado por un m\'etodo de R.Hamming):
-
-\end{document}
