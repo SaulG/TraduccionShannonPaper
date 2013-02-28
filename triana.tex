@@ -18,12 +18,17 @@
 		
 	El siguiente resultado es derivado en el Ap\'endice 6
 	
-    \begin{theorem} Deje que la potencia media de los 2 conjuntos sea
-    $N_{1}$ y $N_{2}$ y deje que sus poderes de entrop\'ia sean
-    $\bar{N}_1$ y $\bar{N}_2$ . Entonces, el poder de entrop\'ia de
-    la suma, $N_{3}$, est\'a delimitado
-    por \begin{equation} \bar{N}_1+\bar{N}_2 \le \bar{N}_3 \le
-    N_{1}+N_{2}.  \end{equation} \end{theorem}
+    \begin{theorem} 
+
+Deje que la potencia media de los 2 conjuntos sea $N_{1}$ y $N_{2}$ y
+ deje que sus poderes de entrop\'ia sean $\bar{N}_1$ y
+ $\bar{N}_2$. Entonces, el poder de entrop\'ia de la suma, $N_{3}$,
+ est\'a delimitado por
+
+\begin{equation} 
+\bar{N}_1+\bar{N}_2 \le \bar{N}_3 \le N_{1} + N_{2}.
+\end{equation} 
+\end{theorem}
 	
 	El ruido blanco Gaussiano tiene la peculiar propiedad que
 	puede absorber cualquier otro ruido o conjunto de se\~nales
@@ -91,334 +96,325 @@
 		P_{x1, \cdots ,xn} (y_{1}, \cdots ,y_{n}) = P_{x}(y).
 	\end{equation}
 	
-	La tasa de transmisi\'on de informaci\'on por un canal
-	continuo se define de una manera an\'aloga a la de un canal
-	separado, esto es \begin{equation} R =
-	H(x)-H_{y}(x), \end{equation} donde $H(x)$ es la entrop\'ia de
-	la entrada y $H_{y}(x)$ el equ\'ivoco. La capacidad del canal
-	$C$ se define como el m\'aximo de R cuando var\'ian la entrada
-	para todos los conjuntos posibles. Esto significa que en una
-	aproximaci\'on dimensional finita debemos variar $P(x) =
-	P(x_{1},...,x_{n})$ y maximizar \begin{equation} - \int
-	P(x) \log P(x)dx + \int\int
-	P(x,y)\log \frac{P(x,y)}{P(y)}dx \diff y.  \end{equation} Esto puede
-	ser escrito \begin{equation} \int\int
-	P(x,y) \log \frac{P(x,y)}{P(x)P(y)}dx \diff y \end{equation} usando
-	el hecho que $\int\int P(x,y)\log P(x)dx \diff y = \int P(x)\log
-	P(x)dx$. La capacidad del canal se expresa as\'i:
-	\begin{equation}
-		C = \limsup_{T\to \infty P(x)} \frac{1}{T}\int\int P(x,y)\log \frac{P(x,y)}{P(x)~
-		P(y)}dx \diff y.
-	\end{equation}
+La tasa de transmisi\'on de informaci\'on por un canal continuo se
+define de una manera an\'aloga a la de un canal separado, esto
+es 
+\begin{equation} 
+R = H(x) - H_{y}(x), 
+\end{equation} 
+donde $H(x)$ es la entrop\'ia de la entrada y $H_{y}(x)$ el
+equ\'ivoco. La capacidad del canal $C$ se define como el m\'aximo de R
+cuando var\'ian la entrada para todos los conjuntos posibles. Esto
+significa que en una aproximaci\'on dimensional finita debemos variar
+$P(x) = P(x_{1},...,x_{n})$ y maximizar 
+\begin{equation} 
+- \int P(x) \log P(x) \diff x 
++ \int\int P(x,y)\log \frac{P(x,y)}{P(y)} \diff x \diff y.  
+\end{equation} 
+Esto puede ser escrito 
+\begin{equation} 
+\int\int P(x,y) \log \frac{P(x,y)}{P(x)P(y)}dx \diff y
+\end{equation} 
+usando el hecho que
+\begin{equation}
+\int\int P(x,y)\log P(x) \diff x \diff y = 
+\int P(x)\log P(x) \diff x.
+\end{equation} 
+La capacidad del canal se expresa as\'i:
+\begin{equation}
+C = \limsup_{T\to \infty P(x)} 
+\frac{1}{T}
+\int\int P(x,y)\log \frac{P(x,y)}{P(x)~P(y)} \diff x \diff y.
+\end{equation}
 	
-	Es obvio que en esta forma $R$ y $C$ son independientes del
-	sistema de coordenadas dado que el numerador y denominador en
-	$\log\frac{P(x,y)}{P(x)P(y)}$ ser\'a multiplicado por los
-	mismos factores cuando $x$ y $y$ son transformados en
-	cualquier forma uno a uno. Esta expresi\'on integral para $C$
-	es m\'{a}s general que $H(x)-H_{y}(x)$. Correctamente
-	interpretada (ver Anexo 7) que siempre existir\'a mientras
-	$H(x)-H_{y}(x)$ puede asumir una forma indeterminada $\infty
-	- \infty$ en algunos casos. Esto ocurre, por ejemplo, si $x$
-	est\'a limitada a una superficie de menos dimensiones que $n$
-	en su aproximaci\'on $n$ dimensional.
+Es obvio que en esta forma $R$ y $C$ son independientes del sistema de
+coordenadas dado que el numerador y denominador en
+$\log\frac{P(x,y)}{P(x)P(y)}$ ser\'a multiplicado por los mismos
+factores cuando $x$ y $y$ son transformados en cualquier forma uno a
+uno. Esta expresi\'on integral para $C$ es m\'{a}s general que
+$H(x) - H_{y}(x)$. Correctamente interpretada (ver Anexo 7) que siempre
+existir\'a mientras $H(x)-H_{y}(x)$ puede asumir una forma
+indeterminada $\infty - \infty$ en algunos casos. Esto ocurre, por
+ejemplo, si $x$ est\'a limitada a una superficie de menos dimensiones
+que $n$ en su aproximaci\'on $n$ dimensional.
 	
-	Si la base logar\'itmica utilizada en computaci\'on $H(x)$ y
-	$H_{y}(x)$ es dos entonces $C$ es el n\'umero m\'aximo de
-	d\'igitos binarios que pueden ser enviados por segundo a
-	trav\'es del canal con equivocaci\'on arbitrariamente
-	peque\~na, al igual que en el caso discreto. Esto se puede ver
-	f\'isicamente al dividir el espacio de se\~nales en un gran
-	n\'umero de celdas peque\~nas y suficientemente peque\~no para
-	que la densidad de probabilidad $P_{x}(y)$ de la se\~nal x que
-	est\'{a}q siendo perturbado hasta el punto de que $y$ es
-	sustancialmente constante en una celda (ya sea de $x$ o
-	$y$). Si las celdas son consideradas como puntos distintos, la
-	situaci\'on es esencialmente la misma que un canal discreto y
-	las pruebas usadas se aplicar\'an all\'{a}. Pero est\'{a}
-	claro que f\'isicamente esta cuantificaci\'on del volumen en
-	puntos individuales no puede de ninguna manera pr\'actica
-	alterar significativamente la respuesta final, siempre que las
-	regiones sean suficientemente peque\~nas. As\'i la capacidad
-	ser\'{a} el l\'imite de las capacidades de las subdivisiones
-	discretas y esto es es s\'olo la capacidad continua definida
-	anteriormente.
+Si la base logar\'itmica utilizada en computaci\'on $H(x)$ y
+$H_{y}(x)$ es dos entonces $C$ es el n\'umero m\'aximo de d\'igitos
+binarios que pueden ser enviados por segundo a trav\'es del canal con
+equivocaci\'on arbitrariamente peque\~na, al igual que en el caso
+discreto. Esto se puede ver f\'isicamente al dividir el espacio de
+se\~nales en un gran n\'umero de celdas peque\~nas y suficientemente
+peque\~no para que la densidad de probabilidad $P_{x}(y)$ de la
+se\~nal x que est\'{a}q siendo perturbado hasta el punto de que $y$ es
+sustancialmente constante en una celda (ya sea de $x$ o $y$). Si las
+celdas son consideradas como puntos distintos, la situaci\'on es
+esencialmente la misma que un canal discreto y las pruebas usadas se
+aplicar\'an all\'{a}. Pero est\'{a} claro que f\'isicamente esta
+cuantificaci\'on del volumen en puntos individuales no puede de
+ninguna manera pr\'actica alterar significativamente la respuesta
+final, siempre que las regiones sean suficientemente peque\~nas. As\'i
+la capacidad ser\'{a} el l\'imite de las capacidades de las
+subdivisiones discretas y esto es es s\'olo la capacidad continua
+definida anteriormente.
 	
-	En el lado matem\'atico se pede demostrar primero (ver el
-	Ap\'endice 7) que si $u$ es el mensaje, $x$ es la se\~nal, $y$
-	es la se\~nal recibida (perturbada por el ruido) y $v$ es el
-	mensaje recuperado, entonces
-	\begin{equation}
-		H(x) - H_{y}(x) \le H(u) - H_{v}(u).
-	\end{equation}	 
+En el lado matem\'atico se pede demostrar primero (ver el Ap\'endice
+7) que si $u$ es el mensaje, $x$ es la se\~nal, $y$ es la se\~nal
+recibida (perturbada por el ruido) y $v$ es el mensaje recuperado,
+entonces 
+\begin{equation} 
+H(x) - H_{y}(x) \le H(u) - H_{v}(u).  
+\end{equation}
 	
-	Independientemente de lo que las operaciones realizan en $u$
-	para obtener $x$ o en $y$ para obtener $v$. No importa como
-	modificamos los d\'igitos binarios para obtener la se\~nal, o
-	como decodificamos la se\~nal recibida para recuperar el
-	mensaje, la tasa discreta para los d\'igitos binarios no
-	excede la capacidad del canal que tenemos definida. Por otra
-	parte, es posible bajo condiciones muy generales encontrar un
-	sistema de codificaci\'on para transmitir d\'igitos binarios
-	en la tasa $C$ con peque\~na equivocaci\'on o frecuencia de
-	errores como se desee. Este es el caso, por ejemplo, si,
-	cuando tomamos un espacio finito de aproximaci\'on para las
-	funciones de las se\~nales, $P(x,y)$ es continuo tanto en $x$
-	como en $y$, excepto en un conjunto de puntos de probabilidad
-	cero.
+Independientemente de lo que las operaciones realizan en $u$ para
+obtener $x$ o en $y$ para obtener $v$. No importa como modificamos los
+d\'igitos binarios para obtener la se\~nal, o como decodificamos la
+se\~nal recibida para recuperar el mensaje, la tasa discreta para los
+d\'igitos binarios no excede la capacidad del canal que tenemos
+definida. Por otra parte, es posible bajo condiciones muy generales
+encontrar un sistema de codificaci\'on para transmitir d\'igitos
+binarios en la tasa $C$ con peque\~na equivocaci\'on o frecuencia de
+errores como se desee. Este es el caso, por ejemplo, si, cuando
+tomamos un espacio finito de aproximaci\'on para las funciones de las
+se\~nales, $P(x,y)$ es continuo tanto en $x$ como en $y$, excepto en
+un conjunto de puntos de probabilidad cero.
 	
-	Un caso especial se produce cuando el ruido se a\~nade a la
-	se\~nal y es independiente de ello (en el sentido de la
-	probabilidad). Entonces $P_{x}(y)$ es una funci\'on s\'olo de
-	la diferencia $n = (y-x)$,
-	\begin{equation}
-		P_{x}(y) = Q(y-x).
-	\end{equation}
-	
-	%%%%%%%%%%%%% PAGINA 43 ES LA SIGUIENTE %%%%%%%%%%	
-	
-	y nosotros podemos asignar una entrop\'ia definida al ruido (independientemente de 
-	las estad\'isticas de la se\~nal), es decir, la entrop\'ia de la distribuci\'on
-	$Q(n)$. Esta entrop\'ia se denotar\'a por $H(n)$.
-	
-	\begin{em}
-		Teorema 16: Si la se\~nal y el ruido son independientes y la se\~nal recibida
-		es la suma de se\~nal transmitida y el ruido entonces la tasa de transmisi\'on es
-	\end{em}
-	
-	\begin{equation}
-		R = H(y) - H(n),
-	\end{equation}
-	
-	es decir, la entrop\'ia de la se\~nal recibida menos la entrop\'ia del ruido. La
-	capacidad del canal es
-	
-	\begin{equation}
-		C = \limsup_{P(x)} H(y) - H(n)
-	\end{equation}
-	
-	Tenemos, desde $y = x+n$
-	
-	\begin{equation}
-		H(x,y) = H(x,n).
-	\end{equation}
-	
-	Expandiendo el lado izquierdo y utilizando el hecho de que $x$ y $n$ son independientes
-	
-	\begin{equation}
-		H(y) + H_{y}(x) = H(x) + H(n).
-	\end{equation}
-	
-	Por lo tanto
-	
-	\begin{equation}
-		R = H(x) - H_{y}(x) = H(y) - H(n).
-	\end{equation}
-	
-	Puesto que $H(n)$ es independiente de $P(x)$, maximizando R requiere maximizar $H(y)$,
-	la entrop\'ia de la se\~nal recibida. Si existen ciertas restricciones en el conjunto
-	de las se\~nales transmitidas, la entrop\'ia de la se\~nal recibida debe ser maximizada
-	sujeto a esas restricciones.
-	
-	\bigskip
-	25. CAPACIDAD DE LA SE\~NAL  CON UNA LIMITACI\'ON DE POTENCIA MEDIA
-	\bigskip	
-	
-	Una sencilla aplicaci\'on del teorema 16 es el caso cuando el ruido es un ruido
-	t\'ermico blanco y las se\~nales transmitidas est\'an limitadas a un cierto 
-	promedio de potencia $P$. Luego las se\~nales recibidas tienen una potencia media
-	$P + N$ donde $N$ es la potencia media del ruido. La entrop\'ia m\'axima para las
-	se\~nales recibidas se produce cuando tambi\'en forman un ruido blanco ya que 
-	es la entrop\'ia mayor posible para una potencia $P + N$ y puede obtenerse mediante
-	una elecci\'on adecuada de las se\~nales transmitidas, a saber, si forman un conjunto
-	de ruido blanco de potencia $P$. La entrop\'ia (por segundo) del conjunto recibido es luego
-	
-	\begin{equation}
-		H(y) = W\log 2\pi e(P+N),
-	\end{equation}
-	
-	Y la entrop\'ia de ruido es
-	
-	\begin{equation}
-		H(n) = W\log 2\pi eN.
-	\end{equation}
-	
-	La capacidad del canal es
-	
-	\begin{equation}
-		C = H(y) - H(n) = W\log \frac{P + N}{N}.
-	\end{equation}
-	
-	Resumiendo tenemos lo siguiente:
-	
-	Teorema 17: La capacidad de un canal de banda $W$ de potencia perturbada por el ruido
-	t\'ermico blanco $N$ cuando la potencia de transmisi\'on media se limita a $P$ viene
-	dada por
-	
-	\begin{equation}
-		C = W\log \frac{P + N}{N}.
-	\end{equation}
-	
-	Esto significa que por sistemas de codificaci\'on suficientemente implicados se puede
-	transmitir d\'igitos binarios a la tasa $W \log_{2}\frac{P + N}{N}$ bits por segundo,
-	con arbitrariamente peque\~na frecuencia de errores. No es posible transmitir a una
-	velocidad mayor por cualquier sistema de codificaci\'on sin una frecuencia
-	definida positiva de errores.
-	
-	Para aproximar esta limitaci\'on de la tasa de transmisi\'on, las se\~nales transmitidas
-	deben aproximarse, en propiedades estad\'isticas, un ruido blanco. Un sistema que se 
-	aproxima a la tasa ideal puede ser descrito como sigue: Sea $M = 2^s$
-	
-	%%%%%%%%%%%%%% SIGUE LA PAGINA 44
-	de ruido blanco sean construidas con una duración $T$. Estos se asignan n\'umeros 
-	binarios desde 0 a  $M-1$. En el transmisor las secuencias de mensajes se dividen en 
-	grupos de $s$ y para cada grupo de la muestra de ruido correspondiente se transmite
-	como se\~nal real recibida (perturbada por el ruido) se compara con cada uno de ellos.
-	La muestra que tiene la menor discrepancia de R.M.S de la se\~nal recibida se elige
-	como la se\~nal transmitida y el correspondiente n\'umero binario reconstruido.
-	Este proceso equivale a elegir la m\'as probable de la se\~nal.
-	El n\'umero $M$ de muestras de ruido usadas depender\'a de la frecuencia
-	admisible de errores, pero para casi todas las selecciones de muestras tenemos	
-	
-	\begin{equation}
-		\lim_{\epsilon \to 0} \lim_{T\to \inf}\frac{\log M(\epsilon, T)}{T} = W\log \frac{P+N}			{N},
-	\end{equation}
-	
-	entonces no importa que tan peque\~no valor de $\epsilon$ se escoja, podemos,tomando valores
-	de $T$ suficientemente grandes, transmitir tan cerca como queramos a $TW\log \frac{P+N}{N}$
-	d\'igitos binarios en el tiempo $T$.
-	
-	F\'ormulas similares a $C = W\log \frac{P+N}{N}$ para el ruido blancon han sido
-	desarrolladas independientemente por otros escritores, tambi\'en con diferentes
-	interpretaciones. Podemos mencionar el trabajo de N. Wiener, W.G. Tuller, y H. Sullivan
-	en esta conexi\'on.
-	
-	En el caso de un ruido arbitrario (no necesariamente ruido blanco t\'ermico) no parece
-	que el problema de maximizaci\'on involucrado en la determinaci\'on de la capacidad
-	del canal C se pueden resolver expl\'icitamente. Sin embargo, los l\'imites superior e 
-	inferior se pueden ajustar para $C$ en t\'erminos de la potencia media de ruido $N$,
-	le entrop\'ia de potencia de ruido $N_{1}$.
-	Estos l\'imites est\'an suficientemente pr\'oximos entre s\'i en la mayor\'ia de los
-	casos pr\'activcos de proporcionar una soluci\'on satisfactoria a este problema.
-	
-	Teorema 18: La capacidad de un canal  de banda $W$ perturbado por un ruido arbitrario
-	est\'a limitada por las desigualdades.
-	
-	\begin{equation}
-		W\log \frac{P+N_{1}}{N_{1}} \leq C \leq W\log \frac{P+N}{N_{1}
-	\end{equation}
-	
-	donde 
-	
-	\begin{center}
-	\begin{em}
-		P = Potencia de transmisi\'on media
-		
+Un caso especial se produce cuando el ruido se a\~nade a la se\~nal y
+es independiente de ello (en el sentido de la
+probabilidad). Entonces $P_{x}(y)$ es una funci\'on s\'olo de
+la diferencia $n = (y-x)$, 
+\begin{equation} 
+P_{x}(y) = Q(y - x)
+\end{equation}
+y nosotros podemos asignar una entrop\'ia definida al ruido
+(independientemente de las estad\'isticas de la se\~nal), es decir, la
+entrop\'ia de la distribuci\'on $Q(n)$. Esta entrop\'ia se denotar\'a
+por $H(n)$.
 
-		N = Potencia de ruido media
+\begin{theorem}	
+\label{t16}
+Si la se\~nal y el ruido son independientes y la se\~nal recibida es
+la suma de se\~nal transmitida y el ruido entonces la tasa de
+transmisi\'on es
+\begin{equation}
+R = H(y) - H(n),
+\end{equation}
+es decir, la entrop\'ia de la se\~nal recibida menos la entrop\'ia del
+ruido.
+\end{theorem}
 
+La capacidad del canal es
+\begin{equation}
+C = \limsup_{P(x)} H(y) - H(n)
+\end{equation}
+Tenemos, desde $y = x+n$
+\begin{equation}
+H(x,y) = H(x,n).
+\end{equation}
+Expandiendo el lado izquierdo y utilizando el hecho de que $x$ y $n$
+son independientes
+\begin{equation}
+H(y) + H_{y}(x) = H(x) + H(n).
+\end{equation}
+Por lo tanto
+\begin{equation}
+R = H(x) - H_{y}(x) = H(y) - H(n).
+\end{equation}
+	
+Puesto que $H(n)$ es independiente de $P(x)$, maximizando R requiere
+maximizar $H(y)$, la entrop\'ia de la se\~nal recibida. Si existen
+ciertas restricciones en el conjunto de las se\~nales transmitidas, la
+entrop\'ia de la se\~nal recibida debe ser maximizada sujeto a esas
+restricciones.
+	
+\section{Capacidad de la se\~nal  con una limitaci\'on de potencia media}
+\label{s25}
 
-		$N_{1}$ = Potencia del ruido de la entrop\'ia
-	\end{em}
-	\end{center}
+Una sencilla aplicaci\'on del teorema 16 es el caso cuando el ruido es
+un ruido t\'ermico blanco y las se\~nales transmitidas est\'an
+limitadas a un cierto promedio de potencia $P$. Luego las se\~nales
+recibidas tienen una potencia media $P + N$ donde $N$ es la potencia
+media del ruido. La entrop\'ia m\'axima para las se\~nales recibidas
+se produce cuando tambi\'en forman un ruido blanco ya que es la
+entrop\'ia mayor posible para una potencia $P + N$ y puede obtenerse
+mediante una elecci\'on adecuada de las se\~nales transmitidas, a
+saber, si forman un conjunto de ruido blanco de potencia $P$. La
+entrop\'ia (por segundo) del conjunto recibido es luego
+\begin{equation}
+H(y) = W\log 2\pi e(P+N),
+\end{equation}
+Y la entrop\'ia de ruido es
+\begin{equation}
+H(n) = W\log 2\pi eN.
+\end{equation}
 	
-	Aqu\'i de nuevo la potencia media de las se\~nales perturbadas ser\'a $P+N$. La entrop\'ia
-	m\'axima para esta potencia se producir\'ia si la se\~nal recibida no es ruido blanco
-	y ser\'ia $W\log 2\pi \epsilon (P+N)$. 
-	Puede que no sea posible lograr esto, es decir, no puede ser cualquier conjunto de
-	se\~nales transmitidas que, a\~nadido al ruido perturbador, produce un ruido blanco
-	t\'ermico en el receptor, pero al menos esto establece un l\'imite superior para 
-	$H(y)$.
-	Tenemos, por lo tanto
+La capacidad del canal es
+\begin{equation}
+C = H(y) - H(n) = W\log \frac{P + N}{N}.
+\end{equation}
 	
-	\begin{equation}
-		C = Max H(y) - H(n)\bigskip
-		\leq W\log 2\pi\epsilon (P+N) - W\log 2\pi \epsilon N_{1}.
-	\end{equation}
-	
-	Este es el l\'imite superior dado en el teorema. El l\'imite inferior puede ser obtenido
-	considerando la tasa si hacemos la se \~nal transmitida por un ruido blanco, de potencia
-	$P$. En este caso, la potencia de la entrop\'ia de la se\~nal  recibida debe  ser al menos
-	tan grande como la de un ruido blanco de potencia $P + N_{1}$ ya que hemos mostrado
-	en un teorema anterior que el poder de la entrop\'ia de la suma de dos conjuntos es 
-	mayor o igual que la suma de las potencias individuales de entrop\'ia. Por lo tanto
-	
-	\begin{equation}
-		Max H(y) \leq W\log 2\pi \epsilon(P+N_{1})
-	\end{equation}
-	
-	%%%%% PAGINA 45 %%%%%
-	
-	y
-	
-	\begin{equation}
-		C \leq W\log 2\pi \epsilon (P + N_{1}) - W\log 2 \pi \epsilon N_{1} \bigskip
-		= W\log \frac{P+N_{1}}{N_{1}}.
-	\end{equation}
-	
-	A medida que aumenta P, los l\'imites superior e inferior se aproximan entre s\'i, por
-	lo que tenemos como una tasa asint\'otica
-	
-	\begin{equation}
-		W\log \frac{P+N}{N_{1}}.
-	\end{equation}
-	
-	Si el ruido es en s\'i blanco, $N = N_{1}$ y el resultado se reduce a la f\'ormula 
-	presentada anteriormente:
-	
-	\begin{equation}
-		C = W\log (1 + \frac{P}{N})
-	\end{equation}
-	
-	Si el ruido es Gaussiano pero con un espectro que no es necesariamente plano, $N_{1}$
-	es la media geom\'etrica de la potencia  de ruido en las difrentes frecuencias en la 
-	banda $W$. As\'i
-	
-	\begin{equation}
-		N_{1} = exp \frac{1}{W} \int_W \log N(f)df
-	\end{equation}
-	
-	donde $N(f)$ es la potencia de ruido a la frecuencia $f$
-	\bigskip
-	
-	\begin{em}
-	Teorema 19: Si fijamos la capacidad de un transmisor de potencia $P$ dada igual a 
-	\end{em}
-	
-	\begin{equation}
-		C = W\log \frac{P+N - \eta}{N_{1}}
-	\end{equation}
-	
-	entonces $\eta$ es mon\'otona decreciente a medida que $P$ aumenta y se aproxima a 0 
-	como l\'imite.
-	
-	Supongamos que para una potencia $P_{1}$ la capacidad del canal es
-	
-	\begin{equation}
-		W\log \frac{P_{1} + N - \eta_{1}{N_{1}}.
-	\end{equation}
+Resumiendo tenemos lo siguiente:
 
-	Esto significa que la mejor distribuci\'on de la se\~nal, por ejemplo $p(x)$, cuando
-	se a\~nade a la distribuci\'on de ruido $q(x)$, da una distribuci\'on recibida $r(y)$
-	cuya potencia de la entrop\'ia es $(P_{1} + N - \eta_{1})$. 
+\begin{theorem}
+\label{t17}	
+La capacidad de un canal de banda $W$ de potencia perturbada por el
+ruido t\'ermico blanco $N$ cuando la potencia de transmisi\'on media
+se limita a $P$ viene dada por
+\begin{equation}
+C = W\log \frac{P + N}{N}.
+\end{equation}
+\end{theorem}
 	
-	Vamos a aumentar la potencia a $P_{1} + \Delta P$ a\~nadiendo un ruido blanco de potencia
-	$\Delta P$ a la se\~nal.
-	La entrop\'ia de la se\~nal recibida es ahora por lo menos
+Esto significa que por sistemas de codificaci\'on suficientemente
+implicados se puede transmitir d\'igitos binarios a la tasa
+$W \log_{2}\frac{P + N}{N}$ bits por segundo, con arbitrariamente
+peque\~na frecuencia de errores. No es posible transmitir a una
+velocidad mayor por cualquier sistema de codificaci\'on sin una
+frecuencia definida positiva de errores.
 	
-	\begin{equation}
-		H(y) = W \log 2\pi \epsilon (P_{1}+N-\eta_{1}+\Delta P)
-	\end{equation}
+Para aproximar esta limitaci\'on de la tasa de transmisi\'on, las
+se\~nales transmitidas deben aproximarse, en propiedades
+estad\'isticas, un ruido blanco. Un sistema que se aproxima a la tasa
+ideal puede ser descrito como sigue: Sea $M = 2^s$ de ruido blanco
+sean construidas con una duraci\'{o}n $T$. Estos se asignan n\'umeros
+binarios desde 0 a $M-1$. En el transmisor las secuencias de mensajes
+se dividen en grupos de $s$ y para cada grupo de la muestra de ruido
+correspondiente se transmite como se\~nal real recibida (perturbada
+por el ruido) se compara con cada uno de ellos.  La muestra que tiene
+la menor discrepancia de R.M.S de la se\~nal recibida se elige como la
+se\~nal transmitida y el correspondiente n\'umero binario
+reconstruido.  Este proceso equivale a elegir la m\'as probable de la
+se\~nal.  El n\'umero $M$ de muestras de ruido usadas depender\'a de
+la frecuencia admisible de errores, pero para casi todas las
+selecciones de muestras tenemos
+\begin{equation}
+\lim_{\epsilon \to 0} \lim_{T\to \inf}
+\frac{\log M(\epsilon, T)}{T} = W\log \frac{P+N}{N},
+\end{equation}
+entonces no importa que tan peque\~no valor de $\epsilon$ se escoja,
+podemos,tomando valores de $T$ suficientemente grandes, transmitir tan
+cerca como queramos a $TW\log \frac{P+N}{N}$ d\'igitos binarios en el
+tiempo $T$.
+	
+F\'ormulas similares a $C = W\log \frac{P+N}{N}$ para el ruido blancon
+han sido desarrolladas independientemente por otros escritores,
+tambi\'en con diferentes interpretaciones. Podemos mencionar el
+trabajo de N.\ Wiener, W.\ G.\ Tuller, y H.\ Sullivan en esta
+conexi\'on.
 
-	por la aplicaci\'on del teorema de la potencia m\'inima de la entrop\'ia de una suma.
-	Por lo tanto, ya que puede alcanzar la $H$ indicada, la entrop\'ia de la 
-	distribuci\on maximizada debe ser al menos tan grande y debe ser monot\'onica decreciente.
-	Para demostrar eso \eta \rightarrow 0 como $P$ \rightarrow $\infty$ se considera una 
-	se\~nal que es de ruido blanco con una gran $P$.
+En el caso de un ruido arbitrario (no necesariamente ruido blanco
+t\'ermico) no parece que el problema de maximizaci\'on involucrado en
+la determinaci\'on de la capacidad del canal C se pueden resolver
+expl\'icitamente. Sin embargo, los l\'imites superior e inferior se
+pueden ajustar para $C$ en t\'erminos de la potencia media de ruido
+$N$, le entrop\'ia de potencia de ruido $N_{1}$.  Estos l\'imites
+est\'an suficientemente pr\'oximos entre s\'i en la mayor\'ia de los
+casos pr\'activcos de proporcionar una soluci\'on satisfactoria a este
+problema.
+
+\begin{theorem}
+\label{t18}
+La capacidad de un canal de banda $W$ perturbado por un ruido
+arbitrario est\'a limitada por las desigualdades
+\begin{equation}
+W\log \frac{P+N_{1}}{N_{1}} \leq C \leq W\log \frac{P+N}{N_{1}},
+\end{equation}
+donde 
+\begin{equation}
+\begin{array}{rcl}
+P &=& \text{Potencia de transmisi\'on media} \\
+N &=& \text{Potencia de ruido media} \\
+N_{1} &=& \text{Potencia del ruido de la entrop\'ia}
+\end{array}
+\end{equation}
+\end{theorem}	
+
+Aqu\'i de nuevo la potencia media de las se\~nales perturbadas ser\'a
+$P+N$. La entrop\'ia m\'axima para esta potencia se producir\'ia si la
+se\~nal recibida no es ruido blanco y ser\'ia $W\log 2\pi \epsilon
+(P+N)$.  Puede que no sea posible lograr esto, es decir, no puede ser
+cualquier conjunto de se\~nales transmitidas que, a\~nadido al ruido
+perturbador, produce un ruido blanco t\'ermico en el receptor, pero al
+menos esto establece un l\'imite superior para $H(y)$.  Tenemos, por
+lo tanto
+\begin{equation}
+C = Max H(y) - H(n)\bigskip
+\leq W\log 2\pi\epsilon (P+N) - W\log 2\pi \epsilon N_{1}.
+\end{equation}
 	
-	Cualquiera que sea el ruido perturbador, la se\~nal recibida ser\'a de aproximadamente
-	un ruido blanco, si $P$ es suficientemente grande, en el sentido de que tiene una 
-	potencia de entrop\'ia aproximada $P + N$.	
+Este es el l\'imite superior dado en el teorema. El l\'imite inferior
+puede ser obtenido considerando la tasa si hacemos la se \~nal
+transmitida por un ruido blanco, de potencia $P$. En este caso, la
+potencia de la entrop\'ia de la se\~nal recibida debe ser al menos tan
+grande como la de un ruido blanco de potencia $P + N_{1}$ ya que hemos
+mostrado en un teorema anterior que el poder de la entrop\'ia de la
+suma de dos conjuntos es mayor o igual que la suma de las potencias
+individuales de entrop\'ia. Por lo tanto
+\begin{equation}
+\max H(y) \leq W\log 2\pi \epsilon(P+N_{1})
+\end{equation}
+y
+\begin{equation}
+C \leq W\log 2\pi \epsilon (P + N_{1}) - W\log 2 \pi \epsilon N_{1} \bigskip
+= W\log \frac{P+N_{1}}{N_{1}}.
+\end{equation}
+	
+A medida que aumenta $P$, los l\'imites superior e inferior se aproximan
+entre s\'i, por lo que tenemos como una tasa asint\'otica
+\begin{equation}
+W\log \frac{P+N}{N_{1}}.
+\end{equation}
+	
+Si el ruido es en s\'i blanco, $N = N_{1}$ y el resultado se reduce a
+la f\'ormula presentada anteriormente:
+\begin{equation}
+C = W\log (1 + \frac{P}{N}).
+\end{equation}
+	
+Si el ruido es Gaussiano pero con un espectro que no es necesariamente
+plano, $N_{1}$ es la media geom\'etrica de la potencia de
+ruido en las difrentes frecuencias en la banda $W$. As\'i
+\begin{equation}
+N_{1} = \exp \frac{1}{W} \int_W \log N(f) \diff f,
+\end{equation}
+donde $N(f)$ es la potencia de ruido a la frecuencia $f$.
+
+\begin{theorem}
+\label{t19}
+Si fijamos la capacidad de un transmisor de potencia $P$ dada igual
+a 
+\begin{equation}
+ C = W\log \frac{P+N - \eta}{N_{1}},
+\end{equation}
+entonces $\eta$ es mon\'otona decreciente a medida que $P$ aumenta y
+se aproxima a cero como l\'imite.
+\end{theorem}
+	
+Supongamos que para una potencia $P_{1}$ la capacidad del canal es
+\begin{equation}
+W\log \frac{P_{1} + N - \eta_{1}}{N_{1}}.
+\end{equation}
+
+Esto significa que la mejor distribuci\'on de la se\~nal, por ejemplo
+$p(x)$, cuando se a\~nade a la distribuci\'on de ruido $q(x)$, da una
+distribuci\'on recibida $r(y)$ cuya potencia de la entrop\'ia es
+$(P_{1} + N - \eta_{1})$.
+	
+Vamos a aumentar la potencia a $P_{1} + \Delta P$ a\~nadiendo un ruido
+blanco de potencia $\Delta P$ a la se\~nal.  La entrop\'ia de la
+se\~nal recibida es ahora por lo menos
+\begin{equation}
+H(y) = W \log 2\pi \epsilon (P_{1}+N-\eta_{1}+\Delta P)
+\end{equation}
+por la aplicaci\'on del teorema de la potencia m\'inima de la
+entrop\'ia de una suma.  Por lo tanto, ya que puede alcanzar la $H$
+indicada, la entrop\'ia de la distribuci\'{o}n maximizada debe ser al
+menos tan grande y debe ser monot\'onica decreciente.  Para demostrar
+eso $\eta \rightarrow 0$ como $P \rightarrow \infty$ se considera una
+se\~nal que es de ruido blanco con una gran $P$.
+	
+Cualquiera que sea el ruido perturbador, la se\~nal recibida ser\'a de
+aproximadamente un ruido blanco, si $P$ es suficientemente grande, en
+el sentido de que tiene una potencia de entrop\'ia aproximada $P + N$.
 	
 
 
