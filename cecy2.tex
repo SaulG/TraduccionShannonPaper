@@ -1,0 +1,276 @@
+
+Deje un bloque de siete s\'imbolos que $X_{1}, X_{2},...,X_{7}$. De estos 
+$X_{3}, X_{5}, X_{6} y X_{7}$ son los mensajes de símbolos y eligidos 
+arbitrariamente por la fuente. Los otros tres son redundantes y se calculan como sigue:
+
+\begin{tabular}{c c c c}
+$X_{4}$ & es elegido para hacer & $\alpha=X_{4}+X_{5}+X_{6}+X_{7}$ & even \\
+$X_{2}$ & `` `` `` & $\beta=X_{2}+X_{3}+X_{6}+X_{7}$ & `` `` `` \\
+$X_{1}$ & `` `` ``& $\gamma=X_{1}+X_{3}+X_{5}+X_{7}$ & `` `` ``
+\end{tabular}
+
+Cuando un bloque de siete es recibido $\alpha, \beta$ y $\gamma$ son calculados y 
+si incluso llam\'o a cero, si un extra\~no llamado. El n\'umero binario $\alpha \beta \gamma$ 
+entonces da el sub\'indice de la $X_{i}$ que no es correcto (si es 0 no hay error).
+
+\section{AP\'ENDICE 1}
+EL CRECIMIENTO DEL N\'UMERO DE BLOQUES DE S\'IMBOLOS CON UNA CONDICI\'ON DE ESTADO FINITO
+
+Siendo $N_{i}(L)$ el n\'umero de bloques de s\'imbolos de largo L terminando en estado $i$. 
+Entonces tenemos
+
+\begin{equation}
+N_{j}(L)=\sum_{i,s} N_{i}(L-b_{ij}^{(s)})
+\end{equation}
+
+donde $b_{ij}^{1},b_{ij}^{2},...,b_{ij}^{m}$ el largo de los s\'imbolos los cuales pueden 
+ser elegidos en estado $i$ y pasar a estado $j$. Esas son ecuaciones diferenciales lineales 
+y el comportamiento como $L\rightarrow \infty $ debe ser de tipo
+
+\begin{equation}
+N_{j}=A_{j}W^{L}.
+\end{equation}
+
+Sustituyendo en la ecuaci\'on diferencial 
+
+\begin{equation}
+A_{j}W^{L} = \sum_{i,s}A_{i}W^{L-b_{ij}^{(s)}}
+\end{equation}
+
+o
+
+\begin{equation}
+\sum_{i}(\sum_{s}W^{b_{ij}^{(s)}}-\delta_{ij})A_{i}=0.
+\end{equation}
+
+Para hacer posible esto el determinante
+
+\begin{equation}
+D(W)=\left| a_{ij}\right| =\left| \sum_{s}W^{-b_{ij}^{(s)}}-\delta_{ij}\right|
+\end{equation}
+
+debe desaparecer y esto determina $W$, que es, por supuesto, la mayor raíz real de $D = 0$.
+La cantidad C est\'a dada entonces por
+
+\begin{equation}
+C=Lim_{L\rightarrow \infty}\frac{\log \sum A_{j}W^{L}}{L}=\log W
+\end{equation}
+
+y observamos tambi\'en que las mismas propiedades de crecimiento resultan si nosotros 
+requierimos que todos los bloques comiencen en el mismo (elegido arbitrariamente) estado.
+
+\section{AP\'ENDICE 2}
+
+DERIVACI\'ON DE $H=-\sum p_{i}\log  p_{i}$
+
+Siendo $H(\frac{1}{n},\frac{1}{n},...,\frac{1}{n})=A(n)$. Desde la condici\'on (3) se 
+puede descomponer una elecci\'on de $s^{m}$ con las mismas probabilidades en una 
+serie de $m$ elecciones de $s$ de posiblemente igualmente probabilidades y obtener
+
+\begin{equation}
+A(s_{m})=mA(s).
+\end{equation}
+
+Igualmente
+
+\begin{equation}
+A(t^{n})=nA(t).
+\end{equation}
+
+Podemos elegir $n$ arbitrariamente grande y encontrar una $m$ para satisfacer
+
+\begin{equation}
+s^{m} \leq t^{n} < s^{(m+1)}.
+\end{equation}
+
+As\'i, tomando logaritmos y dividiendo en $n\log s$,
+
+\begin{equation}
+\frac{m}{n}\leq \frac{\log  t}{\log  s}\leq \frac{m}{n}+\frac{1}{n} \ o \ 
+\left|\frac{m}{n}-\frac{\log  t}{\log  s}\right| < \epsilon 
+\end{equation}
+
+donde $\epsilon$ es arbitrariamente peque\~na.Ahora de la propiedad 
+monot\'onica de $A(n)$,
+\begin{equation}
+A(s^{m})\leq A(t^{n})\leq A(s^{m+1})
+\end{equation}
+\begin{equation}
+mA(s)\leq nA(t) \leq (m+1)A(s)
+\end{equation}
+
+Por lo tanto
+
+\begin{equation}
+H=K\left[\sum p_{i}\log \sum n_{i}-\sum p_{i}\log n_{i}\right]
+\end{equation}
+\begin{equation}
+=-K\sum p_{i}\log \frac{n_{i}}{\sum n_{i}}=-K\sum p_{i}\log p_{i}.
+\end{equation}
+
+Si el $p_{i}$ es inconmensurables, que se puede aproximar por racionales y la misma 
+expresi\'on debe contener por nuestra suposici\'on de continuidad. As\'i, la expresi\'on 
+se mantiene en general. La elecci\'on del coeficiente $K$ es un asunto de conveniencia y 
+asciende a la elecci\'on de una unidad de medida.
+
+\section{AP\'ENDICE 3}
+TEOREMAS SOBRE FUENTES ERG\'ODICAS
+
+Si es posible pasar de un estado con $P>0$ a cualquier otro a lo largo de un camino de 
+probabilidad $p>0$, el sistema es erg\'odico y una fuerte ley de numeros largos es aplicada. 
+As\'i, el n\'umero de veces que un camino dado $p_{ij}$ en una red se desplaza en una larga 
+secuencia de longitud $N$ es aproximadamente proporcional a la probabilidad de estar en $i$, 
+dice $P_{i}$, y escoge la ruta, $P_{i}p_{ij}N$. Si N es lo suficientemente larga la 
+probabilidad de porcentaje de error $\pm\delta$ es esto es menor que $\epsilon$ as\'i que para 
+todos, pero un conjunto de baja probabilidad de los n\'umeros reales se encuentran dentro de 
+los l\'imites
+\begin{equation}
+(P_{i}p_{ij}\pm \delta)N.
+\end{equation}
+
+Por lo tanto casi todas las secuencias tienen una probabilidad p dada por
+\begin{equation}
+p=\prod p_{ij}^{(P_{i}p_{ij}\pm \delta)N}
+\end{equation}
+
+y $\frac{\log  p}{N}$ es limitada por
+
+\begin{equation}
+\frac{\log  p}{N} = \sum (P_{i}p_{ij}\pm \delta)\log  p_{ij}
+\end{equation}
+
+o
+
+\begin{equation}
+\left|\frac{\log  p}{N} = \sum (P_{i}p_{ij}\pm \delta)\log p_{ij}\right|<\eta
+\end{equation}
+
+Esto demuestra el teorema 3.
+Teorema 4 sigue inmediatamente de esto en el c\'alculo de los l\'imites superior e 
+inferior para $n(q)$ basado en el rango posible de valores de p en el Teorema 3.
+En el mixto (no ergódico) caso si
+
+\begin{equation}
+L = \sum p_{i}L_{i}
+\end{equation}
+
+y las entropias de los componentes son $H_{1}\leq H_{2}\leq ... \leq H_{n}$ tenemos el 
+
+Teorema: $Lim_{N\rightarrow \infty }\frac{\log n(q)}{N}=\varphi (q)$ es una funci\'on 
+de paso decreciente
+
+$\varphi (q)=H_{s}$ en el intervalo $\sum_{1}^{s-1}\alpha_{i}<q<\sum_{1}^{s}\alpha_{i}$.
+
+Para demostrar teoremas 5 y 6 primero nota que $F_{N}$ es mon\'otona decreciente 
+porque el aumento de $N$ agrega un sub\'indice a la entrop\'ia condicional. Una sencilla 
+sustitución de $p_{B_{i}}(S_{j})$ en la definici\'on de $F_{N}$ muestra que
+
+\begin{equation}
+F_{N} = NG_{N}-(N-1)G_{N}-1
+\end{equation}
+
+y sumando esto por todas las $N$ dadas $G_{N}=\frac{1}{N}\sum F{n}$. Por lo tanto 
+$G_{N}\leq F_{N}$ y $G_{N}$ son monótonas decrecientes. Tambi\'en se debe aproximar al mismo 
+l\'imite. Usando el teorema 3 se observa que $Lim_{N\rightarrow \infty } G_{N} = H$.
+
+\section{AP\'ENDICE 4}
+MAXIMIZAR LA TASA PARA UN SISTEMA DE RESTRICCIONES
+
+Supongamos que tenemos un conjunto de restricciones sobre secuencias de s\'imbolos que es 
+del tipo de estado finito y puede ser representado por una gr\'afica lineal. Siendo 
+$\l_{ij}^{(s)}$ el largo de varios s\'imbolos que pueden pasar de estado $i$ a estado $j$. 
+?` Qu\'e distribuci\'on de probabildades $P_{i}$ para los estados diferentes y $p_{ij}^{(s)}$ 
+para elegir un s\'imbolo $s$ en estado $i$ e ir a estado $j$ maximiza la tasa de generaci\'on 
+de informaci\'on en virtud de estas limitaciones? Las limitaciones defininen un canal 
+discreto y la velocidad m\'aximo debe ser menor o igual a la capacidad $C$ de este canal, 
+ya que si todos los bloques de longitud grande eran igualmente probables, esta tasa dar\'ia 
+lugar, y si es posible que esto ser\'ia mejor. Se mostrar\'a que esta tasa se puede lograr 
+mediante la elecci\'on adecuada de $P_{i}$ y $p_{ij}^{(s)}$.
+La tasa es:
+\begin{equation}
+\frac{-\sum P_{i}p_{ij}^{(s)}\log p_{ij}^{(s)}}{\sum P_{i}p_{ij}^{(s)}l _{ij}^{(s)}} = \frac{N}{M}.
+\end{equation}
+
+Siendo $l_{ij}=\sum_{s}l _{ij}^{(s)}$. Evidentemente para un m\'aximo de 
+$p_{ij}^{(s)}=k exp l_{ij}^{(s)}$. Las restricciones a la maximizaci\'on son 
+$\sum P_{i} = 1$, $\sum P_{i}(p_{ij}-\delta_{ij})=0$. Por lo tanto podemos maximizar 
+\begin{equation}
+U=\frac{-\sum P_{i}p_{ij}\log p_{ij}}{\sum P_{i}p_{ij}l_{ij}}+\lambda \sum _{i}P_{i}+\sum\mu _{i}p_{ij}+\sum\eta _{j}P_{i}(p_{ij}-\delta_{ij})
+\end{equation}
+
+\begin{equation}
+U=\frac{-\sum P_{i}p_{ij}\log p_{ij}}{\sum P_{i}p_{ij}l_{ij}}+\lambda \sum _{i}P_{i}+\sum\mu _{i}p_{ij}+\sum\eta _{j}P_{i}(p_{ij}-\delta_{ij})
+\end{equation}
+
+\begin{equation}
+\frac {\partial U}{\partial p_{ij}}=-\frac{MP{i}(1+\log p_{ij})+NP_{i}l_{ij}}{M^{2}}+\lambda+\mu_{I}+\eta _{i}P_{i}=0.
+\end{equation}
+
+Resolviendo para $p_{ij}$
+\begin{equation}
+p_{ij}=A_{i}B_{j}D^{-l_{ij}}
+\end{equation}
+
+Desde
+
+\begin{equation}
+\sum _{j}p_{ij}=1,\ A_{i}^{-1}=\sum_{j}B_{j}D^{-l_{ij}}
+\end{equation}
+\begin{equation}
+p_{ij}=\frac{B_{j}D^{-l_{ij}}}{\sum_{s}B_{s}D^{-l_{is}}}
+\end{equation}
+
+para luego
+
+\begin{equation}
+p_{ij}=\frac{B_{j}}{B_{i}}C^{-l_{ij}}
+\end{equation}
+\begin{equation}
+\sum p_{i}\frac{B_{j}}{B_{i}}C^{-l_{ij}}=P_{j}
+\end{equation}
+
+o
+
+\begin{equation}
+\sum \frac{P_{i}}{B_{i}}C^{-l_{ij}}=\frac {P_{j}}{B_{j}}.
+\end{equation}
+
+Entonces si $\lambda_{i}$ satisface
+
+\begin{equation}
+\sum\gamma _{i}C^{-lij}=\gamma_{j}
+\end{equation}
+\begin{equation}
+P_{i}=B_{i}\gamma _{i}.
+\end{equation}
+
+Tanto los conjuntos de ecuaciones para $B_{i}$ and $\gamma_{i}$ puede ser satisfecha ya 
+que C es
+\begin{equation}
+\left | C^{-l_{ij}} - \delta _{ij}\right |=0.
+\end{equation}
+
+En este caso la tasa es
+\begin{equation}
+\sum \frac{P_{i}p_{ij}\log \frac{B_{j}}{B_{i}}C^{-l_{ij}}}{\sum P_{i}p_{ij}l_{ij}}=C-\frac{P_{i}p_{ij}\log \frac{B_{j}}{B_{i}}}{\sum P_{i}p_{ij}l_{ij}}
+\end{equation}
+
+pero
+
+\begin{equation}
+\sum P_{i}p_{ij}(\log B_{j}-\log B_{i})=\sum_{j}P_{j}\log B_{j}-\sum P_{i}\log B_{i}=0
+\end{equation}
+
+Por lo tanto la tasa es $C$ y como esto nunca se podr\'ia superar este es el 
+m\'aximo, lo que justifica la soluci\'on supuesta.
+
+
+
+
+
+
+
+
+
+ 
+
