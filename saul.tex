@@ -1,11 +1,12 @@
-\chapter{Introducci\'{o}n}
+\chapter*{Introducci\'{o}n}
+\addcontentsline{toc}{chapter}{Introducci\'{o}n}
 
 El reciente desarrollo de varios m\'{e}todos de modulaci\'{o}n como
 PCM y PPM el cual intercambio el ancho de banda por se\~{n}al a ruido
 ha intensificado el inter\'{e}s general de la teor\'{\i}a de la
-comunicaci\'{o}n. A base de esta teor\'{\i}a se encuentra en los
-papeles importantes \citet{Nyquist}
-\citet{Hartley} sobre este tema.
+comunicaci\'{o}n. El fundamento de esta teor\'{\i}a se encuentra en
+los art\'{\i}culos importantes por \citet{Nyquist} y \citet{Hartley}
+sobre este tema.
 
 En el presente art\'{\i}culo se extiende la teor\'{\i}a a incluir un
 n\'{u}mero de nuevos factor, en particular el efecto del sonido en un
@@ -74,7 +75,6 @@ d\'{\i}gitos decimales. Desde
 \begin{equation}
 \log_2 M = \log_10 M / \log_10ˆ2 = 3.32 \log_10 M,
 \end{equation}
-FALTA INSERTAR IMAGEN 
 un d\'{\i}gito decimal es alrededor de 3 1/3
 bits. Una rueda d\'{\i}gital en una computadora de escritorio tiene 10
 posiciones estables y por lo tanto, tiene una capacidad de
@@ -83,62 +83,78 @@ la integraci\'{o}n y la diferenciaci\'{o}n estan envueltos en base e
 es algunas veces conveniente. Las unidades resultantes de
 informaci\'{o}n ser\'{\i}an llamados unidades naturales. El cambio de
 base $a$ a base $b$ simplemente requiere la multiplicaci\'{o}n por
-$\log_b * a$.
+$\log_b a$.
+
+\begin{figure}[!ht]
+\centerline{\includegraphics[width=80mm]{ejemplo.png}}
+\caption{Diagrama esquem\'{a}tico de un sistema de comunicaciones
+  general.}
+\label{fig:1}
+\end{figure}
 
 Por un sistema de comunicaci\'{o}n se quiere decir que es un sistema
-de un tipo indicado esquematicamente en la figura \ref{FALTA PONER
-ETIQUETA}. Eso consiste de cinco partes esenciales:
+de un tipo indicado esquem\'{a}ticamente en la figura \ref{fig:1}. Eso
+consiste de cinco partes esenciales:
+
 \begin{enumerate}
 \item{La fuente de informaci\'{o}n el cual produces el mensaje o secuencia de
-mensajes a ser comunicado a la terminal que recibe. El mensaje puede
-ser de varios tipos: (a) Una secuencia de letras como un sistem de
-telegrafo de teletipo; (b) Una sola funci\'{o}n de tiempo $f(t)$ como
-un radio o telefon\'{\i}a; (c) Una funci\'{o}n de tiempo y otras
-variables como televisi\'{o}n en blanco y negro --- aqu\'{\i} el
-mensaje podr\'{\i}a pasar a traves de una funci\'{o}n f(x,y,t) de dos
-espacios de coordenadas y tiempo, la intensidad de la luz en el punto
-(x, y) y el tiempo t sobre un tubo en la placa; (d) Dos o m\'{a}s
-funciones de tiempo, digames $f(t)$, $g(t)$, $h(t)$ --- este es el
-caso en ``tres dimensional'' transmisi\'{o}n de sonido o si el sistema
-est\'{a} dise\~{n}ado para dar servicio a varios canales individuales
-en multiplex; (e) Varias funciones de varias variables --- en la
-televisi\'{o}n a color el mensaje consiste en tres funciones $f(x,y,t)$,
-g(x,y,t),h(x,y,t) definido en tres dimensiones continuas --- tambi\'{e}n se
-podr\'{\i}a pensar que esas tres funciones como componentes de un
-campo vectorial definido en una regi\'{o}n -- de manera similar,
-distintas fuentes de televisiones en blanco y negro podr\'{\i}an
-producir ``mensajes'' que consisten en un n\'{u}mero de funciones de
-tres variables; (f) Diversas combinaciones tambi\'{e}n se producen , por
-ejemplo, en la televisi\'{o}n con un canal de audio asociado.}
+  mensajes a ser comunicado a la terminal que recibe. El mensaje puede
+  ser de varios tipos:
+  \begin{enumerate}[(a)]
+  \item{Una secuencia de letras como un sistema de
+    telegrafo de teletipo;}
+  \item{Una sola funci\'{o}n de tiempo $f(t)$ como
+    un radio o telefon\'{\i}a;}
+  \item{Una funci\'{o}n de tiempo y otras
+    variables como televisi\'{o}n en blanco y negro --- aqu\'{\i} el
+    mensaje podr\'{\i}a pasar a traves de una funci\'{o}n $f(x,y,t)$ de dos
+    espacios de coordenadas y tiempo, la intensidad de la luz en el punto
+    $(x, y)$ y el tiempo $t$ sobre un tubo en la placa;}
+  \item{Dos o m\'{a}s funciones de tiempo, digames $f(t)$, $g(t)$,
+    $h(t)$ --- este es el caso en ``tres dimensional'' transmisi\'{o}n
+    de sonido o si el sistema est\'{a} dise\~{n}ado para dar servicio a
+    varios canales individuales en multiplex;}
+  \item{Varias funciones de varias variables --- en la televisi\'{o}n
+    a color el mensaje consiste en tres funciones $f(x,y,t)$,
+    $g(x,y,t)$, $h(x,y,t)$ definidas en tres dimensiones continuas ---
+    tambi\'{e}n se podr\'{\i}a pensar que esas tres funciones como
+    componentes de un campo vectorial definido en una regi\'{o}n -- de
+    manera similar, distintas fuentes de televisiones en blanco y
+    negro podr\'{\i}an producir ``mensajes'' que consisten en un
+    n\'{u}mero de funciones de tres variables;}
+  \item{Diversas combinaciones tambi\'{e}n se producen , por ejemplo, en la
+    televisi\'{o}n con un canal de audio asociado.}
+\end{enumerate}}
+
 \item{Un transmisor que opera en el mensaje de alguna manera para
-producir una se\~{n}al adecuada para la transmisi\'{o}n sobre el
-canal. En la telefon\'{\i}a esta operaci\'{o}n consiste simplemente en
-el cambio de presi\'{o}n de sonido en una corriente el\'{e}ctrica
-proporcional. En la telegraf\'{\i}a tenemos una operaci\'{o}n de
-codificaci\'{o}n que produce una secuencia de puntos, guiones y
-espacios en el canal correspondiente al mensaje. En un sistema
-multiplex PCM las diferentes funciones de voz deben tomar muestras,
-compresiones, cuantificada y codificada, y finalmente intercalados
-adecuadamente para construir la se\~{n}al. Sistemas de vodocoder, la
-televisi\'{o}n y la modulaci\'{o}n de frecuencia son ejemplos de
-operaciones complejas aplicadas a los mensajes para obtener la
-se\~{n}al.}
+  producir una se\~{n}al adecuada para la transmisi\'{o}n sobre el
+  canal. En la telefon\'{\i}a esta operaci\'{o}n consiste simplemente en
+  el cambio de presi\'{o}n de sonido en una corriente el\'{e}ctrica
+  proporcional. En la telegraf\'{\i}a tenemos una operaci\'{o}n de
+  codificaci\'{o}n que produce una secuencia de puntos, guiones y
+  espacios en el canal correspondiente al mensaje. En un sistema
+  multiplex PCM las diferentes funciones de voz deben tomar muestras,
+  compresiones, cuantificada y codificada, y finalmente intercalados
+  adecuadamente para construir la se\~{n}al. Sistemas de vodocoder, la
+  televisi\'{o}n y la modulaci\'{o}n de frecuencia son ejemplos de
+  operaciones complejas aplicadas a los mensajes para obtener la
+  se\~{n}al.}
 \item{El canal es simplemente el medio usado para transmitir la se\~{n}al
-desde un transmitor a un receptor. Eso podr\'{\i}a ser un par de
-cables, un cable coazial, una radio frecuencia, un rayo de luz, etc.}
+  desde un transmitor a un receptor. Eso podr\'{\i}a ser un par de
+  cables, un cable coazial, una radio frecuencia, un rayo de luz, etc.}
 \item{El receptor ordinalmente hace la operaci\'{o}n inversa de lo que ya
-esta hecho por el transmitor, reconstruye el mensaje desde la se\~{n}al.}
+  esta hecho por el transmitor, reconstruye el mensaje desde la se\~{n}al.}
 \item{La destinaci\'{o}n es la persona (o cosa) hacia quien el mensaje es
-enviado.}
+  enviado.}
 \end{enumerate}
 
 Se desear\'{\i}a considerar ciertos problemas generales envueltos en
- el sistema de comunicaci\'{o}n. Para hacer esto es necesario
- representar varios elementos envueltos como lo son las entidades
- matematicas, adecuadamente idealizada desde sus contrapartes
- f\'{\i}sicas.
+el sistema de comunicaci\'{o}n. Para hacer esto es necesario
+representar varios elementos envueltos como lo son las entidades
+matematicas, adecuadamente idealizada desde sus contrapartes
+f\'{\i}sicas.
 
-%Checar
+% Checar
 
 A grandes rasgos se pueden clasificar los sistemas de comunicaci\'{o}n
 en tres categor\'{\i}as principales: los discretes, continuos y
@@ -156,13 +172,17 @@ la comunicaci\'{o}n, sino tambi\'{e}n en la teor\'{\i}a de las
 m\'{a}quinas de computaci\'{o}n, el dise\~{n}o de las centrales
 telef\'{o}nicas y otros campos.  Adem\'{a}s el caso discreto crea una
 base para los casos continuos mixtos que ser\'{a}n tratadas en la
-segunda mitad del papel.//Checar
+segunda mitad del papel.
+
+% Checar
 
 \clearpage
 
-\chapter{Sistemas discretos silenciosos}
+\part{Sistemas discretos silenciosos}
+\label{part:1}
 
-\section{El canal discreto silencioso}
+\chapter{El canal discreto silencioso}
+\label{sec:1}
 
 Teletipo y telegraf\'{\i}a son dos simples ejemplos de un canal
 discreto para la transmisi\'{o}n de informaci\'{o}n. Generalmente, con
@@ -205,9 +225,9 @@ longitudes de los simbolos y las limitaciones en las secuencias
 permitidas, hacemos la siguiente definici\'{o}n.
 
 \begin{definition}
-La capacidada C de un canal discreto es dado por
+La capacidad $C$ de un canal discreto es dado por
 \begin{equation}
-C = \lim_{T \rightarrow \infty} \frac{\log N(T)}{T}
+C = \lim_{T \rightarrow \infty} \frac{\log N(T)}{T},
 \end{equation}
 donde $N(T)$ es el numero de se\~{n}ales permitidas de duraci\'{o}n $T$.
 \end{definition}
@@ -223,7 +243,7 @@ duraci\'{o}n $t$, nosotros tenemos:
 \begin{equation}
 N(t) = N(t-t_1) + N(t-t_2) + ... +N(t-t_n).
 \end{equation}
-El n\'{u}mero tota es equivalente a la suma de n\'{u}mero de
+El n\'{u}mero total es equivalente a la suma de n\'{u}mero de
 secuencias terminando en $S_1, S_2, \ldots, S_n$ y esos son $N(t-t_1),
 N(t-t_2), \ldots, N(t-t_n)$, respectivamente. Acorde a un buen
 resultado en diferencias finitas, $N(t)$ es entonces asintotica para

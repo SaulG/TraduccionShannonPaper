@@ -5,26 +5,24 @@ un juicio, se hace en el punto de resepci\'on para el mensaje
 original. Incrementando el tama\~{n}o del ejemplo siempre agudiza las
 posibles afirmaciones estad\'isticas.
 
-El contenido del teorema 11 PONER REF y su prueba se pueden formular
-de una manera diferente que muestra una conexi\'on sin ruido de una
+El contenido del teorema \ref{th:11} y su prueba se pueden formular de
+una manera diferente que muestra una conexi\'on sin ruido de una
 manera mas clara. Considere las posibles duraciones de las se\~{n}ales
 T y supongamos un subconjutno de ellos se seleccionan para ser
 usados. Los que esten en el subconjunto se utilizen todos con igual
 probabilidad, y suponiendo que el resector es construido para
 seleccionar, como la se\~{n}al original. la causa m\'as probable de
 subconjutno cuando una se\~{n}al perturbada es recivida. Nosotros
-definimos $N(T,q)$ siendo el numero m\'aximo de se\~{n}ales que podemos
-elegir para el subconjunto tal que la probabilidad de una
+definimos $N(T,q)$ siendo el numero m\'aximo de se\~{n}ales que
+podemos elegir para el subconjunto tal que la probabilidad de una
 interpretaci\'{o}n incorrecta sea menor o igual a $q$.
 
 \begin{theorem}
-  \begin{equation}
-    \lim_{t \to{}\infty}\frac{\log{N}(T,q)}{T} = C,
-  \end{equation}
-donde $C$ es la capacidad de canal,a condici\'on que q no sea igual a
-0 o 1
+\label{th:12}
+  \begin{equation} \lim_{T \to{} \infty}\frac{\log{N}(T,q)}{T} =
+    C, \end{equation} donde $C$ es la capacidad de canal,a condici\'on
+    que q no sea igual a 0 o 1
 \end{theorem}
-
 
 En otras palabras, no importa lo que nos propusimos de limites de
 confiabilidad, podemos distinguir de forma fiable en el tiempo $T$
@@ -34,14 +32,22 @@ capacidad de un canal sin ruido en la secci\'on uno PONER REF.
 
 \clearpage
 
-\section{Ejemplo de un canal discreto y su capacidad}
+\chapter{Ejemplo de un canal discreto y su capacidad}
+\label{sec:15}
 
-Un ejemplo simple de un canal discreto se indica en la figura 11 PONER
-REF. Hay tres posibles s\'imbolos. El primero nunca se vera afectado por
-el ruido. El segundo y la tercera tiene cada una probabilidad $p$ de que
-viene a trav\'es impertubable q de ser cambiado en el otro elemento
-par. Nosotros tenemos (dejar $\alpha = -[plogp + q\log{q}]$ y $p$ y $q$
-son probabilidades de estar usando los s\'imbolos primero y segundo).
+Un ejemplo simple de un canal discreto se indica en la
+figura \ref{fig:11}. Hay tres posibles s\'imbolos. El primero nunca se
+vera afectado por el ruido. El segundo y la tercera tiene cada una
+probabilidad $p$ de que viene a trav\'es impertubable q de ser
+cambiado en el otro elemento par. Nosotros tenemos (dejar $\alpha =
+-[plogp + q\log{q}]$ y $p$ y $q$ son probabilidades de estar usando
+los s\'imbolos primero y segundo).
+
+\begin{figure}[!ht]
+\centerline{\includegraphics[width=80mm]{ejemplo.png}}
+\caption{Un ejemplo de un canal discreto.}
+\label{fig:11}
+\end{figure}
 
 \begin{equation}
 \begin{array}{rcl}
@@ -95,95 +101,118 @@ El primer s\'imbolo se utiliza tanto mas frecuentemente que los otros dos, debid
 
 \clearpage
 
-\section{La capacidad de canales en cietos casos especiales}
+\chapter{La capacidad de canales en cietos casos especiales}
+\label{sec:16}
 
 Si el ruido afecta s\'imbolos sucesivos de canal de forma
 independiente pueden ser descritos por un conjunto de transici\'on de
 probabilidades $p_{i,j}$.Esta es la probabilidad, si el simbolo i es
 enviado, que j sera recibido.La tasa de canal m\'aximo viene dado por
 el m\'aximo de:
-
 \begin{equation}
   \sum_{i,j}P_i p_{i,j} \log{\sum{P_i p_{i,j}}} + \sum_{i,j}P_i p_{i,j}\log{p_{i,j}}
 \end{equation}
  
 Multiplicar por $P_s$ y sumando en $s$ muestra que $\mu = C$. Vamos a la inversa de $p_{sj}$ (si existe) en $h_{st}$  de modo que 
 $\sum_{s}$ $h_{st}$ $p_{sj} = \delta_{tj}$. Entonces: 
-
 \begin{equation}
-  \sum_{s,j}h_{st} p_{s,j} \log{p_{s.j}} - \log{\sum_{i}P_i p_{i,t}} = C \sum_{s} h_{s,t}
+  \sum_{s,j}h_{st} p_{s,j} \log{p_{s.j}} - \log{\sum_{i}P_i p_{i,t}} = C \sum_{s} h_{s,t}.
 \end{equation}
 Por lo tanto:
-
 \begin{equation}
   \sum_{i} P_i p_{i,t} = exp[- C \sum_{s} h_{s,t}+ \sum_{s,j} h_{s,t} p_{s,j} \log{p_{s,j}}]
 \end{equation}
-
-o:  
+o  
 \begin{equation}
-  P_i = \sum_{t} h_{i,t} exp[ - C \sum_{s} h_{s,t}+ \sum_{s,j} h_{s,t} p_{s,j} \log{p_{s,j}} ]
+  P_i = \sum_{t} h_{i,t} exp[ - C \sum_{s} h_{s,t}+ \sum_{s,j} h_{s,t} p_{s,j} \log{p_{s,j}} ].
 \end{equation}
-
-
-Este es el sistema de ecuaciones para determinar el valor m\'aximo de $P$, con $C$ se determina 
-de manera que $\sum P_i = 1$. Cuando esto esta hecho, $C$ sera la capacidad del canal y $P_i$ las probabilidades 
-para los s\'imbolos de canal para lograr esta capacidado.
-Si cada s\'imbolo de entrada tiene el mismo conjunto de probabilidades en las l\'ineas que emergen de ella 
-y lo mismo sucede a cada s\'imbolo de salida, la capacidad puede ser calculada f\'acilmente. Los ejemplos se muestran en la figura 12. 
-En tal caso $H_xy$ es independiente de la destribuci\'on de probabilidades de los s\'imbolos de entrada, y esta dad por $-\sum p_i \log{p_i}$. 
-Cuando $p_i$ son los valores de probabilidad de transici\'on de cualquier s\'imbolo de entrada.La capacidad del canal es:
-
+Este es el sistema de ecuaciones para determinar el valor m\'aximo de
+$P$, con $C$ se determina de manera que $\sum P_i = 1$. Cuando esto
+esta hecho, $C$ sera la capacidad del canal y $P_i$ las probabilidades
+para los s\'imbolos de canal para lograr esta capacidado.  Si cada
+s\'imbolo de entrada tiene el mismo conjunto de probabilidades en las
+l\'ineas que emergen de ella y lo mismo sucede a cada s\'imbolo de
+salida, la capacidad puede ser calculada f\'acilmente. Los ejemplos se
+muestran en la figura 12.  En tal caso $H_xy$ es independiente de la
+destribuci\'on de probabilidades de los s\'imbolos de entrada, y esta
+dad por $-\sum p_i \log{p_i}$.  Cuando $p_i$ son los valores de
+probabilidad de transici\'on de cualquier s\'imbolo de entrada.La
+capacidad del canal es
 \begin{equation}
   \max [H(y) - H_x(y)] = \max H(y) + \sum p_i \log{p_i}.
 \end{equation}
-  
 El valor m\'aximo de $H(y)$ esta claramente  $\log{m}$ donde $m$ es el numero de s\'imbolos de salida, ya que es posible para hacer 
-todos igualmente probables haciendo los s\'imbolos de entradas igualmente probables. La capacidad del canal es por lo tanto:
-
+todos igualmente probables haciendo los s\'imbolos de entradas igualmente probables. La capacidad del canal es por lo tanto
 \begin{equation}
-  C = \log{m} + \sum p_i \log{p_i}
+  C = \log{m} + \sum p_i \log{p_i}.
 \end{equation}
 
-En la figura 12a ser\'ia 
+\begin{figure}
+  \centering
+  \begin{subfigure}[b]{0.4\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{ejemplo.png}
+    \caption{Primer ejemplo.}
+    \label{fig12a}
+  \end{subfigure}%
+\quad
+  \centering
+  \begin{subfigure}[b]{0.4\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{ejemplo.png}
+    \caption{Segundo ejemplo.}
+    \label{fig12b}
+  \end{subfigure}%
+\quad
+  \centering
+  \begin{subfigure}[b]{0.4\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{ejemplo.png}
+    \caption{Tercer ejemplo.}
+    \label{fig12c}
+  \end{subfigure}%
+\caption{Ejemplos de canales discretos con las mismas probabilidades de
+ transici\'{o}n para cada entrada y cada salida.}
+\label{fig:12}
+\end{figure}
 
+En la figura \ref{fig12a} ser\'ia
 \begin{equation}
   C = = \log{4} - \log{2} 0 \log{2}.
 \end{equation}
-
-Esto se podr\'ia lograr mediante el uso solo the la 1a y 3d simbolo. En la Figura b:
-
+Esto se podr\'ia lograr mediante el uso solo el primer y el tercer
+s\'{\i}mbolo. En la Figura \ref{fig12b}:
 \begin{equation}
   C = \log{4} - \frac{2}{3}\log{3} - \frac{1}{3}\log{6}
   = \log{4} - \log{3} - \frac{1}{3}\log{2}
   = \log{\frac{1}{3}} 2^{\frac{5}{3}}
 \end{equation}
-
-En la figura 12c nosotros tenemos:
-
+En la figura \ref{fig12c} nosotros tenemos:
 \begin{equation}
   C = \log{3} - \frac{1}{2}\log{2} - \frac{1}{3}\log{3} - \frac{1}{6} \log{6}
-  = \log  {\frac{3}{ 2^{\frac{1}{2}}}} 3^{\frac{1}{3} 6^{\frac{1}{6} }}
+  = \log  {\frac{3}{ 2^{\frac{1}{2}}}} 3^{\frac{1}{3} 6^{\frac{1}{6} }}.
 \end{equation}
-
-Supongamos que los s\'imbolos se dividen en varios grupos tal que el ruido causa a un s\'imbolo en un grupo a 
-ser confundido con un s\'imbolo de otro grupo. Deja la capacidad de un grupo n-\'esimo ser $C_n$ (en bits por segundo)
-donde solo utilizamos los s\'imbolos de este grupo. Entonces es f\'acil desmotrar  de todo el conjunto, 
-la probabilidad $P_n$ para todos los s\'imbolos del grupo n-esimo deber\'ia ser:
-
+Supongamos que los s\'imbolos se dividen en varios grupos tal que el
+ruido causa a un s\'imbolo en un grupo a ser confundido con un
+s\'imbolo de otro grupo. Deja la capacidad de un grupo n-\'esimo ser
+$C_n$ (en bits por segundo) donde solo utilizamos los s\'imbolos de
+este grupo. Entonces es f\'acil desmotrar de todo el conjunto, la
+probabilidad $P_n$ para todos los s\'imbolos del grupo $n$-\'{e}esimo
+deber\'ia ser:
 \begin{equation}
   P_n = \frac{2^{C_n}}{\sum 2^{C_n}}
 \end{equation}
 
 En un grupo la probabilidad se distribuye tal como ser\'ia si estos eran los \'unicos s\'imbolos que se utilizan. 
 La capacidad del canal es:
-
 \begin{equation}
   C = \log{\sum 2^{C_n}}.
 \end{equation}
 
 \clearpage
 
-\section{Un ejemplo de codificaci\'on eficiente}
+\chapter{Un ejemplo de codificaci\'on eficiente}
+\label{sec:17}
 
 El siguiente ejemplo, aunque es un poco realista, es un caso en que la
 coincidencia exacta para un canal con ruido, es posible. Hay dos
@@ -197,5 +226,5 @@ C = \max [ H(y) - H_x(y) ]
 = \frac{4}{7} \text{ bits}/\text{s\'{\i}mbolos}
 \end{equation}
 Un c\'odigo eficiente, permite la correci\'on de todos los errores y
-transmitir a la tasa $C$, es el siguiente (encontrado por un m\'etodo de
-R.\ Hamming):
+transmitir a la tasa $C$, es el siguiente (encontrado por un m\'etodo
+de R.\ Hamming):

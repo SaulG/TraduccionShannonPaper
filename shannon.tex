@@ -15,6 +15,12 @@
 \usepackage{graphicx}
 \usepackage{array, multirow}
 \usepackage[hypcap]{caption}
+\usepackage{subcaption}
+\usepackage{enumerate}
+\usepackage{tocloft}
+
+\setlength\cftparskip{3pt}
+\setlength\cftbeforechapskip{0pt}
 
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{1em}
@@ -41,7 +47,13 @@
                         \fi\fi\fi\DiffSpace} 
 
 \renewcommand*{\arraystretch}{1.4}
+\addto{\captionsspanish}{\renewcommand{\abstractname}{{Traducci\'{o}n al espa\~{n}ol}}}
 
+\addto\captionsspanish{%
+  \renewcommand\appendixname{Anexo}
+  \renewcommand\appendixpagename{Anexos}
+  \renewcommand\appendixtocname{Anexos}
+}
 
 \author{Claude E. Shannon}
 \title{Una teor\'{\i}a matem\'{a}tica de la comunicaci\'{o}n}
@@ -49,8 +61,11 @@
 \begin{document}
 \maketitle
 
-\newtheorem{theorem}{Teorema}[section]
-\newtheorem{definition}{Definici\'{o}n}[section]
+\newtheorem{theorem}{Teorema}[chapter]
+\newtheorem{definition}{Definici\'{o}n}[chapter]
+
+\theoremstyle{definition}
+\newtheorem{exmp}{Ejemplo}[chapter]
 
 \begin{abstract}
   Esta es una traducci\'{o}n al espa\~{n}ol del art\'{\i}culo
@@ -88,6 +103,7 @@ En la figura \ref{figura_ejemplo} podemos apreciar...
 
 \input{saul.tex} % pp. 1--3 recientemente confirmados
 \input{cecy1.tex} % pp. 4--5 recientemente asignados
+\input{falta.tex} % pp. 6
 \input{isaias.tex} % pp. 7--14 recientemente confirmados
 \input{roberto.tex} % pp. 15--18 recientemente asignados
 \input{esteban.tex} % pp. 19--25 recientemente confirmados
@@ -98,5 +114,8 @@ En la figura \ref{figura_ejemplo} podemos apreciar...
 \input{triana.tex} % pp. 41--45 recientemente confirmados
 \input{ramon2.tex} % pp. 46--47 recientemente asignados
 \input{emmanuel.tex} % pp. 47--55 terminados
+
+\bibliography{shannon}
+\bibliographystyle{plainnat}
 
 \end{document}

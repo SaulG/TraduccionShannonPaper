@@ -21,6 +21,7 @@ la $X_{i}$ que no es correcto (si es 0 no hay error).
 
 \chapter{El crecimiento del n\'umero de bloques de s\'imbolos con una
 condici\'on de estado finito}
+\label{aini:1}
 
 Siendo $N_{i}(L)$ el n\'umero de bloques de s\'imbolos de largo L
 terminando en estado $i$.  Entonces tenemos
@@ -48,14 +49,16 @@ D(W)=\left| a_{ij}\right| =\left| \sum_{s}W^{-b_{ij}^{(s)}}-\delta_{ij}\right|
 debe desaparecer y esto determina $W$, que es, por supuesto, la mayor raíz real de $D = 0$.
 La cantidad C est\'a dada entonces por
 \begin{equation}
-C=Lim_{L\rightarrow \infty}\frac{\log \sum A_{j}W^{L}}{L}=\log W
+C = \lim_{L\rightarrow \infty}\frac{\log \sum A_{j}W^{L}}{L}=\log W
 \end{equation}
-y observamos tambi\'en que las mismas propiedades de crecimiento resultan si nosotros 
-requierimos que todos los bloques comiencen en el mismo (elegido arbitrariamente) estado.
+y observamos tambi\'en que las mismas propiedades de crecimiento
+resultan si nosotros requierimos que todos los bloques comiencen en el
+mismo (elegido arbitrariamente) estado.
 
 \clearpage
 
 \chapter{Derivaci\'on de $H=-\sum p_{i}\log  p_{i}$}
+\label{aini:2}
 
 Siendo $H(\frac{1}{n},\frac{1}{n},...,\frac{1}{n})=A(n)$. Desde la
 condici\'on (3) se puede descomponer una elecci\'on de $s^{m}$ con las
@@ -111,6 +114,7 @@ asciende a la elecci\'on de una unidad de medida.
 \clearpage
 
 \chapter{Teoremas sobre fuentes erg\'odicas}
+\label{aini:3}
 
 Si es posible pasar de un estado con $P>0$ a cualquier otro a lo largo
 de un camino de probabilidad $p>0$, el sistema es erg\'odico y una
@@ -152,25 +156,26 @@ H_{n}$ tenemos :
 $\lim_{N\rightarrow \infty }\frac{\log n(q)}{N}=\varphi (q)$ es una
 funci\'on de paso decreciente $\varphi (q)=H_{s}$ en el intervalo
 $\sum_{1}^{s-1}\alpha_{i}<q<\sum_{1}^{s}\alpha_{i}$.
-\label{aqui_va_su_numero}
+\label{nuevo}
 \end{theorem}
 
-Para demostrar teoremas 5 FALTA REF y 6 FALTA REF primero nota que
+Para demostrar teoremas \ref{th:5} y \ref{th:6}, primero note que
 $F_{N}$ es mon\'otona decreciente porque el aumento de $N$ agrega un
-sub\'indice a la entrop\'ia condicional. Una sencilla sustitución de
-$p_{B_{i}}(S_{j})$ en la definici\'on de $F_{N}$ muestra que
-
+sub\'indice a la entrop\'ia condicional. Una sencilla sustituci\'{o}n
+de $p_{B_{i}}(S_{j})$ en la definici\'on de $F_{N}$ muestra que
 \begin{equation}
-F_{N} = NG_{N}-(N-1)G_{N}-1
+F_{N} = NG_{N}-(N-1)G_{N}-1,
 \end{equation}
-
-y sumando esto por todas las $N$ dadas $G_{N}=\frac{1}{N}\sum F{n}$. Por lo tanto 
-$G_{N}\leq F_{N}$ y $G_{N}$ son monótonas decrecientes. Tambi\'en se debe aproximar al mismo 
-l\'imite. Usando el teorema 3 se observa que $Lim_{N\rightarrow \infty } G_{N} = H$.
+y sumando esto por todas las $N$ dadas $G_{N}=\frac{1}{N}\sum
+F{n}$. Por lo tanto $G_{N}\leq F_{N}$ y $G_{N}$ son mon\'{o}tonas
+decrecientes. Tambi\'en se debe aproximar al mismo l\'imite. Usando el
+teorema \ref{th:3} se observa que $\lim_{N\rightarrow \infty } G_{N} =
+H$.
 
 \clearpage
 
 \chapter{Maximizar la tasa para un sistema de restricciones}
+\label{a4}
 
 Supongamos que tenemos un conjunto de restricciones sobre secuencias
 de s\'imbolos que es del tipo de estado finito y puede ser
