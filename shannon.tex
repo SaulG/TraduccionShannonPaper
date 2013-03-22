@@ -5,7 +5,7 @@
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{amssymb}
-\usepackage[letterpaper, top=30mm, bottom=30mm, left=30mm, right=30mm]{geometry}
+\usepackage[letterpaper, top=30mm, bottom=30mm, left=35mm, right=35mm]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage[sort]{natbib}
 \usepackage{libertine}
@@ -13,6 +13,7 @@
 \usepackage{hyperref}
 \usepackage{floatflt}
 \usepackage{graphicx}
+\usepackage{array, multirow}
 
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{1em}
@@ -38,6 +39,9 @@
                                 \let\DiffSpace\relax
                         \fi\fi\fi\DiffSpace} 
 
+\renewcommand*{\arraystretch}{1.4}
+
+
 \author{Claude E. Shannon}
 \title{Una teor\'{\i}a matem\'{a}tica de la comunicaci\'{o}n}
 \date{1948}
@@ -58,6 +62,20 @@
     codificaci\'{o}n}, impartida por Dra.\ Elisa Schaeffer en la
   primavera del 2013.
 \end{abstract}
+
+\clearpage
+
+\tableofcontents
+
+\clearpage
+
+\listoffigures
+
+\clearpage
+
+\listoftables
+
+\clearpage
 
 \begin{figure}
 \centerline{\includegraphics[width=80mm]{ejemplo.png}}

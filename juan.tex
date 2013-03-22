@@ -118,6 +118,8 @@ H\left ( y \right )=H\left ( x \right )+\log\left | a_{ij} \right |.
 En el caso de la rotaci\'on de coordenadas (o cualquier medici\'on preservando la transformaci\'on) $J=1$ y $H\left ( y \right ) = H\left ( x \right )$.}
 \end{enumerate}
 
+\clearpage
+
 \section{Entrop\'ia en un conjunto de funciones}
 \label{s21}
 
@@ -195,6 +197,8 @@ volumen. Desde que el ruido blanco tiene la m\'axima entrop\'ia para
 una potencia dada, la potencia de entrop\'ia de cualquier ruido es
 menor o igual a su actual potencia.
 
+\clearpage
+
  \section{P\'erdida de entrop\'ia en filtros lineales}
 \label{s22}
 
@@ -238,12 +242,23 @@ N_{1}\exp \frac{1}{W}\int_{W}^{\:}\log \left | Y\left ( f \right )
 \right |^{2} \diff f.
 \end{equation}
 
-% Insertando la imagen, no se inserta aqui, sino hasta el final del PDF
-\begin{figure}
-\centerline{\includegraphics[width=100mm]{./Imagenes/Table1-Pagina40.png}}
-\caption{TABLA 1}
-\label{TABLA 1}
-\end{figure}
+\begin{table}[!ht]
+\caption{Gain, entropy power factor and gain in decibels, and the impulse response.}
+\label{table1}
+\begin{center}
+\begin{tabular}{|m{15mm}m{20mm}|m{15mm}|m{35mm}|m{40mm}|}
+\hline
+\multicolumn{2}{|c|}{\sc Gain} & {\sc Entropy Power Factor} & {\sc Entropy Power Gain in
+Decibels} & {\sc Impulse Response} \\
+\hline
+$1 - \omega \longrightarrow$ & \includegraphics[width=20mm]{ejemplo.png}
+& $\frac{1}{e^2}$ & $-8.69$ & $\frac{\sin^2(t/2)}{t^2 / 2}$ \\
+\hline
+algo & algo & algo & algo & algo \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
 
 La potencia de entrop\'ia final es la entrop\'ia inicial multiplicada
 por la ganancia media geom\'etrica del filtro. Si la ganancia es
@@ -266,6 +281,8 @@ particular ganancia que incrementa linealmente $G \left (\omega
 tiene el factor rec\'iproco. Entonces, $\frac{1}{\omega}$ tiene el
 factor $e^{2}$. Aumentando la ganancia a cualquier potencia incrementa
 el factor a esta potencia. 
+
+\clearpage
 
 \section{Entrop\'ia de una suma de dos conjuntos}
 \label{s23}

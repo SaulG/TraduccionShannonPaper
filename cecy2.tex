@@ -1,71 +1,66 @@
 
-Deje un bloque de siete s\'imbolos que $X_{1}, X_{2},...,X_{7}$. De estos 
-$X_{3}, X_{5}, X_{6} y X_{7}$ son los mensajes de símbolos y eligidos 
-arbitrariamente por la fuente. Los otros tres son redundantes y se calculan como sigue:
-
+Deje un bloque de siete s\'imbolos que $X_{1}, X_{2},...,X_{7}$. De
+estos $X_{3}, X_{5}, X_{6} y X_{7}$ son los mensajes de s\'{\i}mbolos
+y eligidos arbitrariamente por la fuente. Los otros tres son
+redundantes y se calculan como sigue:
+\begin{center}
 \begin{tabular}{c c c c}
-$X_{4}$ & es elegido para hacer & $\alpha=X_{4}+X_{5}+X_{6}+X_{7}$ & even \\
-$X_{2}$ & `` `` `` & $\beta=X_{2}+X_{3}+X_{6}+X_{7}$ & `` `` `` \\
-$X_{1}$ & `` `` ``& $\gamma=X_{1}+X_{3}+X_{5}+X_{7}$ & `` `` ``
+$X_{4}$ & es elegido para hacer & $\alpha=X_{4}+X_{5}+X_{6}+X_{7}$ & par, \\
+$X_{2}$ & `` `` `` & $\beta=X_{2}+X_{3}+X_{6}+X_{7}$ & `` `` ``, \\
+$X_{1}$ & `` `` ``& $\gamma=X_{1}+X_{3}+X_{5}+X_{7}$ & `` `` ``.
 \end{tabular}
+\end{center}
+Cuando un bloque de siete es recibido $\alpha, \beta$ y $\gamma$ son
+calculados y si incluso llam\'o a cero, si un extra\~no llamado. El
+n\'umero binario $\alpha \beta \gamma$ entonces da el sub\'indice de
+la $X_{i}$ que no es correcto (si es 0 no hay error).
 
-Cuando un bloque de siete es recibido $\alpha, \beta$ y $\gamma$ son calculados y 
-si incluso llam\'o a cero, si un extra\~no llamado. El n\'umero binario $\alpha \beta \gamma$ 
-entonces da el sub\'indice de la $X_{i}$ que no es correcto (si es 0 no hay error).
+\clearpage
 
-\section{AP\'ENDICE 1}
-EL CRECIMIENTO DEL N\'UMERO DE BLOQUES DE S\'IMBOLOS CON UNA CONDICI\'ON DE ESTADO FINITO
+\begin{appendices}
 
-Siendo $N_{i}(L)$ el n\'umero de bloques de s\'imbolos de largo L terminando en estado $i$. 
-Entonces tenemos
+\chapter{El crecimiento del n\'umero de bloques de s\'imbolos con una
+condici\'on de estado finito}
 
+Siendo $N_{i}(L)$ el n\'umero de bloques de s\'imbolos de largo L
+terminando en estado $i$.  Entonces tenemos
 \begin{equation}
 N_{j}(L)=\sum_{i,s} N_{i}(L-b_{ij}^{(s)})
 \end{equation}
-
 donde $b_{ij}^{1},b_{ij}^{2},...,b_{ij}^{m}$ el largo de los s\'imbolos los cuales pueden 
 ser elegidos en estado $i$ y pasar a estado $j$. Esas son ecuaciones diferenciales lineales 
 y el comportamiento como $L\rightarrow \infty $ debe ser de tipo
-
 \begin{equation}
 N_{j}=A_{j}W^{L}.
 \end{equation}
-
 Sustituyendo en la ecuaci\'on diferencial 
-
 \begin{equation}
 A_{j}W^{L} = \sum_{i,s}A_{i}W^{L-b_{ij}^{(s)}}
 \end{equation}
-
 o
-
 \begin{equation}
 \sum_{i}(\sum_{s}W^{b_{ij}^{(s)}}-\delta_{ij})A_{i}=0.
 \end{equation}
-
 Para hacer posible esto el determinante
-
 \begin{equation}
 D(W)=\left| a_{ij}\right| =\left| \sum_{s}W^{-b_{ij}^{(s)}}-\delta_{ij}\right|
 \end{equation}
-
 debe desaparecer y esto determina $W$, que es, por supuesto, la mayor raíz real de $D = 0$.
 La cantidad C est\'a dada entonces por
-
 \begin{equation}
 C=Lim_{L\rightarrow \infty}\frac{\log \sum A_{j}W^{L}}{L}=\log W
 \end{equation}
-
 y observamos tambi\'en que las mismas propiedades de crecimiento resultan si nosotros 
 requierimos que todos los bloques comiencen en el mismo (elegido arbitrariamente) estado.
 
-\section{AP\'ENDICE 2}
+\clearpage
 
-DERIVACI\'ON DE $H=-\sum p_{i}\log  p_{i}$
+\chapter{Derivaci\'on de $H=-\sum p_{i}\log  p_{i}$}
 
-Siendo $H(\frac{1}{n},\frac{1}{n},...,\frac{1}{n})=A(n)$. Desde la condici\'on (3) se 
-puede descomponer una elecci\'on de $s^{m}$ con las mismas probabilidades en una 
-serie de $m$ elecciones de $s$ de posiblemente igualmente probabilidades y obtener
+Siendo $H(\frac{1}{n},\frac{1}{n},...,\frac{1}{n})=A(n)$. Desde la
+condici\'on (3) se puede descomponer una elecci\'on de $s^{m}$ con las
+mismas probabilidades en una serie de $m$ elecciones de $s$ de
+posiblemente igualmente probabilidades y obtener
 
 \begin{equation}
 A(s_{m})=mA(s).
@@ -113,57 +108,57 @@ expresi\'on debe contener por nuestra suposici\'on de continuidad. As\'i, la exp
 se mantiene en general. La elecci\'on del coeficiente $K$ es un asunto de conveniencia y 
 asciende a la elecci\'on de una unidad de medida.
 
-\section{AP\'ENDICE 3}
-TEOREMAS SOBRE FUENTES ERG\'ODICAS
+\clearpage
 
-Si es posible pasar de un estado con $P>0$ a cualquier otro a lo largo de un camino de 
-probabilidad $p>0$, el sistema es erg\'odico y una fuerte ley de numeros largos es aplicada. 
-As\'i, el n\'umero de veces que un camino dado $p_{ij}$ en una red se desplaza en una larga 
-secuencia de longitud $N$ es aproximadamente proporcional a la probabilidad de estar en $i$, 
-dice $P_{i}$, y escoge la ruta, $P_{i}p_{ij}N$. Si N es lo suficientemente larga la 
-probabilidad de porcentaje de error $\pm\delta$ es esto es menor que $\epsilon$ as\'i que para 
-todos, pero un conjunto de baja probabilidad de los n\'umeros reales se encuentran dentro de 
-los l\'imites
+\chapter{Teoremas sobre fuentes erg\'odicas}
+
+Si es posible pasar de un estado con $P>0$ a cualquier otro a lo largo
+de un camino de probabilidad $p>0$, el sistema es erg\'odico y una
+fuerte ley de numeros largos es aplicada.  As\'i, el n\'umero de veces
+que un camino dado $p_{ij}$ en una red se desplaza en una larga
+secuencia de longitud $N$ es aproximadamente proporcional a la
+probabilidad de estar en $i$, dice $P_{i}$, y escoge la ruta,
+$P_{i}p_{ij}N$. Si $N$ es lo suficientemente larga la probabilidad de
+porcentaje de error $\pm\delta$ es esto es menor que $\epsilon$ as\'i
+que para todos, pero un conjunto de baja probabilidad de los n\'umeros
+reales se encuentran dentro de los l\'imites
 \begin{equation}
 (P_{i}p_{ij}\pm \delta)N.
 \end{equation}
-
-Por lo tanto casi todas las secuencias tienen una probabilidad p dada por
+Por lo tanto casi todas las secuencias tienen una probabilidad $p$ dada
+por
 \begin{equation}
 p=\prod p_{ij}^{(P_{i}p_{ij}\pm \delta)N}
 \end{equation}
-
 y $\frac{\log  p}{N}$ es limitada por
-
 \begin{equation}
 \frac{\log  p}{N} = \sum (P_{i}p_{ij}\pm \delta)\log  p_{ij}
 \end{equation}
-
 o
-
 \begin{equation}
 \left|\frac{\log  p}{N} = \sum (P_{i}p_{ij}\pm \delta)\log p_{ij}\right|<\eta
 \end{equation}
 
-Esto demuestra el teorema 3.
-Teorema 4 sigue inmediatamente de esto en el c\'alculo de los l\'imites superior e 
-inferior para $n(q)$ basado en el rango posible de valores de p en el Teorema 3.
-En el mixto (no ergódico) caso si
-
+Esto demuestra el teorema 3 PONER REF. Teorema PONER REF sigue
+inmediatamente de esto en el c\'alculo de los l\'imites superior e
+inferior para $n(q)$ basado en el rango posible de valores de $p$ en
+el Teorema PONER REF.  En el mixto (no erg\'{o}dico) caso si
 \begin{equation}
 L = \sum p_{i}L_{i}
 \end{equation}
+y las entropias de los componentes son $H_{1}\leq H_{2}\leq ... \leq
+H_{n}$ tenemos :
+\begin{theorem}
+$\lim_{N\rightarrow \infty }\frac{\log n(q)}{N}=\varphi (q)$ es una
+funci\'on de paso decreciente $\varphi (q)=H_{s}$ en el intervalo
+$\sum_{1}^{s-1}\alpha_{i}<q<\sum_{1}^{s}\alpha_{i}$.
+\label{aqui_va_su_numero}
+\end{theorem}
 
-y las entropias de los componentes son $H_{1}\leq H_{2}\leq ... \leq H_{n}$ tenemos el 
-
-Teorema: $Lim_{N\rightarrow \infty }\frac{\log n(q)}{N}=\varphi (q)$ es una funci\'on 
-de paso decreciente
-
-$\varphi (q)=H_{s}$ en el intervalo $\sum_{1}^{s-1}\alpha_{i}<q<\sum_{1}^{s}\alpha_{i}$.
-
-Para demostrar teoremas 5 y 6 primero nota que $F_{N}$ es mon\'otona decreciente 
-porque el aumento de $N$ agrega un sub\'indice a la entrop\'ia condicional. Una sencilla 
-sustitución de $p_{B_{i}}(S_{j})$ en la definici\'on de $F_{N}$ muestra que
+Para demostrar teoremas 5 FALTA REF y 6 FALTA REF primero nota que
+$F_{N}$ es mon\'otona decreciente porque el aumento de $N$ agrega un
+sub\'indice a la entrop\'ia condicional. Una sencilla sustitución de
+$p_{B_{i}}(S_{j})$ en la definici\'on de $F_{N}$ muestra que
 
 \begin{equation}
 F_{N} = NG_{N}-(N-1)G_{N}-1
@@ -173,20 +168,24 @@ y sumando esto por todas las $N$ dadas $G_{N}=\frac{1}{N}\sum F{n}$. Por lo tant
 $G_{N}\leq F_{N}$ y $G_{N}$ son monótonas decrecientes. Tambi\'en se debe aproximar al mismo 
 l\'imite. Usando el teorema 3 se observa que $Lim_{N\rightarrow \infty } G_{N} = H$.
 
-\section{AP\'ENDICE 4}
-MAXIMIZAR LA TASA PARA UN SISTEMA DE RESTRICCIONES
+\clearpage
 
-Supongamos que tenemos un conjunto de restricciones sobre secuencias de s\'imbolos que es 
-del tipo de estado finito y puede ser representado por una gr\'afica lineal. Siendo 
-$\l_{ij}^{(s)}$ el largo de varios s\'imbolos que pueden pasar de estado $i$ a estado $j$. 
-?` Qu\'e distribuci\'on de probabildades $P_{i}$ para los estados diferentes y $p_{ij}^{(s)}$ 
-para elegir un s\'imbolo $s$ en estado $i$ e ir a estado $j$ maximiza la tasa de generaci\'on 
-de informaci\'on en virtud de estas limitaciones? Las limitaciones defininen un canal 
-discreto y la velocidad m\'aximo debe ser menor o igual a la capacidad $C$ de este canal, 
-ya que si todos los bloques de longitud grande eran igualmente probables, esta tasa dar\'ia 
-lugar, y si es posible que esto ser\'ia mejor. Se mostrar\'a que esta tasa se puede lograr 
-mediante la elecci\'on adecuada de $P_{i}$ y $p_{ij}^{(s)}$.
-La tasa es:
+\chapter{Maximizar la tasa para un sistema de restricciones}
+
+Supongamos que tenemos un conjunto de restricciones sobre secuencias
+de s\'imbolos que es del tipo de estado finito y puede ser
+representado por una gr\'afica lineal. Siendo $\l_{ij}^{(s)}$ el largo
+de varios s\'imbolos que pueden pasar de estado $i$ a estado $j$.  ?`
+Qu\'e distribuci\'on de probabildades $P_{i}$ para los estados
+diferentes y $p_{ij}^{(s)}$ para elegir un s\'imbolo $s$ en estado $i$
+e ir a estado $j$ maximiza la tasa de generaci\'on de informaci\'on en
+virtud de estas limitaciones? Las limitaciones defininen un canal
+discreto y la velocidad m\'aximo debe ser menor o igual a la capacidad
+$C$ de este canal, ya que si todos los bloques de longitud grande eran
+igualmente probables, esta tasa dar\'ia lugar, y si es posible que
+esto ser\'ia mejor. Se mostrar\'a que esta tasa se puede lograr
+mediante la elecci\'on adecuada de $P_{i}$ y $p_{ij}^{(s)}$.  La tasa
+es:
 \begin{equation}
 \frac{-\sum P_{i}p_{ij}^{(s)}\log p_{ij}^{(s)}}{\sum P_{i}p_{ij}^{(s)}l _{ij}^{(s)}} = \frac{N}{M}.
 \end{equation}
@@ -264,13 +263,4 @@ pero
 Por lo tanto la tasa es $C$ y como esto nunca se podr\'ia superar este es el 
 m\'aximo, lo que justifica la soluci\'on supuesta.
 
-
-
-
-
-
-
-
-
- 
-
+\end{appendices}

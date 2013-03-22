@@ -139,6 +139,8 @@ entonces
  dividido por el total de n\'umero de s\'imbolos en $x$.}
 \end{enumerate}
 
+\clearpage
+
 \section{La tasa para una fuente relativa a una evaluaci\'on de fidelidad}
 
 Estamos ahora en una posici\'on de definir la tasa de generaci\'on de
@@ -217,18 +219,27 @@ producido por un tipo de cuantificaci\'on general en el transmisor y
 no producido por el ruido en el canal. Es m\'as o menos an\'alogo al
 ruido de cuantificaci\'on en PCM.
 
+\clearpage
+
 \section{El c\'alculo de las tasas}
 
 La definici\'on de la tasa es similar en muchos aspectos a la
 definici\'on de capacidad de canal. En la primera:
-\begin{equation} R = \min_{P_{x}(y)} \int \int P(x,y) \log \frac{P(x,y)}{P(x)P(y)} \diff x  \diff y \end{equation}
-con $P(x)$ y $v_{1} = \int \int P(x,y) \rho(x,y) \diff x  \diff y $ fija. En la segunda:
-\begin{equation} C = \max_{P(x)} \int \int P(x,y) \log \frac{P(x,y)}{P(x)P(y)} \diff x  \diff y \end{equation}
-con $P_{x}(y)$ fija y posibilidad de uno o m\'as restricciones (por
-ejemplo, una limitaci\'on de potencia promedio) de la forma $K = \int
-\int P(x,y) \lambda(x,y) \diff x  \diff y $. Una soluci\'on parcial del problema
-de maximizaci\'on general para determinar la tasa de una fuente se
-puede dar.
+\begin{equation} 
+R = \min_{P_{x}(y)} \int \int P(x,y) \log \frac{P(x,y)}{P(x)P(y)}
+\diff x \diff y 
+\end{equation}
+con $P(x)$ y $v_{1} = \int \int P(x,y) \rho(x,y) \diff x \diff y $
+fija. En la segunda:
+\begin{equation} 
+C = \max_{P(x)} \int \int P(x,y) \log \frac{P(x,y)}{P(x)P(y)} 
+\diff x \diff y 
+\end{equation} 
+con $P_{x}(y)$ fija y posibilidad de uno o
+m\'as restricciones (por ejemplo, una limitaci\'on de potencia
+promedio) de la forma $K = \int \int P(x,y) \lambda(x,y) \diff x \diff
+y $. Una soluci\'on parcial del problema de maximizaci\'on general
+para determinar la tasa de una fuente se puede dar.
 
 Usando el m\'etodo de Lagrange, consideramos:
 \begin{equation} \int \int [ P(x,y) \log \frac{P(x,y)}{P(x)P(y)} + \mu P(x,y)\rho(x,y) + v(x)P(x,y)] \diff x  \diff y \end{equation}
@@ -293,16 +304,20 @@ blanco. El limite superior resulta si colocamos puntos (usados en la
 comprobaci\'on del Teorema \ref{FALTA LA ETIQUETA}) no en la mejor
 forma sino al azar en una esfera de radio $\sqrt{(Q - N)}$.
 
+\clearpage
+
 \section*{Reconocimientos}
 
 El escritor est\'{a} en deuda con sus colegas en los laboratorio,
 particularmente al Dr.\ H.\ W.\ Bode, Dr.\ J.\ R.\ Pierce,
 Dr.\ B.\ McMillan y al Dr.\ B.\ M.\ Oliver, por muchas sugerencias y
 criticismos \'utiles durante el curso de su trabajo. Cr\'{e}dito debe
-tambi\'en ser otorgado al Profesor N.\ Wiener, cuya soluci\'on elegante
-al problema de filtraci\'on y predicci\'on de conjuntos estacionarios
-ha influido considerablemente la forma de pensar del escritor en este
-campo de estudio.
+tambi\'en ser otorgado al Profesor N.\ Wiener, cuya soluci\'on
+elegante al problema de filtraci\'on y predicci\'on de conjuntos
+estacionarios ha influido considerablemente la forma de pensar del
+escritor en este campo de estudio.
+
+\clearpage
 
 \begin{appendices}
 
@@ -424,6 +439,7 @@ lo cual requiere $A_{ij} = H_{1}/H_{3} C_{ij}$. En este caso $A_{ij} = H_{1}/H_{
 se reducen a identidades.
 
 \chapter{}
+\label{a3}
 
 Lo siguiente indicar\'a un acercamiento m\'as general y riguroso a las
 definiciones centrales de teor\'ia de la comunicaci\'on. Consideremos
