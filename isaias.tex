@@ -18,7 +18,7 @@ para cada transicion desde un estado a otro. Los estados
 corresponder\'{a}n al ``residuo de influencia'' de letras precedentes.
 
 \begin{figure}[!ht]
-\centerline{\includegraphics[width=80mm]{ejemplo.png}}
+\centerline{\includegraphics[width=80mm]{Imagenes/SinComentarios/Pagina8-Figura3.png}}
 \caption{Un grafo correspondiente a la fuente del ejemplo \ref{ej:b}.}
 \label{fig:3}
 \end{figure}
@@ -26,7 +26,7 @@ corresponder\'{a}n al ``residuo de influencia'' de letras precedentes.
 La situaci\'{o}n puede ser representada graficamente como se muestra
 en las figuras \ref{fig:3}, \ref{fig:4} y \ref{fig:5}. Los ``estados''
 son los puntos de union en la grafica y las probabilidades y letras
-son producidas para una transicion son dadas ademas de la linea
+son producidas para una transicion son dadas a lado de la linea
 correspondiente. La figura \ref{fig:2} es para el ejemplo \ref{ej:b}
 en el cap\'{\i}tulo \ref{sec:2}, mientras que la figura \ref{fig:4}
 corresponde al ejemplo \ref{ej:c}. En la figura \ref{fig:3} solamente
@@ -34,7 +34,7 @@ hay un estado ya que letras sucesivas son independientes. En la figura
 \ref{fig:4} hay tantos estados como letras.
 
 \begin{figure}[!ht]
-\centerline{\includegraphics[width=80mm]{ejemplo.png}}
+\centerline{\includegraphics[width=80mm]{Imagenes/SinComentarios/Pagina8-Figura4.png}}
 \caption{Un grafo correspondiente a la fuenta en ejemplo \ref{ej:c}}
 \label{fig:4}
 \end{figure}
@@ -51,7 +51,7 @@ grafo para el caso de estructura de palabras en el ejemplo
 \label{sec:5}
 
 Como se ha indicado anteriormente, una fuente discreta para nuestros
-propositos puede ser considerada representada por un proceso
+propositos puede ser considerada para ser representada por un proceso
 Markoviano. Entre los posibles procesos discretos Markovianos existe
 un grupo con propiedades especiales con importancia en la teoria de la
 comunicacion. Esta clase especial consiste en los procesos
@@ -84,14 +84,14 @@ correspondiente ser\'{a} erg\'{o}dico:
  \item Una serie de lineas cerradas en un grafo con todas sus flechas
    en las lineas apuntando en la misma direccion son llamados
    ``circuitos''.  La ``longitud'' de un circuito es el numero de
-   lineas en el.  Por lo tanto figura \ref{fig:5}, la serie $BEBES$ es
+   lineas en el.  Por lo tanto en la figura \ref{fig:5}, la serie $BEBES$ es
    un circuito de longitud cinco.  La segunda propiedad requerida es
    que el maximo comun divisor de la longitud de todos los circuitos
    en el grafo sea igual a uno.
 \end{enumerate}
 
 \begin{figure}[!ht]
-\centerline{\includegraphics[width=80mm]{ejemplo.png}}
+\centerline{\includegraphics[width=80mm]{Imagenes/SinComentarios/Pagina9-Figura5.png}}
 \caption{Un grafo correspondiente a la fuente en ejemplo \ref{ej:d}.}
 \label{fig:5}
 \end{figure}
@@ -103,7 +103,7 @@ clases diferentes que son estadisticamente las mismas partiendo desde
 un cambio del origen (por ejemplo, que letra en la secuencia es
 llamada letra 1). Por un cambio de desde $0$ hasta $d - 1$ cualquier
 secuencia puede ser estadisticamente equivalente a cualquier otra. Un
-ejempl simple con $d = 2$ es el siguiente: Existen tres posibles
+ejemplo simple con $d = 2$ es el siguiente: Existen tres posibles
 letras $a, b , c$.  La letra $a$ es seguida con $b$ \'{o} $c$ con
 probabilidades $\frac{1}{3}$ y $\frac{2}{3}$ respectivamente.  Tanto
 $b$ como $c$ son siempre seguidas por una letra $a$. Por lo tanto una
@@ -129,14 +129,14 @@ estadistica homogenea (por ejemplo, son erg\'{o}dicos). No sabemos
 secuencia empieza en un componente puro dado $L_{i}$, este continua
 indefinidamente de acuerdo a la estructura estadistica de ese
 componente.  Como un ejemplo, uno puede tomar dos de estos procesos
-definidos arriba y asumir $p_{1} = .2$ y $p_{2} = .8$. Una secuencia
+definidos arriba y asumir $p_{1} = 0.2$ y $p_{2} = 0.8$. Una secuencia
 de la fuente mezclada
 \begin{equation}
 L = 0.2 L_{1} + 0.8 L_{2}
 \end{equation}
 ser\'{i}a obtenida escogiendo primero $L_{1}$ o $L_{2}$ con
 probabilidades $0.2$ y $0.8$ y despues de esta elecci\'{o}n generando
-una secuenca de lo que sea haya sido elegido.  Excepto cuando se
+una secuencia de lo que sea que haya sido elegido.  Excepto cuando se
 exprese lo contrario nosotros debemos asumir que una fuente es
 erg\'{o}dica. Esta suposici\'{o}n permite a uno identificar los
 promedios a lo largo de la secuencia con promedios encima del conjunto
@@ -149,7 +149,7 @@ probabilidad de transicion de un estado $j$, entonces para que el
 proceso sea estacionario es claro que $P_{i}$ debe satisfacer
 condiciones de equilibrio:
 \begin{equation}
-P_{j} = \sum P_{i}p_{i}(j).
+P_{j} = \sum{i} P_{i}p_{i}(j).
 \end{equation}
 En el caso erg\'{o}dico este puede ser demostrado que con cualquier
 condici\'{o}n inicial las probabilidades $P_{j}(N)$ de estar en un
@@ -164,12 +164,12 @@ valores conforme $N \rightarrow \infty$.
 Hemos presenteado una fuente de informaci\'{o}n discreta como un
 proceso Markoviano. Podremos definir una cantidad que mida, en algun
 sentido, que tanta informaci\'{o}n es ``producida'' por estos
-procesos, o mejor aun, a que tasa de informaci\'{o}n es producida?
+procesos, o mejor aun, a que tasa la informaci\'{o}n es producida?
 Suponiendo que tenemos un conjunto de posibles eventos cuya
 probabilidad de ocurrir es $p_{1}, p_{2}, \ldots, p_{n}$. Estas
 probabilidades son conocidas pero eso es todo lo que conocemos en
 cuanto a lo que concierne a que evento
-ocurrir\'{a}. {\textquestiondown}Podremos encontrar una medidad de
+ocurrir\'{a}. Podremos encontrar una medidad de
 cuanta ``opcion'' est\'{a} involucrada en la seleccion de un evento o
 de que tan incierto pudiera ser la salida?  En caso de que exista
 dicha medida, $H(p_{1}, p_{2}, \ldots, p_{n})$, es razonable el
@@ -183,8 +183,8 @@ requerir de \'{e}sta las siguientes propiedades:
   $H$. El significado de esto es ilustrado en la figura \ref{fig:6}. A
   la izquierda tenemos tres posibilidades $p_{1} = \frac{1}{2}, p_{2}
   = \frac{1}{3}, p_{3} = \frac{1}{6}$. A la derecha primero se escoge
-  enntre las dos posibilidades cada una con probabilidad
-  $\frac{1}{2}$, y si la segunda ocurra hacer otra seleccion con
+  entre las dos posibilidades cada una con probabilidad
+  $\frac{1}{2}$, y si la segunda ocurre hacer otra selecci\'{o}n con
   probabilidades $\frac{2}{3}, \frac{1}{3}$. Los resultados finales
   tienen las mismas probabilidades que antes. Requerimos, en este caso
   en especial, que
@@ -196,7 +196,7 @@ El coeficiente $\frac{1}{2}$ es porque esta segunda eleccion solo ocurre la mita
 \end{enumerate}
 
 \begin{figure}[!ht]
-\centerline{\includegraphics[width=80mm]{ejemplo.png}}
+\centerline{\includegraphics[width=80mm]{Imagenes/SinComentarios/Pagina10-Figura6.png}}
 \caption{Descomposici\'{o}n de una decisi\'{o}n de tres posibilidades.}
 \label{fig:6}
 \end{figure}
@@ -218,7 +218,7 @@ no son en ninguna manera necesarias para la teor\'{\i}a de la que se
 est\'{a} hablando.  Se da principalmente para dar verosimilitud a
 algunas definiciones posteriores. La justificacion real de estas
 definiciones, sin embargo, residira en sus implicaciones. Cantidades
-de la forma $H = -\sum p_{i} \log p_{i}$ (la constante viene a ser una
+de la forma $H = -\sum p_{i} \log p_{i}$ (la constante $K$ viene a ser una
 opcion de una unidad de medida) juegan un papel principal en la teoria
 de informacion como medidas de informacion, opciones e
 incertidumbre. La forma de $H$ ser\'{a} reconocida como de
@@ -228,8 +228,8 @@ mec\'{a}nica\footnote{Ver, por ejemplo, R.\ C.\ Tolman, {\em
 donde $p_{i}$ es la probabilidad de un sistema de estar en una celda
 $i$ de su espacio de fase. $H$ es entonces, por ejemplo, la $H$ en el
 famoso teorema $H$ de Boltzmann. Debemos llamar $H = -\sum p_{i}
-\log{p} p_{i}$ la entrop\'{i}a del conjunto de probabilidades $p_{1},
-\cdots,P_{n}$. Si $x$ es una variable de probabilidad escribiriamos
+\log{p_{i}}$ la entrop\'{i}a del conjunto de probabilidades $p_{1},
+\cdots,p{n}$. Si $x$ es una variable de probabilidad escribiriamos
 $H(x)$ para su entrop\'{i}a; por lo tanto $x$ no es un argumento de
 una funci\'{o}n sino una manera de representar un numero, para
 diferenciar de $H(y)$ se dir\'{i}a la entrop\'{i}a de la variable de
@@ -241,7 +241,7 @@ H = -(p \log p + q \log q),
 es graficado en la figura \ref{fig:7} como una funci\'{o}n de $p$.
 
 \begin{figure}[!ht]
-\centerline{\includegraphics[width=80mm]{ejemplo.png}}
+\centerline{\includegraphics[width=80mm]{Imagenes/SinComentarios/Pagina11-Figura7.png}}
 \caption{Entropia en el caso de dos posibilidades con probabilidades
   $p$ y $1 - p$.}
 \label{fig:7}
@@ -253,7 +253,7 @@ informaci\'{o}n.
 \begin{enumerate}
 \item{$H = 0$ si y solo si todas las $p_{i}$ excepto una son cero,
   esta teniendo el valor unitario. As\'{i} solamente cuando estemos
-  seguros $H$ desaparece. De lo contrario $H$ es positivo.}
+  seguros del resultado $H$ desaparece. De lo contrario $H$ es positivo.}
 \item{Dado un $n$, $H$ es un valor maximo igual a $\log n$ cuando
   todos los $p_{i}$ son iguales (por ejemplo, $\frac{1}{n}$). Esto
   tambien es intuitivamente la situaci\'{o}n m\'{a}s incierta.}
@@ -262,13 +262,13 @@ informaci\'{o}n.
   probabilidad de la union de que ocurra $i$ para el primero y $j$
   para el segundo. La entrop\'{i}a de la union de los eventos es
   \begin{equation}
-    H(x,y) = -\sum{i,j}{}p(i,j)\log p(i,j),
+    H(x,y) = -\sum{i,j} p(i,j)\log p(i,j),
   \end{equation}
   mientras
   \begin{equation}
     \begin{array}{rcl}
-      H(x,y) &=& -\sum{i,j}{}p(i,j)\log\sum{j}{}p(i,j), \\
-      H(x,y) &=& -\sum{i,j}{}p(i,j)\log\sum{i}{}p(i,j).
+      H(x,y) &=& -\sum{i,j} p(i,j)\log\sum{j}{}p(i,j), \\
+      H(x,y) &=& -\sum{i,j} p(i,j)\log\sum{i}{}p(i,j).
     \end{array}
   \end{equation}
   Es f\'{a}cil demostrar que
@@ -276,18 +276,18 @@ informaci\'{o}n.
     H(x,y) \leq H(x) + H(y)
   \end{equation}
   con igualdad solo si los eventos son independientes (por ejemplo,
-  p(i)p(j)). La incertidumbre de la union de eventos es menor que o
+  $p(i,j) = p(i)p(j))$. La incertidumbre de la union de eventos es menor que o
   igual a la suma de las incertidumbres individuales.}
 \item{Cualquier cambio hacia la ecualizacion de las probabilidades
   $p_{1}, p_{2}, \ldots, p_{n}$ incrementa $H$. Por lo tanto, si
-  $p_{1} < p_{2}$ y incrementamos $p_{1}$, decrementando $p_{2}$ una
+  $p_{1} < p_{2}$ y incrementamos $p_{1}$, disminuyendo $p_{2}$ una
   cantidad igual de manera que $p_{1}$ y $p_{2}$ sean mas cercanos,
   entonces $H$ incrementa. De una manera mas general, si ejecutamos de
   nuevo alguna operacion ``promediante'' en $p_{i}$ de la forma
   \begin{equation}
-    p^{'}_{i} = \sum{j}{} a_{ij}p_{j},
+    p^{'}_{i} = \sum{j} a_{ij}p_{j},
   \end{equation}
-  donde $\sum_{i} a_{ij} = \sum_{j} a_{ij} = 1$, y todo $a_{ij} \leq 0$, entonces H incrementa (excepto in el caso especial donde esta transformacion de cantidades a no mas de $p_{j}$ permutaciones con $H$ permaneciendo igual).}
+  donde $\sum_{i} a_{ij} = \sum_{j} a_{ij} = 1$, y todo $a_{ij} \geq 0$, entonces H incrementa (excepto en el caso especial donde esta transformacion de cantidades a no mas de $p_{j}$ permutaciones con $H$ permaneciendo igual).}
 \item{Suponiendo que hay dos oportunidades de eventos $x$ y $y$ como
   en 3, no necesariamente independiente. Para cada valor particular
   $i$ que $x$ puede tener hay una probabilidad condicional $p_{i}(j)$
@@ -297,7 +297,7 @@ p_{i}(j) = \frac{p(i,j)}{\sum_{j}p(i,j)}.
 \end{equation}
 Definimos la \textit{entrop\'{i}a condicional} de $y$, $H_{x}(y)$ como el promedio de entropia de $y$ para cada valor de $x$, ponderado de acuerdo a la probabilidad de obtener ese $x$ en particular. Esto es
 \begin{equation}
-  H_{x}(y) = -\sum{i,j}{}p(i,j)logp_{i}(j)
+  H_{x}(y) = -\sum{i,j} p(i,j)logp_{i}(j)
 \end{equation}
 Esta cantidad mide que tan incierto se est\'{a} de $y$ en promedio cuando se conoce $x$. Substituyendo el valor de $p_{i}(j)$ obtenemos
 \begin{equation}
@@ -310,7 +310,7 @@ H(x,y) = H(x) + H_{x}(y).
 La incertidumbre (o entropia) del evento conjunto $x,y$ es la incertidumbre de $x$ mas la incertidumbre de $y$ cuando $x$ es conocido.}
 \item{Desde 3 y 5 tenemos
 \begin{equation}
-H(x) + H(y) \leq H(x,y) \ H(x) + H_{x}(y)
+H(x) + H(y) \geq H(x,y) = H(x) + H_{x}(y)
 \end{equation}
 Por lo tanto
 \begin{equation}
@@ -328,20 +328,20 @@ independientes, en cuyo caso no se cambia.}
 
 Considere una fuente discreta del tipo estado finito considerado
 arriba. Para cada posible estado $i$ existir\'{a} un conjunto de
-probabilidades $p_{i}(j$ resultado de producir los diferentes simbolos
+probabilidades $p_{i}(j)$ resultado de producir los diferentes simbolos
 $j$. Por lo tanto existe una entrop\'{i}a $H_{i}$ para cada estado. La
 entropia de la fuente se definir\'{a} como el promedio de estas
 $H_{i}$ ponderadas de acuerdo con la probabilidad de ocurrencia de los
 estados en cuesti\'{o}n:
 \begin{equation}
-H = \sum{i}{} P_{i}H_{i}
-  = - \sum{i,j}{} P_{i}p_{i}(j) \log p_{i}(j).
+H = \sum{i} P_{i}H_{i}
+  = - \sum{i,j} P_{i}p_{i}(j) \log p_{i}(j).
 \end{equation}
 Esta es la entrop\'{i}a de la fuente por simbolo de texto. Si el
 proceso Markoviano est\'{a} procediendo a una taza de tiempo definido
 hay tambien una entrop\'{i}a por segundo,
 \begin{equation}
-H' = \sum{i}{} f_{i}H_{i},
+H' = \sum{i} f_{i}H_{i},
 \end{equation}
 donde $f_{i}$ es la frecuencia promedio (sucesos por segundo) del estado $i$. Claramente
 \begin{equation}
@@ -364,9 +364,9 @@ p = p_{1}^{ p_{1}^{N}} p_{2}^{ p_{2}^{N}} \ldots p_{n}^{ p_{n}^{N}}
 o
 \begin{equation}
 \begin{array}{rcl}
-\log p &\doteq& N \sum{i}{} p_{i} \log p_{i} \\
+\log p &\doteq& N \sum{i} p_{i} \log p_{i} \\
 \log p &\doteq& -NH \\
-\log p &\doteq& \frac{\log 1/p}{N}
+H &\doteq& \frac{\log 1/p}{N}
 \end{array}
 \end{equation}
 
@@ -394,7 +394,7 @@ En otras palabras estamos casi seguros de tener $\frac{log p^{-1}}{N}$
 muy cerca a $H$ cuando $N$ es grande.  Un resultado estrechamente
 relacionado trata con el numero de secuencias de varias
 probabilidades. Considerando de nuvo el numero de secuencias de
-longitud $N$ y dejando que sean acomodados en order decremental de
+longitud $N$ y dejando que sean acomodados en orden decreciente de
 probabilidad. Definimos $n(q)$ para ser el numero que debemos de tomar
 de este conjunto empezando con el mas probable a fin de acumular una
 probabilidad total q para aquellos tomados.
@@ -429,7 +429,7 @@ estados.
 Sea $p(B_{i})$ la probabilidad de una secuencia $B_{i}$ de
 s\'{\i}mbolos de una fuente. Sea
 \begin{equation}
-G_{N} = - \frac{1}{N} \sum{i}{} p(B_{i}) \log p(B_{i}),
+G_{N} = - \frac{1}{N} \sum{i} p(B_{i}) \log p(B_{i}),
 \end{equation}
 donde la suma est\'{a} por encima de todas las secuencias $B_{i}$ que
 contienen $N$ simbolos. Entonces $G_{N}$ es una funcion de decremento
@@ -445,9 +445,9 @@ Sea $p(B_{i},S_{j})$ la probabilidad de secuencia $B_{i}$ seguida por
 el simbolo $S_{j}$ y $p_{B_{j}}(S_{j}) = p(B_{i},S_{j}/p(B_{i}))$ sea
 la probabilidad condicional de $S_{j}$ despu\'{e}s de $B_{i}$. Sea
 \begin{equation}
-F_{N} = - \sum{i,j}{} p(B_{i},S_{j}) \log p_{B_{i}}(S_{j}),
+F_{N} = - \sum{i,j} p(B_{i},S_{j}) \log p_{B_{i}}(S_{j}),
 \end{equation}
-donde la suma est\'{a} por encima todos los bloques $B_{i}$ de $N-1$
+donde la suma est\'{a} por encima de todos los bloques $B_{i}$ de $N-1$
 simbolos y sobre todos los simbolos $S_{j}$. Entonces $F_{N}$ es una
 funcion mon\'{o}tona decreciente de $N$,
 \begin{equation}
@@ -486,9 +486,9 @@ encontr\'{o} por diversos metodos independientes que todos arrojaron
 resultados similares. Uno es por calculo de la entrop\'{i}a de las
 aproximaciones al ingl\'{e}s. Un segundo metodo trata sobre borrar una
 cierta fraccion de letras de un ejemplo de texto en ingl\'{e}s y
-despues permitir a alguien el tratar de restaurarlo. Si puede ser
-restaurado cuando 50\% son borrados por redundancia. Un tercer metodo
-depende de ciertos resultados conocidos en criptografia.
+despues permitir a alguien el tratar de restaurarlo. Pueden ser
+restaurados cuando el 50\% son borrados y la redundancia es mayor a
+50\%. Un tercer metodo depende de ciertos resultados conocidos en criptografia.
 
 Dos extremos de la redundancia en prosa inglesa son representados por
 ingl\'{e}s b\'{a}sico y por el libro de James Joyce ``Finnegans
