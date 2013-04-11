@@ -1,0 +1,49 @@
+\chapter{Representaci\'{o}n de las operaciones de codificaci\'{o}n y decodificaci\'{o}n}
+\label{sec:8}
+
+A\'{u}n tenemos que representar matem\'{a}ticamente las operaciones realizadas por el transmisor y el receptor en la informaci\'{o}n codificada y decodificada. Cualquiera de estos se llama transductor discreto. La entrada al transductor es una secuencia de s\'{i}mbolos de entrada y su salida una secuencia de s\'{i}mbolos de salida. El transductor puede tener una memoria interna de modo que su salida depende no s\'{o}lo del s\'{i}mbolo actual de entrada, sino tambi\'{e}n de su historial anterior. Se supone que la memoria interna es finito, es decir, existe un n\'{u}mero finito m de posibles estados del transductor y que su salida es una funci\'{o}n del estado actual y el s\'{i}mbolo de entrada presente. El estado siguiente ser\'{a} una funci\'{o}n segunda de estas dos cantidades. As\'{i}, un transductor puede ser descrito por dos funciones:
+\begin{equation}y_{n}= f\left ( x_{n}, \alpha_{n} \right )\end{equation}
+\begin{equation}\alpha_{n+1} = g\left ( x_{n}, \alpha_{n} \right )\end{equation}
+Donde
+
+$x_{n}$ es el n^{esimo} s\'{i}mbolo de entrada,
+
+$\alpha_{n}$ es el estado del transductor cuando el n^{esimo} s\'{i}mbolo de entrada es introducido,
+
+$y_{n}$ es el s\'{i}mbolo de salida \left ( o la secuencia de s\'{i}mbolos de salida \right ) producida cuando x_{n} es introducida si el estado de is \alpha_{n}.
+
+Si el s\'{i}mbolo de salida es un transductor puede ser identificado con un s\'{i}mbolo de entrada de un segundo, se pueden conectar en t\'{a}ndem y el resultado es tambi\'{e}n un transductor. Si existe un segundo transfuctor que opera sobre la salida de la primera y recupera el original de entrada, el primer tranductor se llama no singular y el segundo es llamado el inverso.
+
+\begin{theorem}
+\label{th:7}
+La salida de un transductor de estado finito accionado por una fuente de estado finito estad\'{i}stica es una fuente de estado finito estadi\'{i}stica, con la entrop\'{i}a \left (por unidad de tiempo \right) menor o igual a la de la entrada. Si el transductor es no singular son iguales.\end{theorem}
+
+Sea $\alpha$ el estado de la fuente, que produce una secuencia de s\'{i}mbolos $x_{i}$; y sea $\beta$ el estado del transductor, que produce, en su salida, bloques de s\'{i}mbolos $y_{j}$. El sistema combinado puede ser representado por el espacio del producto de los pares $\left ( \alpha, \beta \right )$. Dos puntos en el espacio $\left ( \alpha_{1}, \beta_{1} \right )$ y $\left ( \alpha_{2}, \beta_{2} \right )$, son conectados por una linea si $\alpha{1}$ puede producir una $x$ que cambie $\beta_{1}$ a $\beta_{2}$, y esta linea es dada por la probabilidad de $x$ en este caso. La linea es etiquetada con el bloque de s\'{i}mbolos $y_{j}$ producida por el transductor. La entropia de la salida puede ser calculada con el peso de la sumas de los estados. Si sumamos primero cada $\beta$ resultante es menor o igual que el termino correspondiente a $\alpha$, por lo tanto la entropia no es incrementada. Si el tranductor es no singular sea su salida conectada al transuduct inverso. Si $H_{'}^{1}$, $H_{'}^{2}$ y $H_{'}^{3}$ son las salidas de las entropias de la fuente, el primero y el segundo transductor respectivamente, entonces $H_{'}^{1}\geqH_{'}^{2}\geqH_{'}^{3}=H_{'}^{1}$ por lo tanto $H_{'}^{1}=H_{'}^{2}$.
+
+Supongamos que tenemos un sistema de restricciones sobre las posibles secuencias del tipo que puede ser representado por grafo lineal como en la Fig. 2. Si las probabilidades $p_{ij}^{(s)}$ son asignados por varias lineas conectadas estado $i$ al estado $j$ se convertir\'{i}a en una fuente. Hay una asignaci\'{o}n particular que maximiza la entrop\'{i}a resultante (v\'{e}ase Ap\'{e}ndice 4).
+
+\begin{theorem}
+\label{th:8}
+Sea el sistema de restricciones considerado como canal tiene una capacidad $C = logW$. Si se asigna.} $\begin{equation} P_{ij}^{(s)} = \frac{B_{j}}{B_{i}}W^{-\iota_{ij}^{(s)}} \end{equation}$ \textit{donde $\iota_{ij}^{(s)}$ es la duraci\'{o}n del s^{esimo} s\'{i}mbolo que va desde el estado $i$ hasta el estado $j$ y satisfaciendo $B_{i}$} $\begin{equation} B_{i}=\sum_{s.j} B{j}W^{-\iota_{ij}^{(s)}} \end{equation}$ \textit{entonces $H$ es maximizada e igual a C.
+\end{theorem}
+
+Por asignaci\'{o}n correcta de las probabilidades de transici\'{o}n de la entrop\'{i}a de los s\'{i}mbolos en un canal puede ser maximizada a la capacidad del canal. 
+
+\clearpage
+
+\chapter{El teorema fundamental de un canal sin ruido}
+\label{sec:9}
+
+FALTA
+
+\begin{theorem}
+\label{th:9}
+Que una fuente tenga entropia $H$...
+\end{theorem}
+
+\clearpage
+
+\chapter{Discusi\'{o}n y ejemplos}
+\label{sec:19}
+
+FALTA
