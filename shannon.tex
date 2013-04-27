@@ -8,16 +8,32 @@
 \usepackage[letterpaper, top=30mm, bottom=30mm, left=35mm, right=35mm]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage[sort]{natbib}
-\usepackage{libertine}
+%\usepackage{libertine}
 \renewcommand*\familydefault{\sfdefault} 
 \usepackage{hyperref}
-\usepackage{floatflt}
+%\usepackage{floatflt}
 \usepackage{graphicx}
 \usepackage{array, multirow}
 \usepackage[hypcap]{caption}
 \usepackage{subcaption}
 \usepackage{enumerate}
 \usepackage{tocloft}
+\newif\ifpdf
+\ifx\pdfoutput\undefined
+   \pdffalse
+\else
+   \pdfoutput=1
+   \pdftrue
+\fi
+\ifpdf
+   \usepackage{graphicx}
+   \usepackage{epstopdf}
+   \DeclareGraphicsRule{.eps}{pdf}{.pdf}{`epstopdf #1}
+   \pdfcompresslevel=9
+\else
+   \usepackage{graphicx}
+\fi
+
 
 \setlength\cftparskip{3pt}
 \setlength\cftbeforechapskip{0pt}
