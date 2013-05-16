@@ -91,9 +91,11 @@ El primer s\'imbolo se utiliza tanto mas frecuentemente que los otros dos, debid
 \chapter{La capacidad del canal en ciertos casos especiales}
 \label{sec:16}
 
-Si el ruido afecta s\'imbolos sucesivos del canal de forma independiente pueden ser descritos por un conjunto de 
-transici\'on de probabilidades $p_{i,j}$.Esta es la probabilidad, si el simbolo $i$ es
-enviado, que $j$ sera recibido.La tasa de canal m\'aximo viene dado por el m\'aximo de:
+Si el ruido afecta s\'imbolos sucesivos del canal de forma
+independiente pueden ser descritos por un conjunto de transici\'on de
+probabilidades $p_{i,j}$. Esta es la probabilidad, si el simbolo $i$ es
+enviado, que $j$ ser\'{a} recibido. La tasa de canal m\'aximo viene dado
+por el m\'aximo de:
 
 \begin{equation}
   \sum_{i,j}P_i p_{i,j} \log{\sum{P_i p_{i,j}}} + \sum_{i,j}P_i p_{i,j}\log{p_{i,j}}
@@ -114,21 +116,26 @@ $\sum_{s}$ $h_{st}$ $p_{sj} = \delta_{tj}$. Entonces:
 \end{equation}
 Por lo tanto:
 \begin{equation}
-  \sum_{i} P_i p_{i,t} = exp[- C \sum_{s} h_{s,t}+ \sum_{s,j} h_{s,t} p_{s,j} \log{p_{s,j}}]
+  \sum_{i} P_i p_{i,t} = \exp[- C \sum_{s} h_{s,t}+ \sum_{s,j} h_{s,t} p_{s,j} \log{p_{s,j}}]
 \end{equation}
 o  
 \begin{equation}
-  P_i = \sum_{t} h_{i,t} exp[ - C \sum_{s} h_{s,t}+ \sum_{s,j} h_{s,t} p_{s,j} \log{p_{s,j}} ].
+  P_i = \sum_{t} h_{i,t} \exp[ - C \sum_{s} h_{s,t}+ \sum_{s,j} h_{s,t} p_{s,j} \log{p_{s,j}} ].
 \end{equation}
 
-Este es el sistema de ecuaciones para determinar el valor m\'aximo de $P_i$, con $C$ se determina de 
-manera que $\sum P_i = 1$. Cuando esto esta hecho, $C$ sera la capacidad del canal y $P_i$ las probabilidades
-para los s\'imbolos del canal para lograr esta capacidad.  
-Si cada s\'imbolo de entrada tiene el mismo conjunto de probabilidades en las l\'ineas que emergen de esto y lo mismo 
-sucede a cada s\'imbolo de salida, la capacidad puede ser calculada f\'acilmente. Los ejemplos se muestran en la figura 12 \ref{fig:12}.  
-En tal caso $H_x (y)$ es independiente de la distribuci\'on de probabilidades de los s\'imbolos de entrada, y esta dada por 
-$-\sum p_i \log{p_i}$. Cuando $p_i$ son los valores de probabilidad de transici\'on de cualquier s\'imbolo de entrada. La
-capacidad del canal es:
+Este es el sistema de ecuaciones para determinar el valor m\'aximo de
+$P_i$, con $C$ se determina de manera que $\sum P_i = 1$. Cuando esto
+est\'{a} hecho, $C$ sera la capacidad del canal y $P_i$ las
+probabilidades para los s\'imbolos del canal para lograr esta
+capacidad.  Si cada s\'imbolo de entrada tiene el mismo conjunto de
+probabilidades en las l\'ineas que emergen de esto y lo mismo sucede a
+cada s\'imbolo de salida, la capacidad puede ser calculada
+f\'acilmente. Los ejemplos se muestran en la figura 12 \ref{fig:12}.
+En tal caso $H_x (y)$ es independiente de la distribuci\'on de
+probabilidades de los s\'imbolos de entrada, y esta dada por $-\sum
+p_i \log{p_i}$. Cuando $p_i$ son los valores de probabilidad de
+transici\'on de cualquier s\'imbolo de entrada. La capacidad del canal
+es:
 
 \begin{equation}
   Max [H(y) - H_x(y)] = Max H(y) + \sum p_i \log{p_i}.
