@@ -1,0 +1,31 @@
+Supongamos que tenemos un sistema de restricciones sobre las posibles secuencias del tipo que puede ser 
+representada por un gr\'afico lineal como la Figura 2. Si las probabilidades de \textit{p^{(s)}_{ij}} fueron 
+asignados a las distintas l\'ineas de conex\'ion del estado i al estado j esto se convertir\'ia en una fuente. 
+Existe un trabajo en particular que maximiza la entrop\'ia resultante (v\'ease Ap\'endice 4).
+
+Teorema 8: El sistema de restricciones consideradas como un canal tiene una capacidad \textit{C}=log\textit{W}.
+Si nosotros asignamos
+\begin{center}
+\textit{p^{(s)}_{ij}=\dfrac{B_{j}}{B_{i}}W^{-l^{(s)}_{ij}} } 
+\end{center}
+donde l^{(s)_{ij}} es la duraci\'on de \textit{s^{th}} s\'imbolo que va desde el estado i al estado j y satisface 
+\textit{B_{i}}
+
+\begin{center}
+\textit{B_{i}=\Sigma_{s,j} B_{j}W^{-l^{(s)}_{ij}}}
+\end{center}
+entonces H es maximizada e igual a C.
+
+Por asignaci\'on adecuada de las probabilidades de transici\'on de la entrop\'ia de los s\'imbolos en un canal 
+puede ser maximizada a la capacidad del canal.
+
+\begin{center}
+9. EL TEOREMA FUNDAMENTAL PARA UN CANAL SIN RUIDO
+\end{center}
+
+Ahora vamos a justificar nuestra interpretaci\'on de H, tal como la tasa de generaci\'on de informaci\'on por 
+demostrar que H determina la capacidad de canal requerida con la codificaci\'on m\'as eficiente.
+Teorema 9: Vamos a tener una fuente de entrop\'ia H (bits por s\'imbolo) y un canal con una capacidad C(bits por 
+segundo). Entonces es posible codificar la salida de la fuente de tal manera que se transmita a la media 
+\dfrac{C}{H}-\epsilon simbolos por segundo, sobre el canal donde es arbitrariamente peque\~{n}o. No es posible 
+transmitir a una tasa promedio mayor que \dfrac{C}{H}.
