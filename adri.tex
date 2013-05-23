@@ -1,37 +1,40 @@
-Supongamos que tenemos un sistema de restricciones sobre las posibles secuencias del tipo que puede ser 
-representada por un gr\'afico lineal como la Figura 2. Si las probabilidades de \textit{p^{(s)}_{ij}} fueron 
-asignados a las distintas l\'ineas de conex\'ion del estado i al estado j esto se convertir\'ia en una fuente. 
-Existe un trabajo en particular que maximiza la entrop\'ia resultante (v\'ease Ap\'endice 4).
+Supongamos que tenemos un sistema de restricciones sobre las posibles
+secuencias del tipo que puede ser representada por un gr\'afico lineal
+como la Figura \ref{fig2}. Si las probabilidades de $p^{(s)}_{ij}$
+fueron asignados a las distintas l\'ineas de conex\'ion del estado i
+al estado j esto se convertir\'ia en una fuente.  Existe un trabajo en
+particular que maximiza la entrop\'ia resultante (v\'ease Ap\'endice
+\ref{a4}).
 
-Teorema 8: El sistema de restricciones consideradas como un canal tiene una capacidad \textit{C}=log\textit{W}.
-Si nosotros asignamos
-\begin{center}
-\textit{p^{(s)}_{ij}=\dfrac{B_{j}}{B_{i}}W^{-l^{(s)}_{ij}} } 
-\end{center}
-donde l^{(s)_{ij}} es la duraci\'on de \textit{s^{th}} s\'imbolo que va desde el estado i al estado j y satisface 
-\textit{B_{i}}
+\begin{theorem}
+El sistema de restricciones consideradas como un canal tiene una
+capacidad $C=\log W$.  Si nosotros asignamos
+\begin{equation}
+p^{(s)}_{ij}=\frac{B_{j}}{B_{i}}W^{-l^{(s)}_{ij}}
+\end{equation}
+donde $l^{(s)_{ij}}$ es la duraci\'on de $s$\'{e}simo s\'imbolo que va
+desde el estado $i$ al estado $j$ y satisface $B_{i}$
+\begin{equation}
+B_{i}=\sum_{s,j} B_{j}W^{-l^{(s)}_{ij}}
+\end{equation}
+entonces $H$ es maximizada e igual a $C$.
+\end{theorem}
 
-\begin{center}
-\textit{B_{i}=\Sigma_{s,j} B_{j}W^{-l^{(s)}_{ij}}}
-\end{center}
-entonces H es maximizada e igual a C.
+Por asignaci\'on adecuada de las probabilidades de transici\'on de la
+entrop\'ia de los s\'imbolos en un canal puede ser maximizada a la
+capacidad del canal.
 
-Por asignaci\'on adecuada de las probabilidades de transici\'on de la entrop\'ia de los s\'imbolos en un canal 
-puede ser maximizada a la capacidad del canal.
-
-\begin{center}
-9. EL TEOREMA FUNDAMENTAL PARA UN CANAL SIN RUIDO
-\end{center}
+\section{El teorema fundamental para un canal sin ruido}
 
 Ahora vamos a justificar nuestra interpretaci\'on de H, tal como la tasa de generaci\'on de informaci\'on por 
 demostrar que H determina la capacidad de canal requerida con la codificaci\'on m\'as eficiente.
 Teorema 9: Vamos a tener una fuente de entrop\'ia H (bits por s\'imbolo) y un canal con una capacidad C(bits por 
 segundo). Entonces es posible codificar la salida de la fuente de tal manera que se transmita a la media 
-\dfrac{C}{H}-\epsilon simbolos por segundo, sobre el canal donde es arbitrariamente peque\~{n}o. No es posible 
-transmitir a una tasa promedio mayor que \dfrac{C}{H}.\\
+\frac{C}{H}-\epsilon simbolos por segundo, sobre el canal donde es arbitrariamente peque\~{n}o. No es posible 
+transmitir a una tasa promedio mayor que \frac{C}{H}.\\
 
 
-La parte inversa del teorema, que \dfrac{C}{H} no puede ser excedido, puede probarse por senalar que la entrop\'ia 
+La parte inversa del teorema, que \frac{C}{H} no puede ser excedido, puede probarse por senalar que la entrop\'ia 
 de la entrada del canal por segundo es igual a la de la fuente, ya que el transmisor debe ser no singular, y tambi\'en 
 esta entrop\'ia no puede exceder la capacidad del canal. Por lo tanto \textit{H'} \leq \textit{C} y el n\'umero de 
 s\'imbolos por segundo =\textit{H'/ H}\leq \textit{C/H}\\
@@ -42,7 +45,7 @@ en dos grupos, uno que contiene menos de 2^{(H+\eta)^{N}} miembros N y la segund
 A medida que aumenta N, \eta y \mu se aproximan a cero. El n\'umero de se\~{n}ales de dueraci\'on \textit{T} en el 
 canal es mayor que \textit{2^{(C-\theta)T}} con \theta peque\~{n}a cuando \textit{T} es grande. Si nosotros elegimos:\\
 \begin{center}
-\textit{T =(\dfrac{H}{C}+\lambda)N}
+\textit{T =(\frac{H}{C}+\lambda)N}
 \end{center}
 entonces no habra un numero suficiente de secuencias de simbolos de canal para el grupo de alta probabilidad cuando 
 \textit{N} y \textit{T} son lo suficientemente grandes(por peque\~{n}o \lambda) y tambi\'en algunos adicionales. El 
@@ -52,7 +55,7 @@ secuencia especial act\'ua como una se\~{n}al de inicio y parada para un c\'odig
 un tiempo suficiente para dar suficientes secuencias diferentes a todos los mensajes de baja probabilidad. Esto 
 requerir\'a
 \begin{center}
-\textit{T_{1} = (\dfrac{R}{C} + \varphi)N}
+\textit{T_{1} = (\frac{R}{C} + \varphi)N}
 \end{center}
 cuando \varphi es peque\~{n}o. La tasa media de transmisi\'on de s\'imbolos de mensajes por segundo ser\'a entonces 
 mayor que
