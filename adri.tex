@@ -128,3 +128,66 @@ con la fuente para el canal en un sentido estad\'istico. La fuente como se ve de
 transductor debe tener la misma estructura estad\'istica.
 
 ^{9} Informe T\'ecnico N° 65, El Laboratorio de Investigaci\'on Electr\'onica del MIT, 17 de marzo de 1949.
+
+como la fuente que maximiza la entrop\'ia en el canal. El contenido del teorema 9 es que, a pesar de una 
+coincidencia exacta no es posible en general, podemos aproximar la mayor fidelidad si lo deseas. La relaci\'on 
+de la velocidad real de transmisi\'on de la capacidad $C$ se puede llamar la eficiencia del sistema de 
+codificaci\'on. Esto es, por supuesto, igual a la relaci\'on de la entrop\'ia real de los s\'imbolos de canal 
+a la entrop\'ia m\'axima posible.
+En general, la codificaci\'on ideal o casi ideal requiere un largo retraso en el transmisor y el receptor. 
+En el caso silenciosos que hemos estado considerando, la funci\'on principal de este retraso es permitir 
+razonablemente buena adaptaci\'on de las probabilidades correspondientes a longitudes de secuencias. Con un 
+buen c\'odigo el logaritmo de la probabilidad rec\'iproco de un mensaje largo debe ser proporcional a la 
+duraci\'on de la se\~{n}al correspondiente, de hecho\\
+\begin{equation}
+|\frac{log p^{-1}}{$T$} - $C$ |
+\end{equation}
+debe ser peque\~{n}a para todos, pero una peque\~{n}a fracci\'on de los mensajes largos.
+Si una fuente puede producir s\'olo un mensaje particular, su entrop\'ia es cero, y no se requiere ning\'un canal. 
+Por ejemplo, una m\'aquina de computaci\'on configurado para calcular los d\'igitos sucesivos de produce una 
+secuencia definida con ning\'un elemento de azar. No se requiere ning\'un canal de "transmitir" este a otro punto. 
+Se podr\'ia construir una segunda m\'aquina para calcular la misma secuencia en el punto. Sin embargo, esto puede 
+ser poco pr\'actico. En tal caso se puede optar por ignorar algunos o todos de los conocimientos estad\'isticos que 
+tenemos de la fuente. Podr\'iamos considerar los d\'igitos de \pi son una secuencia aleatoria en que se construye un 
+sistema capaz de enviar cualquier secuencia de d\'igitos. \\
+
+De manera similar, podemos optar por utilizar algunos de nuestro conocimiento estad\'istico de Ingl\'es en la 
+construcci\'on de un c\'odigo, pero no todos de la misma. En este caso se considera la fuente de la m\'axima 
+entrop\'ia sujeta a las condiciones estad\'isticas que deseamos conservar. La entrop\'ia de esta fuente determina 
+la capacidad del canal que es necesaria y suficiente. En \pi el ejemplo de la \'unica informaci\'on retenida es que 
+todos los d\'igitos se eligen desde el conjunto 0,1, ... 9. En el caso de Ingl\'es que uno podr\'ia desear utilizar 
+el ahorro estad\'istica posible debido a las frecuencias de la letra, pero nada m\'as. La fuente de entrop\'ia m\'axima 
+es entonces la primera aproximaci\'on al Ingl\'es y su entrop\'ia determina la capacidad del canal deseado.\\
+
+Como un simple ejemplo de algunos de estos resultados consideran una fuente que produce una secuencia de letras 
+elegidas de entre $A$, $B$, $C$, $D$ con probabilidades \frac{1}{2},\frac{1}{4},\frac{1}{8}, \frac{1}{8}, s\'imbolos 
+sucesivos se eligen independientemente.
+Nosotros tenemos\\
+\begin{equation}
+$H$ = -(\frac{1}{2} log \frac{1}{2} + \frac{1}{4} log \frac{1}{4} + \frac{2}{8} log \frac{1}{8})\\
+= \frac{7}{4} bits por s\'imbolo.
+\end{equation}
+
+Por lo tanto se puede establecer un sistema de codificaci\'on para codificar los mensajes aproximada de esta fuente en 
+d\'igitos binarios con un promedio de \frac{7}{4} d\'igito binario por s\'imbolo. En este caso podemos realmente alcanzar 
+el valor l\'imite por el siguiente c\'odigo (obtenida por el m\'etodo de la segunda prueba del teorema 9):
+\begin{center}
+LISTa ke no se como se hace
+\end{center}
+
+El n\'umero medio de d\'igitos binarios utilizados en la codificaci\'on de una secuencia de $N$ s\'imbolos es:
+\begin{equation}
+$N$ (\frac{1}{2} x 1 + \frac{1}{4} x 2 + \frac{2}{8} x 3) = \frac{7}{4}$N$.
+\end{equation}\\
+Es f\'acil ver que los d\'igitos binarios 0, 1 tienen probabilidades de \frac{1}{2}, \frac{1}{2} por lo que la $H$ para 
+las secuencias codificadas es un bit por s\'imbolo. Puesto que, en promedio, tenemos \frac{7}{4} s\'imbolos binarios por 
+carta original, las entrop\'ias sobre una base de tiempo son los mismos. La entrop\'ia m\'axima posible para el conjunto 
+original es $log4 = 2$, que se producen cuando $A$, $B$, $C$, $D$ tienen probabilidades de \frac{1}{4}, \frac{1}{4}, \frac{1}{4}, \frac{1}{4}. 
+Por lo tanto, la entrop\'ia relativa es \frac{7}{8}. Podemos traducir las secuencias binarias en el conjunto original de 
+los s\'imbolos en un dos-a-uno en la siguiente tabla:\\
+\begin{center}
+00  	$A'$
+01		$B'$
+10		$C'$
+11		$D'$
+\end{center}\\
