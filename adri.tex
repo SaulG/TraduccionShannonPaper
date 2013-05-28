@@ -67,3 +67,38 @@ Como $N$ incrementa \delta, \lambda y \varphi se aproximan a cero y la tasa se a
 Otro m\'etodo de realizar esta codificaci\'on y demostrando as\'i el teorema se puede describir de la siguiente manera:\\
 Organizar los mnsajes de longitud $N$ en orden decreciente de probabilidad y suponiendo que sus probabilidades 
 son \textit{p_{1}\geq p_{2}\geq p_{3} ... \geq p_{n}}.
+
+Vamos a $P_{s}=\sum^{s-1}_{1} pi$; que es $P_{s}$ es la probabilidad acumulada hasta, pero no incluyendo, $P_{s}$.\\
+En primer lugar, codificar en un sistema binario. El c\'odigo binario para el mensaje de $s$ se obtiene mediante la 
+expansi\'on de $P_{s}$ como un n\'umero binario.
+La expansi\'on se lleva a cabo para $m_{s}$ lugares, donde $m_{s}$ es el n\'umero entero que satisface:
+\begin{equation}
+log_{2} \frac{1}{$P_{s}$}\leq $m_{s}$ \bigodot 1 + log_{2}\frac{1}{$P_{s}$} .
+\end{equation} \\
+
+Por lo tanto los mensajes de alta probabilidad son representados por los c\'odigos de acceso y los de baja 
+probabilidad de c\'odigos largos. A partir de estas desigualdades que tenemos:
+\begin{equation}
+\frac{1}{2^{$m_{s}$}} \leq $P_{s}$ < \frac{1}{2^{$m_{s}$ -1}}.
+\end{equation}\\
+El c\'odigo por $P_{s}$ ser\'a diferente de todos los subsiguientes en uno o m\'as de sus lugares $m_{s}$, ya que 
+todos los restantes $P_{i}$ es al menos \frac{1}{2^{$m_{s}$}} grande y por lo tanto sus expansiones binarios difieren 
+en los primeros lugares de $m_{s}$. En consecuencia, todos los c\'odigos son diferentes, y es posible recuperar el 
+mensaje de su c\'odigo. Si las secuencias de los canales no son ya secuencias de d\'igitos binarios, que se pueden 
+atribuir n\'umeros binarios de manera arbitraria y por lo tanto el c\'odigo binario traducido en se\~{n}ales 
+adecuadas para el canal.\\
+
+El n\'umero promedio de $H'$ de d\'igitos binarios utilizados por \'imbolo de mensaje original se calcula 
+f\'acilmente. Nosotros tenemos
+\begin{equation}
+$H'$ = \frac{1}{$N$} \sum $m_{s} p_{s}$
+\end{equation}
+pero,\\
+\begin{equation}
+\frac{1}{$N$} \sum (log_{2} \frac{1}{$p_{s}$})$p_{s}$ \leq \frac{1}{$N$} \sum (1+log_{2} \frac{1}{$p_{s}$}) $p_{s}$
+\end{equation}
+y por lo tanto,\\
+\begin{equation}
+$G_{N}$ \leq $H'$ < $G_{N}$ + \frac{1}{$N$}
+\end{equation}
+
