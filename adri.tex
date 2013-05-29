@@ -26,24 +26,36 @@ capacidad del canal.
 
 \section{El teorema fundamental para un canal sin ruido}
 
-Ahora vamos a justificar nuestra interpretaci\'on de H, tal como la tasa de generaci\'on de informaci\'on por 
-demostrar que H determina la capacidad de canal requerida con la codificaci\'on m\'as eficiente.
-Teorema 9: Vamos a tener una fuente de entrop\'ia H (bits por s\'imbolo) y un canal con una capacidad C(bits por 
-segundo). Entonces es posible codificar la salida de la fuente de tal manera que se transmita a la media 
-\frac{C}{H}-\epsilon simbolos por segundo, sobre el canal donde es arbitrariamente peque\~{n}o. No es posible 
-transmitir a una tasa promedio mayor que \frac{C}{H}.\\
+Ahora vamos a justificar nuestra interpretaci\'on de $H$, tal como la
+tasa de generaci\'on de informaci\'on por demostrar que $H$ determina la
+capacidad de canal requerida con la codificaci\'on m\'as eficiente.
 
+\begin{theorem}
+Vamos a tener una fuente de entrop\'ia H (bits por s\'imbolo) y un
+canal con una capacidad $C$ (bits por segundo). Entonces es posible
+codificar la salida de la fuente de tal manera que se transmita a la
+media $\frac{C}{H}-\epsilon$ s\'{\i}mbolos por segundo, sobre el canal
+donde es arbitrariamente peque\~{n}o. No es posible transmitir a una
+tasa promedio mayor que $\frac{C}{H}$.
+\end{theorem}
 
-La parte inversa del teorema, que \frac{C}{H} no puede ser excedido, puede probarse por senalar que la entrop\'ia 
-de la entrada del canal por segundo es igual a la de la fuente, ya que el transmisor debe ser no singular, y tambi\'en 
-esta entrop\'ia no puede exceder la capacidad del canal. Por lo tanto \textit{H'} \leq \textit{C} y el n\'umero de 
-s\'imbolos por segundo =\textit{H'/ H}\leq \textit{C/H}\\
-La primera parte del teorema se demostr\'o de dos maneras diferentes. El primer m\'etodo es considerar el conjunto 
-de todas las secuencias de \textit{N} s\'imbolos producidos por la fuente. Para \textit{N} grandes podemos dividir 
-en dos grupos, uno que contiene menos de 2^{(H+\eta)^{N}} miembros N y la segunda contiene menos de 2^{RN} miembros 
-(donde R es el logaritmo del n\'umero de s\'imbolos diferentes) y que tiene una probabilidad total menos que \mu. 
-A medida que aumenta N, \eta y \mu se aproximan a cero. El n\'umero de se\~{n}ales de dueraci\'on \textit{T} en el 
-canal es mayor que \textit{2^{(C-\theta)T}} con \theta peque\~{n}a cuando \textit{T} es grande. Si nosotros elegimos:\\
+La parte inversa del teorema, que $\frac{C}{H}$ no puede ser excedido,
+puede probarse por senalar que la entrop\'ia de la entrada del canal
+por segundo es igual a la de la fuente, ya que el transmisor debe ser
+no singular, y tambi\'en esta entrop\'ia no puede exceder la capacidad
+del canal. Por lo tanto \textit{H'} \leq \textit{C} y el n\'umero de
+s\'imbolos por segundo =\textit{H'/ H}\leq \textit{C/H}\\ La primera
+parte del teorema se demostr\'o de dos maneras diferentes. El primer
+m\'etodo es considerar el conjunto de todas las secuencias
+de \textit{N} s\'imbolos producidos por la fuente. Para \textit{N}
+grandes podemos dividir en dos grupos, uno que contiene menos de
+2^{(H+\eta)^{N}} miembros N y la segunda contiene menos de 2^{RN}
+miembros (donde R es el logaritmo del n\'umero de s\'imbolos
+diferentes) y que tiene una probabilidad total menos que \mu.  A
+medida que aumenta N, \eta y \mu se aproximan a cero. El n\'umero de
+se\~{n}ales de dueraci\'on \textit{T} en el canal es mayor
+que \textit{2^{(C-\theta)T}} con \theta peque\~{n}a cuando \textit{T}
+es grande. Si nosotros elegimos:\\
 \begin{center}
 \textit{T =(\frac{H}{C}+\lambda)N}
 \end{center}
