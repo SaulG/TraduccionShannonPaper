@@ -56,7 +56,7 @@ conjunto poseen y otros no lo hacen. Algunos ejemplos son:
 Una familia de funciones es un conjunto de funciones junto con una
 medida de probabilidad mediante el cual se puede determinar la
 probabilidad de una funci\'on en el conjunto que tiene ciertas
-propiedades.\footnote[1]{En terminolog\'ia matem\'atica, las funciones
+propiedades.\footnote{En terminolog\'ia matem\'atica, las funciones
 pertenecen a un espacio de medida cuya medida total es la unidad.} Por
 ejemplo con el conjunto,
 \begin{equation}
@@ -93,7 +93,7 @@ funciones son:
   con la $a_i$ normal e independiente todas con la misma desviaci\'on
   est\'andar $\sqrt{N}$. Esta es una representaci\'on de ruido ``blanco'',
   banda limitada a la banda de 0 a $W$ ciclos por segundo y con potencia
-  media de $N$.\footnote[2]{Esta representaci\'on puede ser utilizada
+  media de $N$.\footnote{Esta representaci\'on puede ser utilizada
   como una definici\'on de banda de ruido blanco limitada. Esto tiene
   ciertas ventajas que implican un menor n\'umero de operaciones
   limitantes que usan definiciones que se han utilizado en el
@@ -160,20 +160,17 @@ familia.
 M\'as precisamente, se sabe que con un conjunto erg\'odico un promedio
 de cualquier estad\'istica sobre el conjunto es igual (con una
 probabilidad de 1) a un promedio sobre los desplazamientos de tiempo
-de una funci\'on particular del conjunto.\footnote[3]{Este es el
-famoso teorema erg\'odico o m\'as bien un aspecto de este teorema que
-fue demostrado en formulaciones algo diferentes por Birkoff, von
-Neumann, y Koopman, y posteriormente generalizada por Wiener, Hopf,
-Hurewicz y otros. La literatura sobre la teor\'ia erg\'odica es
-bastante extensa y se remite al lector a los trabajos de estos autores
-para formulaciones precisas y generales; por ejemplo, E. Hopf,
-``Ergodentheorie,'' {\em Ergebnisse der Mathematik und ihrer
-Grenzgebiete}, v. 5; ``On Causality Statistics and Probability,'' {\em
-Journal of Mathematics and Physics}, v. XIII, No. 1, 1934; N. Wiener,
-``The Ergodic Theorem,'' {\em Duke Mathematical Journal}, v. 5, 1939.}
-En t\'erminos generales, en cada funci\'on se puede esperar que, a
-medida que avanza el tiempo, pase con la frecuencia adecuada todas las
-convoluciones de cualquiera de las funciones en el conjunto.
+de una funci\'on particular del conjunto.\footnote{Este es el famoso
+  teorema erg\'odico o m\'as bien un aspecto de este teorema que fue
+  demostrado en formulaciones algo diferentes por Birkoff, von
+  Neumann, y Koopman, y posteriormente generalizada por Wiener, Hopf,
+  Hurewicz y otros. La literatura sobre la teor\'ia erg\'odica es
+  bastante extensa y se remite al lector a los trabajos de estos
+  autores para formulaciones precisas y generales; por ejemplo,
+  \citet{hopf1,hopf2}; \citet{wiener}.}  En t\'erminos generales, en
+cada funci\'on se puede esperar que, a medida que avanza el tiempo,
+pase con la frecuencia adecuada todas las convoluciones de cualquiera
+de las funciones en el conjunto.
 
 Del mismo modo que se pueden realizar diversas operaciones sobre los
 n\'umeros o funciones para obtener nuevos n\'umeros o funciones,
@@ -218,20 +215,19 @@ desplazamientos que son m\'ultiplos del per\'iodo del portador.
 
 Wiener ha se\~nalado la \'intima relaci\'on entre la invariancia de
 dispositivos f\'isicos en desplazamientos en tiempo y la teor\'ia de
-Fourier.\footnote[4]{La teor\'ia de la comunicaci\'on est\'a muy en
-deuda con Wiener por gran parte de su filosof\'ia y teor\'ia. Su
-art\'iculo cl\'asico NDRC, {\em The Interpolation, Extrapolation and
-Smoothing of Stationary Time Series} (Wiley, 1949), contiene la
-primera formulaci\'on clara de la teor\'ia de la comunicaci\'on como
-un problema estad\'istico, el estudio de las operaciones en series de
-tiempo. Este trabajo, aunque ocupa principalmente de la predicci\'on
-lineal y el problema de filtraci\'on, es una referencia colateral
-importante en relaci\'on con el presente documento. Tambi\'en podemos
-referirnos aqu\'i a {\em Wiener's Cybernetics} (Wiley, 1948), que
-trata de los problemas generales de comunicaci\'on y control.} De
-hecho, \'el ha demostrado que si un dispositivo es lineal, as\'i como
-el invariante an\'alisis de Fourier, es entonces la herramienta
-matem\'atica adecuada para tratar con el problema.
+Fourier.\footnote{La teor\'ia de la comunicaci\'on est\'a muy en deuda
+  con Wiener por gran parte de su filosof\'ia y teor\'ia. Su
+  art\'iculo cl\'asico \citep{wiener2} contiene la primera
+  formulaci\'on clara de la teor\'ia de la comunicaci\'on como un
+  problema estad\'istico, el estudio de las operaciones en series de
+  tiempo. Este trabajo, aunque ocupa principalmente de la predicci\'on
+  lineal y el problema de filtraci\'on, es una referencia colateral
+  importante en relaci\'on con el presente documento. Tambi\'en
+  podemos referirnos aqu\'i a \citet{wiener3} que trata de los
+  problemas generales de comunicaci\'on y control.} De hecho, \'el ha
+demostrado que si un dispositivo es lineal, as\'i como el invariante
+an\'alisis de Fourier, es entonces la herramienta matem\'atica
+adecuada para tratar con el problema.
 
 Una familia de funciones es la representaci\'on matem\'atica adecuada
 de los mensajes producidos por una fuente continua (por ejemplo, el
@@ -253,11 +249,8 @@ Si la funci\'on de tiempo $f(t)$ es limitada a la banda de 0 a $W$
 ciclos por segundo, este es completamente determinado dando sus
 ordenadas en una serie de puntos discretos espaciados $\frac{1}{2W}$
 segundos aparte de la manera indicada por el siguiente
-resultado.\footnote[5]{Para una demostraci\'on de este teorema y
-  discusi\'on adicional, v\'ease el art\'iculo del autor
-  ``Communication in the Presence of Noise'' publicado en {\em
-    Proceedings of the Institute of Radio Engineers}, v. 37, No. 1,
-  Enero, 1949, pp. 10-21.}
+resultado \footnote{Para una demostraci\'on de este teorema y
+  discusi\'on adicional, v\'ease \citep{shannon}.}.
 
 \begin{theorem}
   No dejar que $f(t)$ contenga frecuencias por encima de $W$. Entonces
@@ -307,8 +300,8 @@ p_n$ ha sido definido como:
 \begin{equation}
   H = -\sum p_i \log p_i.
 \end{equation}
-De manera an\'aloga se define la entrop\'ia de una distribuci\'on continua
-con la funci\'on de la distribuci\'on de densidad $p(x)$ por:
+De manera an\'aloga se define la entrop\'ia de una distribuci\'on
+continua con la funci\'on de la distribuci\'on de densidad $p(x)$ por:
 \begin{equation}
   H = -\int_{-\infty}^{\infty} p(x) \log p(x) \diff x.
 \end{equation}

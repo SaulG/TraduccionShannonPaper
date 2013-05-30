@@ -24,7 +24,7 @@ Por asignaci\'on adecuada de las probabilidades de transici\'on de la
 entrop\'ia de los s\'imbolos en un canal puede ser maximizada a la
 capacidad del canal.
 
-\section{El teorema fundamental para un canal sin ruido}
+\chapter{El teorema fundamental para un canal sin ruido}
 
 Ahora vamos a justificar nuestra interpretaci\'on de $H$, tal como la
 tasa de generaci\'on de informaci\'on por demostrar que $H$ determina la
@@ -72,12 +72,16 @@ diferente. En el medio se permite un tiempo suficiente para dar
 suficientes secuencias diferentes a todos los mensajes de baja
 probabilidad. Esto requerir\'a
 \begin{equation}
-T_{1} = (\frac{R}{C} + \varphi)N
+T_{1} = \left(\frac{R}{C} + \varphi\right)N
 \end{equation}
 cuando $\varphi$ es peque\~{n}o. La tasa media de transmisi\'on de s\'imbolos de mensajes por segundo ser\'a entonces 
 mayor que
 \begin{equation}
-[(1-\delta)\frac{T}{N} + \delta\frac{T_{1}}{N}]^{-1} = [(1-\delta) (\frac{H}{C} + \lambda) + \delta(\frac{R}{C} + \varphi)]^{-1}.
+\left[(1-\delta)\frac{T}{N} + \delta\frac{T_{1}}{N}\right]^{-1} 
+= 
+\left[(1-\delta) 
+\left(\frac{H}{C} + \lambda \right) + 
+\delta \left(\frac{R}{C} + \varphi \right) \right]^{-1}.
 \end{equation}
 
 Como $N$ incrementa $\delta$, $\lambda$ y $\varphi$ se aproximan a cero y la tasa se aproxima a  $\frac{C}{H}$.
@@ -92,10 +96,11 @@ de $s$ se obtiene mediante la expansi\'on de $P_{s}$ como un n\'umero
 binario. La expansi\'on se lleva a cabo para $m_{s}$ lugares, donde
 $m_{s}$ es el n\'umero entero que satisface:
 \begin{equation}
-\log_{2} \frac{1}{P_{s}}\leq m_{s} \times 1 + \log_{2}\frac{1}{P_{s}} .
+\log_{2} \frac{1}{P_{s}}\leq m_{s} < 1 + \log_{2}\frac{1}{P_{s}} .
 \end{equation} 
-Por lo tanto los mensajes de alta probabilidad son representados por los c\'odigos de acceso y los de baja 
-probabilidad de c\'odigos largos. A partir de estas desigualdades que tenemos:
+Por lo tanto los mensajes de alta probabilidad son representados por
+los c\'odigos de acceso y los de baja probabilidad de c\'odigos
+largos. A partir de estas desigualdades que tenemos:
 \begin{equation}
 \frac{1}{2^{m_{s}}} \leq P_{s} < \frac{1}{2^{m_{s} -1}}.
 \end{equation}
@@ -113,11 +118,13 @@ El n\'umero promedio de $H'$ de d\'igitos binarios utilizados
 por \'imbolo de mensaje original se calcula f\'acilmente. Nosotros
 tenemos
 \begin{equation}
-H' = \frac{1}{N} \sum m_{s} p_{s},
+H' = \frac{1}{N} \sum m_{s} p_{s}.
 \end{equation}
-pero
+Pero
 \begin{equation}
-\frac{1}{N} \sum (\log_{2} \frac{1}{p_{s}})p_{s} \leq \frac{1}{N} \sum (1+\log_{2} \frac{1}{p_{s}}) p_{s},
+\frac{1}{N} \sum 
+\left(\log_{2} \frac{1}{p_{s}} \right) p_{s} 
+\leq \frac{1}{N} \sum \left( 1+\log_{2} \frac{1}{p_{s}} \right) p_{s},
 \end{equation}
 y por lo tanto,
 \begin{equation}
@@ -136,9 +143,9 @@ sobre el ideal es por lo tanto, menos
 \end{equation}
 
 Este m\'etodo de codificaci\'on es sustancialmente el mismo que uno
-que encontraron de forma independiente por \citet{fano}. Su m\'etodo es
-el de organizar los mensajes de longitud $N$ en orden decreciente de
-probabilidad. Dividir esta serie en dos grupos de tan iguales
+que encontraron de forma independiente por \citet{fano}. Su m\'etodo
+es el de organizar los mensajes de longitud $N$ en orden decreciente
+de probabilidad. Dividir esta serie en dos grupos de tan iguales
 probabilidades sea posible. Si el mensaje est\'a en el primer grupo su
 primer d\'igito binario ser\'a 0, en caso contrario 1. Los grupos
 est\'an divididos de manera similar en subconjuntos de casi la misma
@@ -148,7 +155,7 @@ s\'olo un mensaje. Es f\'acil ver que, aparte de peque\~{n}as
 diferencias (generalmente en el \'ultimo d\'igito) esto equivale a lo
 mismo que el proceso de c\'alculo descrito anteriormente.
 
-\section{Discusi\'on y ejemplos}
+\chapter{Discusi\'on y ejemplos}
 
 Con el fin de obtener la m\'axima transferencia de energ\'ia de un
 generador a una carga, un transformador debe en general ser
@@ -158,7 +165,7 @@ similar. El transductor hace que la codificaci\'on debe coincidir con
 la fuente para el canal en un sentido estad\'istico. La fuente como se
 ve desde el canal a trav\'es del transductor debe tener la misma
 estructura estad\'istica como la fuente que maximiza la entrop\'ia en
-el canal. El contenido del teorema 9 es que, a pesar de una
+el canal. El contenido del teorema \ref{t9} es que, a pesar de una
 coincidencia exacta no es posible en general, podemos aproximar la
 mayor fidelidad si lo deseas. La relaci\'on de la velocidad real de
 transmisi\'on de la capacidad $C$ se puede llamar la eficiencia del
@@ -173,7 +180,7 @@ secuencias. Con un buen c\'odigo el logaritmo de la probabilidad
 rec\'iproco de un mensaje largo debe ser proporcional a la duraci\'on
 de la se\~{n}al correspondiente, de hecho
 \begin{equation}
-|\frac{log p^{-1}}{T} - C |
+\left |\frac{\log p^{-1}}{T} - C \right |
 \end{equation}
 debe ser peque\~{n}a para todos, pero una peque\~{n}a fracci\'on de
 los mensajes largos. Si una fuente puede producir s\'olo un mensaje
@@ -185,9 +192,9 @@ otro punto. Se podr\'ia construir una segunda m\'aquina para calcular
 la misma secuencia en el punto. Sin embargo, esto puede ser poco
 pr\'actico. En tal caso se puede optar por ignorar algunos o todos de
 los conocimientos estad\'isticos que tenemos de la fuente. Podr\'iamos
-considerar los d\'igitos de $\pi$ son una secuencia aleatoria en que se
-construye un sistema capaz de enviar cualquier secuencia de
-d\'igitos. 
+considerar los d\'igitos de $\pi$ son una secuencia aleatoria en que
+se construye un sistema capaz de enviar cualquier secuencia de
+d\'igitos.
 
 De manera similar, podemos optar por utilizar algunos de nuestro
 conocimiento estad\'istico de Ingl\'es en la construcci\'on de un
@@ -196,7 +203,7 @@ fuente de la m\'axima entrop\'ia sujeta a las condiciones
 estad\'isticas que deseamos conservar. La entrop\'ia de esta fuente
 determina la capacidad del canal que es necesaria y suficiente. En
 $\pi$ el ejemplo de la \'unica informaci\'on retenida es que todos los
-d\'igitos se eligen desde el conjunto $0,1, \ldots 9$. En el caso de
+d\'igitos se eligen desde el conjunto $0, 1, \ldots, 9$. En el caso de
 Ingl\'es que uno podr\'ia desear utilizar el ahorro estad\'istica
 posible debido a las frecuencias de la letra, pero nada m\'as. La
 fuente de entrop\'ia m\'axima es entonces la primera aproximaci\'on al
@@ -208,8 +215,8 @@ $C$, $D$ con probabilidades $\frac{1}{2}$, $\frac{1}{4}$,
 $\frac{1}{8}$, $\frac{1}{8}$, s\'imbolos sucesivos se eligen
 independientemente. Nosotros tenemos
 \begin{equation}
-H = -(\frac{1}{2} \log \frac{1}{2} + \frac{1}{4} \log \frac{1}{4} + \frac{2}{8} \log \frac{1}{8})\\
-= \frac{7}{4}
+H \quad = \quad -\left(\frac{1}{2} \log \frac{1}{2} + \frac{1}{4} \log \frac{1}{4} + \frac{2}{8} \log \frac{1}{8}\right) \\
+\quad = \quad \frac{7}{4}
 \end{equation}
 bits por s\'imbolo.
 
@@ -229,19 +236,20 @@ teorema \ref{t9}):
 
 El n\'umero medio de d\'igitos binarios utilizados en la codificaci\'on de una secuencia de $N$ s\'imbolos es:
 \begin{equation}
-N (\frac{1}{2} x 1 + \frac{1}{4} x 2 + \frac{2}{8} x 3) = \frac{7}{4}N.
+N \left(\frac{1}{2} x_1 + \frac{1}{4} x_2 + \frac{2}{8} x_3\right) 
+= \frac{7}{4}N.
 \end{equation}
-Es f\'acil ver que los d\'igitos binarios 0, 1 tienen probabilidades
-de $\frac{1}{2}$, $\frac{1}{2}$ por lo que la $H$ para las secuencias
-codificadas es un bit por s\'imbolo. Puesto que, en promedio, tenemos
-$\frac{7}{4}$ s\'imbolos binarios por carta original, las entrop\'ias
-sobre una base de tiempo son los mismos. La entrop\'ia m\'axima
-posible para el conjunto original es $\log_2 4 = 2$, que se producen
-cuando $A$, $B$, $C$, $D$ tienen probabilidades
-de $\frac{1}{4}$, $\frac{1}{4}$, $\frac{1}{4}$, $\frac{1}{4}$. Por lo tanto,
-la entrop\'ia relativa es $\frac{7}{8}$. Podemos traducir las secuencias
-binarias en el conjunto original de los s\'imbolos en un dos-a-uno en
-la siguiente tabla:
+Es f\'acil ver que los d\'igitos binarios $0$, $1$ tienen
+probabilidades de $\frac{1}{2}$, $\frac{1}{2}$ por lo que la $H$ para
+las secuencias codificadas es un bit por s\'imbolo. Puesto que, en
+promedio, tenemos $\frac{7}{4}$ s\'imbolos binarios por carta
+original, las entrop\'ias sobre una base de tiempo son los mismos. La
+entrop\'ia m\'axima posible para el conjunto original es $\log_2 4 =
+2$, que se producen cuando $A$, $B$, $C$, $D$ tienen probabilidades de
+$\frac{1}{4}$, $\frac{1}{4}$, $\frac{1}{4}$, $\frac{1}{4}$. Por lo
+tanto, la entrop\'ia relativa es $\frac{7}{8}$. Podemos traducir las
+secuencias binarias en el conjunto original de los s\'imbolos en un
+dos-a-uno en la siguiente tabla:
 
 \begin{tabular}{ll}
 00  &	$A'$\\

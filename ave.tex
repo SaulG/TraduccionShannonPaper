@@ -28,7 +28,7 @@ En el teorema \ref{t12} podemos comparar la capacidad de un canal sin ruido dado
 
 Un ejemplo simple de un canal discreto se indica en la figura \ref{fig:11}. Hay tres posibles s\'imbolos. El primero nunca se
 vera afectado por el ruido. El segundo y el tercero tienen cada uno una probabilidad $p$ de llegar inalterado y 
-$q$ de ser cambiado en otro elemento par. Tenemos (permitiendo $\alpha = -[plogp + q\log{q}]$ y $P$ y $Q$ son 
+$q$ de ser cambiado en otro elemento par. Tenemos (permitiendo $\alpha = -[p \log p + q\log{q}]$ y $P$ y $Q$ son 
 probabilidades de estar usando los s\'imbolos primero y segundo).
 
 \begin{figure}[!ht]
@@ -78,13 +78,21 @@ La capacidad del canal es de:
   C = \log{\frac{\beta + 2}{\beta}}
 \end{equation}
 
-Notese como esto comprueba los valores obvios en los casos: $p = 1$ y $p = \frac{1}{2}$. En primero, $\beta = 1$ y $C = \log{3}$, 
-el cual es correcto debido a que el canal es entonces sin ruido con tres posibles s\'imbolos. Si $p = \frac{1}{2}$, $\beta = 2$ y 
-$C = \log{2}$.Aqu\'i el segundo y el tercer s\'imbolo, no se puede distinguir en absoluto y act\'uan conjuntamente como un solo 
-s\'imbolo. El primer s\'imbolo se utiliza con una probabilidad $P = \frac{1}{2}$  y el segundo junto al tercero con probabilidad $\frac{1}{2}$. Esto puede ser distribuido entre ellos de cualquier modo deseado y todav\'ia alcanzar la m\'axima capacidad.
-Para los valores intermedios de la capacidad del canal $p$ estara entre $\log{2}$ y $\log{3}$.Esta distinci\'on 
-entre el segundo y tercer s\'imbolo transmite alguna informaci\'on, pero no tanto como en el caso sin ruido.
-El primer s\'imbolo se utiliza tanto mas frecuentemente que los otros dos, debido a su ausencia de ruido.
+N\'{o}tese como esto comprueba los valores obvios en los casos: $p =
+1$ y $p = \frac{1}{2}$. En primero, $\beta = 1$ y $C = \log{3}$, el
+cual es correcto debido a que el canal es entonces sin ruido con tres
+posibles s\'imbolos. Si $p = \frac{1}{2}$, $\beta = 2$ y $C
+= \log{2}$. Aqu\'i el segundo y el tercer s\'imbolo, no se puede
+distinguir en absoluto y act\'uan conjuntamente como un solo
+s\'imbolo. El primer s\'imbolo se utiliza con una probabilidad $P
+= \frac{1}{2}$ y el segundo junto al tercero con probabilidad
+$\frac{1}{2}$. Esto puede ser distribuido entre ellos de cualquier
+modo deseado y todav\'ia alcanzar la m\'axima capacidad.  Para los
+valores intermedios de la capacidad del canal $p$ estara entre
+$\log{2}$ y $\log{3}$. Esta distinci\'on entre el segundo y tercer
+s\'imbolo transmite alguna informaci\'on, pero no tanto como en el
+caso sin ruido.  El primer s\'imbolo se utiliza tanto mas
+frecuentemente que los otros dos, debido a su ausencia de ruido.
 
 \clearpage
 
@@ -138,7 +146,7 @@ transici\'on de cualquier s\'imbolo de entrada. La capacidad del canal
 es:
 
 \begin{equation}
-  Max [H(y) - H_x(y)] = Max H(y) + \sum p_i \log{p_i}.
+  \max [H(y) - H_x(y)] = \max H(y) + \sum p_i \log{p_i}.
 \end{equation}
 
 El valor m\'aximo de $H(y)$ es claramente  $\log{m}$ donde $m$ es el numero de s\'imbolos de salida, ya que es posible que se den 
@@ -203,7 +211,7 @@ exactamente un s\'imbolo de los siete es incorrecta.Estas ocho
 posibilidades son igualmente probables. Tenemos:
 
 \begin{equation}
-C = Max [ H(y) - H_x(y) ]
+C = \max [ H(y) - H_x(y) ]
 = \frac{1}{7}[7 + \frac{8}{8}\log{\frac{1}{8}}]
 = \frac{4}{7} \text{ bits}/\text{s\'{\i}mbolos}
 \end{equation}

@@ -6,60 +6,57 @@ PCM y PPM el cual intercambio el ancho de banda por se\~{n}al a ruido
 ha intensificado el inter\'{e}s general de la teor\'{\i}a de la
 comunicaci\'{o}n. El fundamento de esta teor\'{\i}a se encuentra en
 los art\'{\i}culos importantes por \citet{Nyquist1} y \citet{Hartley}
-sobre este tema.
+sobre este tema. En el presente art\'{\i}culo se extiende la
+teor\'{\i}a a incluir un n\'{u}mero de nuevos factor, en particular el
+efecto del sonido en un canal, y los ahorros posibles debido a la
+estructura estad\'{\i}stica del mensaje original y a la naturaleza del
+destino final de la informaci\'{o}n. 
 
-En el presente art\'{\i}culo se extiende la teor\'{\i}a a incluir un
-n\'{u}mero de nuevos factor, en particular el efecto del sonido en un
-canal, y los ahorros posibles debido a la estructura estad\'{\i}stica
-del mensaje original y a la naturaleza del destino final de la
-informaci\'{o}n. El problema fundamental de la comunicaci\'{o}n es el
-de reproducir en un momento exacto o aproximado un mensaje
-seleccionado en otro punto.
-
-Frecuentemente los mensajes tienen un significado; es decir que
-refieren o est\'{a}n correlacionados de acuerdo con alg\'{u}n sistema con
-ciertas entidades f\'{\i}sicas o conceptuales. Estos aspectos
+El problema fundamental de la comunicaci\'{o}n es el de reproducir en
+un momento exacto o aproximado un mensaje seleccionado en otro
+punto. Frecuentemente los mensajes tienen un significado; es decir que
+refieren o est\'{a}n correlacionados de acuerdo con alg\'{u}n sistema
+con ciertas entidades f\'{\i}sicas o conceptuales. Estos aspectos
 semanticos de la comunicaci\'{o}n son irrelevantes a el problema de
-ingenier\'{\i}a.
-
-El significante aspecto es que el actual mensaje es uno de los
-seleccionados desde un conjunto de posibles mensajes. El sistema debe
-estar dise\~{n}ado para operar por cada selecci\'{o}n posible, no
-solamente por el \'{u}nico que ha sido escogido ya que es desconocido
-en el momento del dise\~{n}o.
+ingenier\'{\i}a. El significante aspecto es que el actual mensaje es
+uno de los seleccionados desde un conjunto de posibles mensajes. El
+sistema debe estar dise\~{n}ado para operar por cada selecci\'{o}n
+posible, no solamente por el \'{u}nico que ha sido escogido ya que es
+desconocido en el momento del dise\~{n}o.
 
 Si el n\'{u}mero de mensajes en el conjunto es finito entonces el
 numero o cualquier funci\'{o}n mon\'{o}tico de este n\'{u}mero puede
 ser considerado como una medida de la informaci\'{o}n producida cuando
 un mensaje es escogido de un conjunto, todas las opciones son
-igualmente probables.
-
-Como se ha se\~{n}alado por Hartley la opci\'{o}n mas natural es la
-funci\'{o}n logar\'{\i}tmica. Aunque esta definici\'{o}n debe ser
-generalizado consideradamente cuando se cuenta la influencia de las
-estad\'{\i}sticas del mensaje y cuando tenemos un rango continuo de
-mensajes, vamos a utilizar en todos los casos una medida esencialmente
-logar\'{\i}tmica.
+igualmente probables. Como se ha se\~{n}alado por Hartley la
+opci\'{o}n mas natural es la funci\'{o}n logar\'{\i}tmica. Aunque esta
+definici\'{o}n debe ser generalizado consideradamente cuando se cuenta
+la influencia de las estad\'{\i}sticas del mensaje y cuando tenemos un
+rango continuo de mensajes, vamos a utilizar en todos los casos una
+medida esencialmente logar\'{\i}tmica.
 
 La medida logar\'{\i}tmica es m\'{a}s conveniente por varias razones:
 \begin{enumerate}
-\item{Es practicamente muy \'{u}til. Par\'{a}metros importantes utilizados en la
-ingenier\'{\i}a como el tiempo, ancho de banda, n\'{u}mero de pasos,
-etc., tiende a variar linealmente con el logar\'{\i}tmo de n\'{u}mero
-de posibilidades. Por ejemplo, agregando un paso a un grupo dobla el
-n\'{u}mero de posible estado de pasos. Eso agrega 1 a la base 2 del
-logar\'{\i}tmo de este n\'{u}mero. Duplicando el tiempo
-aproximadamente hace que el n\'{u}mero de cuadrados posibles, o
-duplicando el logar\'{\i}tmo, etc.}
-\item{Es m\'{a}s cerca a nuestro sentimiento intuitivo en cuanto a la medidad
-adecuada. Esto es cercanamente relacionado desde que medimos
-intuitivamente entidades por una comparaci\'{o}n lineal con est\'{a}ndares
-com\'{u}nes \cite{Nyquist1,Nyquist2}. Un sentimiento, por ejemplo, cuando perforas
-dos cartas deber\'{\i}an tener el doble de la capacidad de uno para la
-transmisi\'{o}n de informaci\'{o}n \cite{Hartley}.}
-\item{Es matem\'{a}ticamente m\'{a}s adecuado. Muchas de las operaciones que
-limitan son simples en t\'{e}rminos de el logar\'{\i}tmo pero requerir\'{\i}a
-reemplantamiento descuidado en t\'{e}rminos del n\'{u}mero de posibilidades.}
+\item{Es m\'{a}s \'{u}til en la pr\'{a}ctica. Par\'{a}metros
+  importantes utilizados en la ingenier\'{\i}a como el tiempo, ancho
+  de banda, n\'{u}mero de pasos, etc., tiende a variar linealmente con
+  el logar\'{\i}tmo de n\'{u}mero de posibilidades. Por ejemplo,
+  agregando un paso a un grupo dobla el n\'{u}mero de posible estado
+  de pasos. Eso agrega 1 a la base 2 del logar\'{\i}tmo de este
+  n\'{u}mero. Duplicando el tiempo aproximadamente hace que el
+  n\'{u}mero de cuadrados posibles, o duplicando el logar\'{\i}tmo,
+  etc.}
+\item{Es m\'{a}s cerca a nuestro sentimiento intuitivo en cuanto a la
+  medidad adecuada. Esto es cercanamente relacionado desde que medimos
+  intuitivamente entidades por una comparaci\'{o}n lineal con
+  est\'{a}ndares com\'{u}nes \cite{Nyquist1,Nyquist2}. Un sentimiento,
+  por ejemplo, cuando perforas dos cartas deber\'{\i}an tener el doble
+  de la capacidad de uno para la transmisi\'{o}n de informaci\'{o}n
+  \cite{Hartley}.}
+\item{Es matem\'{a}ticamente m\'{a}s adecuado. Muchas de las
+  operaciones que limitan son simples en t\'{e}rminos de el
+  logar\'{\i}tmo pero requerir\'{\i}a reemplantamiento descuidado en
+  t\'{e}rminos del n\'{u}mero de posibilidades.}
 \end{enumerate}
 
 La selecci\'{o}n de la base del logar\'{\i}tmo corresponde a la
@@ -69,21 +66,20 @@ digitos binarios, o m\'{a}s brevemente bits, una palabra sugerida por
 J.\ W.\ Tukey. Un dispositivo con dos posiciones estables, como lo es
 un n\'{u}mero de paso o un circuito flip-flop, pueden almacenar un bit
 de informaci\'{o}n. $N$ dispositivos pueden almacenar $N$ bits, desde
-que el n\'{u}mero total de posibles estados es $2ˆN$ y $\log_2 * 2ˆN =
-N$. Si la base 10 es usada las unidades podr\'{\i}an ser llamados
+que el n\'{u}mero total de posibles estados es $2^N$ y $\log_2 * 2^N =
+N$. Si la base $10$ es usada las unidades podr\'{\i}an ser llamados
 d\'{\i}gitos decimales. Desde
 \begin{equation}
-\log_2 M = \log_10 M / \log_10ˆ2 = 3.32 \log_10 M,
+\log_2 M = \log_10 M / \log_10^2 = 3.32 \log_10 M,
 \end{equation}
-un d\'{\i}gito decimal es alrededor de 3 1/3
-bits. Una rueda d\'{\i}gital en una computadora de escritorio tiene 10
-posiciones estables y por lo tanto, tiene una capacidad de
-almacenamiento de un d\'{\i}gito decimal. En trabajo analitico donde
-la integraci\'{o}n y la diferenciaci\'{o}n estan envueltos en base e
-es algunas veces conveniente. Las unidades resultantes de
-informaci\'{o}n ser\'{\i}an llamados unidades naturales. El cambio de
-base $a$ a base $b$ simplemente requiere la multiplicaci\'{o}n por
-$\log_b a$.
+un d\'{\i}gito decimal es alrededor de $3 \frac{1}{3}$ bits. Una rueda
+d\'{\i}gital en una computadora de escritorio tiene $10$ posiciones
+estables y por lo tanto, tiene una capacidad de almacenamiento de un
+d\'{\i}gito decimal. En trabajo analitico donde la integraci\'{o}n y
+la diferenciaci\'{o}n estan envueltos en base e es algunas veces
+conveniente. Las unidades resultantes de informaci\'{o}n ser\'{\i}an
+llamados unidades naturales. El cambio de base $a$ a base $b$
+simplemente requiere la multiplicaci\'{o}n por $\log_b a$.
 
 \begin{figure}[!ht]
 \centerline{\includegraphics[width=120mm]{fig1shannon_esp.pdf}}
@@ -97,23 +93,23 @@ de un tipo indicado esquem\'{a}ticamente en la figura \ref{fig:1}. Eso
 consiste de cinco partes esenciales:
 
 \begin{enumerate}
-\item{La fuente de informaci\'{o}n el cual produces el mensaje o secuencia de
-  mensajes a ser comunicado a la terminal que recibe. El mensaje puede
-  ser de varios tipos:
+\item{La fuente de informaci\'{o}n el cual produces el mensaje o
+  secuencia de mensajes a ser comunicado a la terminal que recibe. El
+  mensaje puede ser de varios tipos:
   \begin{enumerate}[(a)]
-  \item{Una secuencia de letras como un sistema de
-    telegrafo de teletipo;}
-  \item{Una sola funci\'{o}n de tiempo $f(t)$ como
-    un radio o telefon\'{\i}a;}
-  \item{Una funci\'{o}n de tiempo y otras
-    variables como televisi\'{o}n en blanco y negro --- aqu\'{\i} el
-    mensaje podr\'{\i}a pasar a traves de una funci\'{o}n $f(x,y,t)$ de dos
-    espacios de coordenadas y tiempo, la intensidad de la luz en el punto
-    $(x, y)$ y el tiempo $t$ sobre un tubo en la placa;}
+  \item{Una secuencia de letras como un sistema de telegrafo de
+    teletipo;}
+  \item{Una sola funci\'{o}n de tiempo $f(t)$ como un radio o
+    telefon\'{\i}a;}
+  \item{Una funci\'{o}n de tiempo y otras variables como
+    televisi\'{o}n en blanco y negro --- aqu\'{\i} el mensaje
+    podr\'{\i}a pasar a traves de una funci\'{o}n $f(x,y,t)$ de dos
+    espacios de coordenadas y tiempo, la intensidad de la luz en el
+    punto $(x, y)$ y el tiempo $t$ sobre un tubo en la placa;}
   \item{Dos o m\'{a}s funciones de tiempo, digames $f(t)$, $g(t)$,
     $h(t)$ --- este es el caso en ``tres dimensional'' transmisi\'{o}n
-    de sonido o si el sistema est\'{a} dise\~{n}ado para dar servicio a
-    varios canales individuales en multiplex;}
+    de sonido o si el sistema est\'{a} dise\~{n}ado para dar servicio
+    a varios canales individuales en multiplex;}
   \item{Varias funciones de varias variables --- en la televisi\'{o}n
     a color el mensaje consiste en tres funciones $f(x,y,t)$,
     $g(x,y,t)$, $h(x,y,t)$ definidas en tres dimensiones continuas ---
@@ -122,14 +118,14 @@ consiste de cinco partes esenciales:
     manera similar, distintas fuentes de televisiones en blanco y
     negro podr\'{\i}an producir ``mensajes'' que consisten en un
     n\'{u}mero de funciones de tres variables;}
-  \item{Diversas combinaciones tambi\'{e}n se producen , por ejemplo, en la
-    televisi\'{o}n con un canal de audio asociado.}
+  \item{Diversas combinaciones tambi\'{e}n se producen , por ejemplo,
+    en la televisi\'{o}n con un canal de audio asociado.}
 \end{enumerate}}
 
 \item{Un transmisor que opera en el mensaje de alguna manera para
   producir una se\~{n}al adecuada para la transmisi\'{o}n sobre el
-  canal. En la telefon\'{\i}a esta operaci\'{o}n consiste simplemente en
-  el cambio de presi\'{o}n de sonido en una corriente el\'{e}ctrica
+  canal. En la telefon\'{\i}a esta operaci\'{o}n consiste simplemente
+  en el cambio de presi\'{o}n de sonido en una corriente el\'{e}ctrica
   proporcional. En la telegraf\'{\i}a tenemos una operaci\'{o}n de
   codificaci\'{o}n que produce una secuencia de puntos, guiones y
   espacios en el canal correspondiente al mensaje. En un sistema
@@ -139,12 +135,14 @@ consiste de cinco partes esenciales:
   televisi\'{o}n y la modulaci\'{o}n de frecuencia son ejemplos de
   operaciones complejas aplicadas a los mensajes para obtener la
   se\~{n}al.}
-\item{El canal es simplemente el medio usado para transmitir la se\~{n}al
-  desde un transmitor a un receptor. Eso podr\'{\i}a ser un par de
-  cables, un cable coazial, una radio frecuencia, un rayo de luz, etc.}
-\item{El receptor ordinalmente hace la operaci\'{o}n inversa de lo que ya
-  esta hecho por el transmitor, reconstruye el mensaje desde la se\~{n}al.}
-\item{La destinaci\'{o}n es la persona (o cosa) hacia quien el mensaje es
+\item{El canal es simplemente el medio usado para transmitir la
+  se\~{n}al desde un transmitor a un receptor. Eso podr\'{\i}a ser un
+  par de cables, un cable coazial, una radio frecuencia, un rayo de
+  luz, etc.}
+\item{El receptor ordinalmente hace la operaci\'{o}n inversa de lo que
+  ya est\'{a} hecho por el transmitor, reconstruye el mensaje desde la
+  se\~{n}al.}
+\item{El destino es la persona (o cosa) hacia quien el mensaje es
   enviado.}
 \end{enumerate}
 
@@ -152,29 +150,24 @@ Se desear\'{\i}a considerar ciertos problemas generales envueltos en
 el sistema de comunicaci\'{o}n. Para hacer esto es necesario
 representar varios elementos envueltos como lo son las entidades
 matematicas, adecuadamente idealizada desde sus contrapartes
-f\'{\i}sicas.
+f\'{\i}sicas. A grandes rasgos se pueden clasificar los sistemas de
+comunicaci\'{o}n en tres categor\'{\i}as principales: los discretes,
+continuos y mixtos. Por un sistema discreto se quiere decir que en
+tanto el mensaje como la se\~{n}al son una secuencia de simbolos
+discretos. Un caso t\'{\i}pico es la telegraf\'{\i}a donde el mensaje
+es una secuencia de letras y la se\~{n}al de una secuencia de puntos,
+guiones y espacios. Un sistema continuo es aqul en el que est\'{a}n
+tanto el mensaje como se\~{n}al tratadas como funciones continuas, por
+ejemplo, la radio o la televisi\'{o}n. Un sistema mixto es una en la
+que tanto las variables discretas y continuas aparecen, por ejemplo,
+la transmisi\'{o}n PCM de voz. 
 
-% Checar
-
-A grandes rasgos se pueden clasificar los sistemas de comunicaci\'{o}n
-en tres categor\'{\i}as principales: los discretes, continuos y
-mixtos. Por un sistema discreto se quiere decir que en tanto el
-mensaje como la se\~{n}al son una secuencia de simbolos discretos. Un
-caso t\'{\i}pico es la telegraf\'{\i}a donde el mensaje es una
-secuencia de letras y la se\~{n}al de una secuencia de puntos, guiones
-y espacios. Un sistema continuo es aqul en el que est\'{a}n tanto el
-mensaje como se\~{n}al tratadas como funciones continuas, por ejemplo,
-la radio o la televisi\'{o}n. Un sistema mixto es una en la que tanto
-las variables discretas y continuas aparecen, por ejemplo, la
-transmisi\'{o}n PCM de voz. Consideremos en primer lugar el caso
-discreto. Este caso tiene aplicaciones no s\'{o}lo en teor\'{\i}a de
-la comunicaci\'{o}n, sino tambi\'{e}n en la teor\'{\i}a de las
-m\'{a}quinas de computaci\'{o}n, el dise\~{n}o de las centrales
-telef\'{o}nicas y otros campos.  Adem\'{a}s el caso discreto crea una
-base para los casos continuos mixtos que ser\'{a}n tratadas en la
-segunda mitad del papel.
-
-% Checar
+Consideremos en primer lugar el caso discreto. Este caso tiene
+aplicaciones no s\'{o}lo en teor\'{\i}a de la comunicaci\'{o}n, sino
+tambi\'{e}n en la teor\'{\i}a de las m\'{a}quinas de computaci\'{o}n,
+el dise\~{n}o de las centrales telef\'{o}nicas y otros campos.
+Adem\'{a}s el caso discreto crea una base para los casos continuos
+mixtos que ser\'{a}n tratadas en la segunda mitad del art\'{\i}culo.
 
 \clearpage
 
