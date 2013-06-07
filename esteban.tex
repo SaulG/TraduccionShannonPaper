@@ -1,4 +1,16 @@
-FALTA LO DE ARRIBA EN PAGINA 19
+Este doble proceso puede decodificar el mensaje original en los mismo s\'{i}mbolos, pero con un radio de compresi\'{o}n promedio de $\frac{7}{8}$.
+
+Como un segundo ejemplo considere una fuente que produce una secuencia de A's y B's con probabilidad p para A y q por B. Si p << q tenemos que
+
+\begin{equation}
+H = - log p^p (1 - p)^1^-^p
+= -p log p(1-p)^(^1^-^p^)^/^p
+= p log \frac{e}{p}
+\end{equation}
+
+En tal caso uno puede construir una codificaci\'{o}n del mensaje sobre un canal de 0, 1 lo suficientemente buena mediante el env\'{i}o de una secuencia especial, por ejemplo 0000, para el s\'{i}mbolo poco frecuente A y a continuaci\'{o}n, una secuencia indicando el n\'{u}mero siguiente de B's. Esto podr\'{i}a ser indicado por una representaci\'{o}n binaria con todos los n\'{u}meros que contienen la secuencia especial eliminada. Todos los n\'{u}meros hasta el 16 son representados como de costumbre; el 16 es representado por el siguiente n\'{u}mero binario despues de 16 que no contiene 4 ceros, es decir, 17  = 10001, etc.
+
+Se puede demostrar que a medida que $p\rightarrow{0}$ los enfoques de codificaci\'{o}n ideales proporcionan la longitud de la secuencia especial es ajustada correctamente.
 
 \part{El canal discreto con ruido}
 \label{part:2}
@@ -6,12 +18,38 @@ FALTA LO DE ARRIBA EN PAGINA 19
 \chapter{Representaci\'{o}n de un canal discreto con ruido}
 \label{sec:11}
 
-FALTA
+Ahora consideremos el caso en donde la señal es perturbada por ruido durante la transmisi\'{o} o en algunas de las terminales. Esto significa que la señal recibida no es necesariamente el mismo que el enviado por el transmisor. Dos casos pueden ser distinguidos. Si una señal particular transmitida siempre produce la misma señal recibida, es decir, la señar recibida es una funcion definida de la señal transmitida, entonces el efecto puede ser llamado distorsi\'{o}n. Si la función tiene inversa -las dos señales transmitidas no deben de producir la misma señal recibida- la distorsi\'{o} puede ser corregida, al menos al principio, solamente por la realizaci\'{o}n de la operaci\'{o}n de la funci\'{o}n inversa de la señal recibida.
+
+El caso de inter\'{e}s aqu\'{i} es aquel en el que la señal no siempre se someta al mismo cambio en la transmisi\'{o}n. En este caso podemos asumir que la señal recibida E es una funci\'{o} de la señal de transmisi\'{o}n S y una segunda variable, el ruido N.
+
+\begin{equation}
+E = f\left (S,\right N)
+\end{equation}
+
+El ruido es considerado como una variable de probabilidad igual al mensaje que estaba por encima. En general, esto puede ser representado como un proceso estoc\'{a}stico adecuado. El tipo m\'{a}s general de canales discretos con ruido que consideramos es una generalizaci\'{o}n de el canal libre de ruido de estado finito descrito anteriormente. Podemos asumir un n\'{u}mero finito de estados y un conjunto de probabilidades
+
+\begin{equation}
+P_{\alpha, i}\left ( \beta , \right j).
+\end{equation}
+
+Esta es la probabilidad, si el canal est\'{a} en el estado $\alpha$ y el s\'{i}mbolo $i$ es transmitido, el s\'{i}mbolo $j$ sera recibido y el canal se queda en estado $\beta$. As\'{i} $\alpha$ y el rango de $\beta$ sobre las posibles señales recibidas. En el caso de que los s\'{i}mbolos sucesivos son perturbados de forma independiente por el ruido solo hay un estado, y el canal es descrito por el conjunto de probablidades de transici\'{o}n $P_{i}\left (j\right)$, la probabilidad de transmitir un s\'{i}mbolo $i$ sera recibido como $j$·
+
+Si el canal con ruido es alimentado por una fuente hay dos procesos en trabajo: la fuente y el ruido. Por lo tanto hay un n\'{u}mero de entrop\'{i}as que se pueden calcular. En primer lugar est\'{a} la entrop\'{i}a $H(x)$ de la fuente o de la entrada al canal (\'{e}stos ser\'{a}n iguales si el transmisor es no singular). La entrop\'{i}a de la salidad del canal, es decir, la señal recibida se denota por $H(y)$. En el caso sin ruido $H(y) = H(x)$. El conjunto de entrop\'{i}as de entrada y salida ser\'{a} $H\left(x\right y)$. Finalmente donde haya dos entrop\'{i}as condicionales $H_{x}(y)$ y $H_{y}(x)$, la entrop\'{i}a de la salida cuando la entrada es conocida y a la inversa. Entre esas cantidades tenemos las relaciones
+
+\begin{equation}
+H\left (x,\right y) = H(x) + H_{x}(y) = H(y) + H_{y}(x).
+\end{equation}
+
+Todas estas entrop\'{i}as se pueden medir en funci\'{o}n de por segundo o en funci\'{o}n de cada s\'{i}mbolo.
 
 \clearpage
 
 \chapter{Equivocaci\'{o}n y capacidad de canal}
 \label{sec:12}
+
+Si el canal es con ruido por lo general no es posible el reconstruir el mensaje original o la señal transmitida con certeza por cualquier operaci\'{o} efectuada sobre la señal recibida $E$. Hay, sin embargo, maneras de transmitir la informaci\'{o}n que son \'{o}ptimas en el combate contra el ruido. Este es el problema que consideramos ahora
+
+Supongamos que hay dos posibles s\'{i}mbolos 0 y 1, y estamos transmitiendo a una velocidad de 1000 s\'{i}mbolos por segundo con probabilidad de $p_{0} = p_{1} = \frac{1}{2}$. Por lo tanto nuestra fuenta est\'{a} produciendo informaci\'{o}n a la velocidad de 1000 bits por segundo. Durante la transmisi\'{o}n del ruido se introduce errores de manera que, en promedio, 1 en 100 se recibieron incorrectamente (un 0 como 1, o 1 como 0). ¿Cu\'{a}l es la tasa de transmisi\'{o}n de informaci\'{o}n? Ciertamenet menos de 1000 bits por segundo aproximadamente el 1\% de los s\'{i}mbolos recibidos son correctos. Nuesto primer impulso podr\'{i}a decir que la tasa es de 990 bits por segundo, simplemente el n\'{u}mero de errores esperados. Esto no es satisfactorio ya que no se tiene en cuenta la falta de conocimiento de d\'{o}nde se producen los errores del destinatario. Es posible llevarlo a un caso extremo y supongamos que el ruido es tan grande que los s\'{i}mbolos recibidos son totalmente independientes de los s\'{i}mbolos transmitidos. La probalidad de recibir $1$ es $\frac{1}{2}$ en todo lo que se transmite y de manera similar para 0. Luego, alrededor de la mitada de los s\'{i}mbolos recibidos son correctos debido al azar, y nos estar\'{i} dando el cr\'{e}dito del sistema para la transmisi\'{o}n de 500 bits por segundo, cuando en realidad la informaci\'{o} no se transmite en absoluto. Igualmente la transmisi\'{o}n "correcta" se obtendr\'{i}a mediante la dispensaci\'{o}n con el canal entero y lanzando una moneda en el punto de recepci\'{o}n.
 
 FALTA
 
