@@ -113,7 +113,7 @@ H_{yz}(x) \geq H_y(x) - H_y(z) \geq H_y(x) - H(z)
 \end{array}
 \end{equation}
 
-Si identificamos $x$ como la salida de la fuente, $y$ como la señal recibida y $z$ como la señal enviada por el canal de correci\'{o}n, entonces la parte derecha es la equivocaci\'{o}n menos la tasa de transmisi\'{o}n sobre el canal de correci\'{o}n. Si la capacidad de este canal es menor que la equivocaci\'{o}n de la parte derecha ser\'{a} mayor que cero y $H_{yz}(x) > 0$. Pero esta es la incertidumbre de lo que fue enviado, conociendo tanto la señal recibida y la señal de correci\'{o}n. Si este es mayor que cero la frecuencia de errores no puede ser arbitrariamente peque\~{n}o.
+Si identificamos $x$ como la salida de la fuente, $y$ como la se\~{n}al recibida y $z$ como la se\~{n}al enviada por el canal de correci\'{o}n, entonces la parte derecha es la equivocaci\'{o}n menos la tasa de transmisi\'{o}n sobre el canal de correci\'{o}n. Si la capacidad de este canal es menor que la equivocaci\'{o}n de la parte derecha ser\'{a} mayor que cero y $H_{yz}(x) > 0$. Pero esta es la incertidumbre de lo que fue enviado, conociendo tanto la se\~{n}al recibida y la se\~{n}al de correci\'{o}n. Si este es mayor que cero la frecuencia de errores no puede ser arbitrariamente peque\~{n}o.
 
 \begin{exmp}
 Supongamos que los errores suceden al azar en una secuencia de d\'{i}gitos binarios: la probabilidad $p$ de que un d\'{i}gito es incorrecto y $q = 1 - p$ es correcto. Estos errores se pueden corregir si se conoce su posici\'{o}n. As\'{i} el canal de correcci\'{o}n s\'{o}lo necesita enviar informaci\'{o}n sobre estas posiciones. Esto equivale a transmitir desde una fuente que produce d\'{i}gitos binarios con probabilidad $p$ para $1$ (incorrecto) y $q$ para $0$ (correcto). Esto requiere un canal de capacidad
@@ -150,17 +150,21 @@ donde el m\'{a}ximo es con respecto a todas las posibles fuentes de informaci\'{
 \chapter{El teorema fundamental para un canal discreto con ruido}
 \label{sec:13}
 
-FALTA
+Puede parecer sorprendente que debemos definir una capacidad definida C para un canal ruidoso ya que nunca podemos enviar cierta información en un caso así. Está claro, sin embargo, que mediante el envío de la información en una forma redundante la probabilidad de errores se puede reducir. Por ejemplo, mediante la repetici\'{o}n del mensaje muchas veces y por un estudio estad\'{i}stico de las diferentes versiones recibidas del mensaje la probabilidad de errores podr\'{i}a hacerse muy peque\~{n}a. Se podr\'{i}a esperar, sin embargo, que para hacer esta probabilidad de errores de enfoque de cero, la redundancia de la codificaci\'{o}n debe aumentar indefinidamente, y la tasa de transmisi\'{o}n por lo tanto, tiende a cero. Esto no es en absoluto cierto. Si lo fuera, no habr\'{i}a una capacidad muy bien definida, pero s\'{o}lo una capacidad para una frecuencia dada de errores, o una equivocaci\'{o}n dada; la capacidad de bajar como los requisitos de error se hacen m\'{a}s estrictas. En realidad, la capacidad $C$ definido anteriormente tiene un significado muy definido. Es posible enviar informaci\'{o}n a la velocidad C a trav\'{e}s del canal con tan peque\~{n}a frecuencia de errores o equivocaci\'{o}n como se desee mediante la codificaci\'{o}n adecuada. Esta declaraci\'{o}n no es v\'{a}lida para cualquier tasa mayor que $C$. Si se hace un intento de transmitir a una velocidad mayor que $C$, por ejemplo $C + R_1$, entonces no necesariamente ser\'{a} una equivocaci\'{o}n igual o mayor que al exceso de $R_1$. La naturaleza toma por pago mucha incertidumbre al exigir justamente eso, por lo que no estamos consiguiendo m\'{a}s correctamente a trav\'{e}s de $C$.
+
+La situaci\'{o}n se indica en la figua \ref{fig:9}. La tasa de informaci\'{o}n en el canal se representa horizontalmente y la equivocaci\'{o}n verticalmente. Cualquier punto por encima de la l\'{i}nea gruesa de la regi\'{o}n sombreada se puede alcanzar y aquellos por debajo no. Los puntos de la l\'{i}nea no pueden en general ser alcanzados, pero por lo general ser\'{a} de dos puntos en la l\'{i}nea que pueda.
+
+Estos resultados son la principal justificaci\'{o}n para la definici\'{o}n de C y ahora se han demostrado.
 
 \begin{theorem}
 \label{th:11}
-Que un canal discreto tenga
+Que un canal discreto tenga la capacidad $C$ y una fuente discreta de la entrop\'{i}a por segundo $H$. Si $H \leq C$ existe un sistema de codificaci\'{o}n de tal manera que de la salidad de la fuente puede ser transmitido a trav\'{e}s del canal con una peque\~{n}a frecuencia de errores arbitraria (o una peque\~{n}a equivocaci\'{o}n arbitraria). Si $H > C$ es posible codificar la fuente de modo que la equivocaci\'{o}n es menor que $H - C$ donde $\epsilon$ is arbitrariamente peque\~{n}o. No existe un m\'{e}todo de codificaci\'{o}n que da una equivocaci\'{o}n menor de $H - C$.
 \end{theorem}
 
 FALTA
 
 \begin{figure}[!ht]
-\centerline{\includegraphics[width=100mm]{Imagenes/Pagina22-Figura9.png}}
+\centerline{\includegraphics[width=100mm]{Imagenes/SinComentarios/Pagina22-Figura9.png}}
 \caption{La equivocaci\'{o}n posible para una entropia de entrada dada
   a un canal.}
 \label{fig:9}
